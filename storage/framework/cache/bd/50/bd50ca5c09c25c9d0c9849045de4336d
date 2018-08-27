@@ -1,0 +1,324 @@
+1535385127a:1:{s:17:"possibilities.htm";a:11:{s:8:"fileName";s:17:"possibilities.htm";s:7:"content";s:8070:"title = "possibilities.title"
+url = "/conservation-des-forets-et-de-la-nature"
+layout = "default"
+is_hidden = 0
+
+[localePicker]
+forceUrl = 1
+
+[viewBag]
+localeUrl[en] = "/forests-and-nature-conservation-in-quebec"
+==
+<?php
+use RainLab\Translate\Classes\Translator;
+
+function onStart()
+{
+    $this['pageClass'] = 'page-possibilities';
+
+    $this->translator = Translator::instance();
+    $locale = $this->translator->getLocale();
+
+    if ($locale == "fr") {
+        $this["pageTitle"] = "Conservation des forêts et de la nature";
+        $this["pageDescription"] = "Trouvez toute l'information que vous cherchez sur notre écosystème forestier, la Loi sur l’aménagement durable du territoire forestier, la transformation des arbres de nos forêts et plus.";
+        $this["pageKeywords"] = "";
+    } else if ($locale == "en") {
+        $this["pageTitle"] = "Forest and nature conservation in Quebec";
+        $this["pageDescription"] = "All the information you are looking for about our forest ecosystem, the Sustainable Forest Development Act, forest management and more.";
+        $this["pageKeywords"] = "";
+    }
+}
+?>
+==
+<div class="content">
+    <div class="container">
+        <div class="grid-full">
+            <h1 class="title">{{ 'Regard sur la forêt'|_ }}</h1>
+        </div>
+    </div>
+    <div class="thumbs">
+        <div class="thumbs__possibilities">
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'foret-naturelle-du-quebec' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                 <a class="thumb" href="{{ 'possibility'|page({ slug: 'quebec-forest-biodiversity' }) }}">
+            {% endif %}
+                <img src="{{ 'assets/public/images/thumb-healthy-resource.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="leaf-icon" viewBox="0 0 1 1"><use xlink:href="#leaf" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'Une forêt naturelle'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'amenagement-forestier-au-quebec' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'quebec-forestry-practices' }) }}">
+            {% endif %}
+                <img src="{{ 'assets/public/images/thumb-practices-evolution.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="sprout-icon" viewBox="0 0 1 1"><use xlink:href="#sprout" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'L\'évolution des <br>pratiques forestières'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'biodiversite-des-territoires-forestiers' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'biodiversity-of-forest-territories' }) }}">
+            {% endif %}
+                <img src="{{ 'assets/public/images/thumb-share-territory.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="team-icon" viewBox="0 0 1 1"><use xlink:href="#team" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'Un territoire partagé'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'developpement-durable-de-la-foret' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'sustainable-development-of-the-forest' }) }}">
+            {% endif %}
+                <img src="{{ 'assets/public/images/thumb-wood-second-life.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="recyc-icon" viewBox="0 0 1 1"><use xlink:href="#recyc" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'Les multiples vies du bois'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'foret-certifiee-au-quebec' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'quebec-certified-forest' }) }}">
+            {% endif %}          
+                <img src="{{ 'assets/public/images/thumb-responsabilities.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="book-icon" viewBox="0 0 1 1"><use xlink:href="#book" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'Responsabilités et <br>certifications'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'forets-anti-pollution-du-quebec' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'quebec-anti-pollution-forests' }) }}">
+            {% endif %}
+                <img src="{{ 'assets/public/images/thumb-climate-change.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="o2-icon" viewBox="0 0 1 1"><use xlink:href="#o2" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'La lutte aux <br>changements climatiques'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="thumbs__sidebar">
+            <div class="thumbs__sidebar--inner">
+                <div class="redirect-cta voxpop">
+                    <a class="play-btn" href="{{ 'voxpop'|page }}">
+                        <img src="{{ 'assets/public/images/voxpop-cta.png'|theme }}" alt="">
+                        <span>{{ 'Visionnez les capsules'|_ }}</span>
+                        <svg class="play-icon" viewBox="0 0 1 1"><use xlink:href="#play" /></use></svg>
+                    </a>
+                </div>
+                <div class="redirect-cta quiz">
+                    <div class="quiz__content">
+                        {% if locale == 'fr' %}
+                            <a href="{{ 'quiz'|page }}"><img src="{{ 'assets/public/images/miniquiz-icon.png'|theme }}" alt=""></a>
+                        {% endif %}
+                        {% if locale == 'en' %}
+                            <a href="{{ 'quiz'|page }}"><img src="{{ 'assets/public/images/miniquiz-icon.png'|theme }}" alt=""></a>
+                        {% endif %}
+                        <a class="btn" href="{{ 'quiz' | page }}">
+                            <span style="white-space:nowrap">{{ 'Faites le test !'|_ }}</span>
+                            <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1533224048;s:6:"markup";s:6942:"<div class="content">
+    <div class="container">
+        <div class="grid-full">
+            <h1 class="title">{{ 'Regard sur la forêt'|_ }}</h1>
+        </div>
+    </div>
+    <div class="thumbs">
+        <div class="thumbs__possibilities">
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'foret-naturelle-du-quebec' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                 <a class="thumb" href="{{ 'possibility'|page({ slug: 'quebec-forest-biodiversity' }) }}">
+            {% endif %}
+                <img src="{{ 'assets/public/images/thumb-healthy-resource.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="leaf-icon" viewBox="0 0 1 1"><use xlink:href="#leaf" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'Une forêt naturelle'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'amenagement-forestier-au-quebec' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'quebec-forestry-practices' }) }}">
+            {% endif %}
+                <img src="{{ 'assets/public/images/thumb-practices-evolution.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="sprout-icon" viewBox="0 0 1 1"><use xlink:href="#sprout" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'L\'évolution des <br>pratiques forestières'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'biodiversite-des-territoires-forestiers' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'biodiversity-of-forest-territories' }) }}">
+            {% endif %}
+                <img src="{{ 'assets/public/images/thumb-share-territory.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="team-icon" viewBox="0 0 1 1"><use xlink:href="#team" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'Un territoire partagé'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'developpement-durable-de-la-foret' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'sustainable-development-of-the-forest' }) }}">
+            {% endif %}
+                <img src="{{ 'assets/public/images/thumb-wood-second-life.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="recyc-icon" viewBox="0 0 1 1"><use xlink:href="#recyc" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'Les multiples vies du bois'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'foret-certifiee-au-quebec' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'quebec-certified-forest' }) }}">
+            {% endif %}          
+                <img src="{{ 'assets/public/images/thumb-responsabilities.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="book-icon" viewBox="0 0 1 1"><use xlink:href="#book" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'Responsabilités et <br>certifications'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+
+            {% if locale == 'fr' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'forets-anti-pollution-du-quebec' }) }}">
+            {% endif %}
+            {% if locale == 'en' %}
+                <a class="thumb" href="{{ 'possibility'|page({ slug: 'quebec-anti-pollution-forests' }) }}">
+            {% endif %}
+                <img src="{{ 'assets/public/images/thumb-climate-change.jpg'|theme }}" alt="">
+                <div class="thumb__inner">
+                    <p>
+                        <span class="thumb__icon">
+                            <svg class="o2-icon" viewBox="0 0 1 1"><use xlink:href="#o2" /></use></svg>
+                        </span>
+                        <span class="thumb__title">{{ 'La lutte aux <br>changements climatiques'|_ }}</span>
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="thumbs__sidebar">
+            <div class="thumbs__sidebar--inner">
+                <div class="redirect-cta voxpop">
+                    <a class="play-btn" href="{{ 'voxpop'|page }}">
+                        <img src="{{ 'assets/public/images/voxpop-cta.png'|theme }}" alt="">
+                        <span>{{ 'Visionnez les capsules'|_ }}</span>
+                        <svg class="play-icon" viewBox="0 0 1 1"><use xlink:href="#play" /></use></svg>
+                    </a>
+                </div>
+                <div class="redirect-cta quiz">
+                    <div class="quiz__content">
+                        {% if locale == 'fr' %}
+                            <a href="{{ 'quiz'|page }}"><img src="{{ 'assets/public/images/miniquiz-icon.png'|theme }}" alt=""></a>
+                        {% endif %}
+                        {% if locale == 'en' %}
+                            <a href="{{ 'quiz'|page }}"><img src="{{ 'assets/public/images/miniquiz-icon.png'|theme }}" alt=""></a>
+                        {% endif %}
+                        <a class="btn" href="{{ 'quiz' | page }}">
+                            <span style="white-space:nowrap">{{ 'Faites le test !'|_ }}</span>
+                            <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>";s:4:"code";s:899:"use RainLab\Translate\Classes\Translator;
+
+function onStart()
+{
+    $this['pageClass'] = 'page-possibilities';
+
+    $this->translator = Translator::instance();
+    $locale = $this->translator->getLocale();
+
+    if ($locale == "fr") {
+        $this["pageTitle"] = "Conservation des forêts et de la nature";
+        $this["pageDescription"] = "Trouvez toute l'information que vous cherchez sur notre écosystème forestier, la Loi sur l’aménagement durable du territoire forestier, la transformation des arbres de nos forêts et plus.";
+        $this["pageKeywords"] = "";
+    } else if ($locale == "en") {
+        $this["pageTitle"] = "Forest and nature conservation in Quebec";
+        $this["pageDescription"] = "All the information you are looking for about our forest ecosystem, the Sustainable Forest Development Act, forest management and more.";
+        $this["pageKeywords"] = "";
+    }
+}";s:5:"title";s:19:"possibilities.title";s:3:"url";s:40:"/conservation-des-forets-et-de-la-nature";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"1";}s:7:"viewBag";a:1:{s:9:"localeUrl";a:1:{s:2:"en";s:42:"/forests-and-nature-conservation-in-quebec";}}}}

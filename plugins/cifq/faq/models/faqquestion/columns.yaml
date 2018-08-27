@@ -1,0 +1,20 @@
+columns:
+    firstname:
+        label: Prénom
+        type: text
+    lastname:
+        label: Nom
+        type: text
+    email:
+        label: Courriel
+        type: text
+    city:
+        label: Ville
+        type: text
+    question:
+        label: Question
+        type: text
+        sortable: false
+    created_at:
+        label: Date
+        type: datetime

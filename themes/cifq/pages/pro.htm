@@ -1,0 +1,12 @@
+title = ""
+url = "/pro"
+layout = "default"
+is_hidden = 0
+==
+<?php
+function onStart()
+{
+    return Redirect::away($this['url_partenaires']);
+}
+?>
+==

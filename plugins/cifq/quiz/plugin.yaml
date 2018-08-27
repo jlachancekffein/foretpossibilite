@@ -1,0 +1,11 @@
+plugin:
+    name: 'cifq.quiz::lang.plugin.name'
+    description: 'cifq.quiz::lang.plugin.description'
+    author: cifq
+    icon: oc-icon-bolt
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Quiz
+        url: cifq/quiz/quiz
+        icon: icon-bolt

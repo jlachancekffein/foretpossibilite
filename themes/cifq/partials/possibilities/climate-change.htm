@@ -1,0 +1,30 @@
+[localePicker]
+forceUrl = 1
+
+==
+
+<div class="row" data-right-height>
+    <div class="grid-half" data-right-height-content>
+        <div class="wrap-pics">
+            <img data-animate="true" src="{{ 'assets/public/images/possibilities/pic-climate-change-1.png'|theme }}" alt="">
+        </div>
+    </div>
+    <div class="grid-half" data-right-height-content>
+        {% if locale == 'fr' %}
+            <h2>La lutte aux changements climatiques</h2>
+            <ul>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Les arbres transformés en produits du bois génèrent des gains importants pour l’environnement, car ils continuent de séquestrer le carbone, principal composant des gaz à effet de serre (GES).</li>
+                <li data-animate="true"><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Chaque 1&nbsp;m<sup>3</sup> de forêt en croissance absorbe 1&nbsp;tonne de CO<sub>2</sub>. Les arbres emmagasinent le carbone (C) et libèrent l’oxygène (O<sub>2</sub>), ce qui purifie l’air. Le bois est donc constitué à 50 % de carbone.</li>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg> L’utilisation de 1&nbsp;m<sup>3</sup> de bois de construction permet de retirer 0,9&nbsp;tonne de CO<sub>2</sub> de l'atmosphère.</li>
+            </ul>
+        {% endif %}
+        {% if locale == 'en' %}
+            <h2>The fight against climate change</h2>
+            <ul>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Trees that are processed into wood products generate important benefits for the environment, since they continue to store carbon, which is the main constituent of greenhouse gas.</li>
+                <li data-animate="true"><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Every cubic metre of growing forest absorbs one metric ton of CO<sub>2</sub>.Trees store carbon (C) and release oxygen (O<sub>2</sub>), purifying the air. Wood is composed of 50% carbon.</li>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>One cubic metre of wood used in construction can remove 0.9 metric tons of  CO<sub>2</sub> from the atmosphere</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>

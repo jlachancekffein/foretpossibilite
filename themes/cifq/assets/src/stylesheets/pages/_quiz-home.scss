@@ -1,0 +1,305 @@
+.page-quiz-home {
+
+    .wrapper {
+        background: url('../images/quiz-bg.jpg') no-repeat center;
+        background-size: cover;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: .6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .content {
+            margin-top: -80px;
+            padding-bottom: 60px;
+        }
+
+        .title {
+            display: block;
+            width: 150px;
+            height: 115px;
+            margin: 0 auto;
+            text-indent: -10000px;
+            background: url('../images/mini-quiz-title.svg') no-repeat;
+            background-size: contain;
+            overflow: hidden;
+        }
+
+        p {
+            @include font-size(20);
+            @include font-smoothing('antialiased');
+            text-align: center;
+            width: 40%;
+            margin: 1em auto;
+            line-height: 1.3em;
+        }
+
+        .quiz-link {
+            position: relative;
+            display: block;
+            width: 260px;
+            height: 260px;
+            border: solid 1px $white;
+            text-decoration: none;
+            text-transform: uppercase;
+            @include font-size(22);
+            @include font-smoothing('antialiased');
+            line-height: 1.2em;
+            text-align: center;
+            border-radius: 50%;
+            margin: 20px auto 0;
+            transition: all .2s linear;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 104%;
+                height: 104%;
+                border: dashed 1px $white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                transition: all .2s linear;
+                background-size: cover;
+                background-position: center;
+            }
+
+            &:hover {
+                &:before {
+                    width: 110%;
+                    height: 110%;
+                    // transform: translate(-50%, -50%) rotate(-45deg);
+                    transform: translate(-50%, -50%);
+                    opacity: 1;
+                    animation: rotating 2s linear infinite;
+                }
+            }
+
+            span {
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &#quiz-forest {
+                transform: translateY(-40%);
+                background: url('../images/quiz-home-forest-bg.jpg') no-repeat;
+
+                &:hover {
+                    transform: translateY(-40%) scale(1.05);
+                }
+            }
+
+            &#quiz-foresterie {
+                background: url('../images/quiz-home-foresterie-bg.jpg') no-repeat;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            &#quiz-ecolo {
+                transform: translateY(-40%);
+                background: url('../images/quiz-home-ecolo-bg.jpg') no-repeat;
+
+                &:hover {
+                    transform: translateY(-40%) scale(1.05);
+                }
+            }
+
+            &.active {
+                background: none !important;
+            }
+        }
+
+        .video-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                z-index: 0;
+                transition: all .9s ease-out;
+                overflow: hidden;
+
+                img {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    min-width: 100%;
+                    min-height: 100%;
+                    width: auto;
+                    height: auto;
+                    transform: translate(-50%, -50%);
+                }
+
+                &.active {
+                  opacity: 1;
+                  z-index: 1;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;;
+                    background: rgba(0,0,0,.45);
+                    //z-index: 1;
+                }
+            }
+
+            video {
+                display: block;
+                opacity: 0;
+                position: absolute;
+                // background: black;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                transform: translate(-50%, -50%);
+                z-index: 0;
+                transition: all .4s ease-out;
+
+                &.active {
+                  opacity: 1;
+                  z-index: 1;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;;
+                    background: linear-gradient(to bottom, rgba(0,0,0,0) 43%, rgba(0,0,0,0.55) 79%, rgba(0,0,0,1) 100%);
+                    //z-index: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $bp-large)
+{
+    .page-quiz-home {
+        .wrapper {
+
+            .quiz-link {
+                width: 200px;
+                height: 200px;
+                @include font-size(19);
+
+                &#quiz-forest {
+                    transform: translateY(-20px);
+
+                    &:hover {
+                        transform: translateY(-20px) scale(1.05);
+                    }
+                }
+
+                &#quiz-ecolo {
+                    transform: translateY(-20px);
+
+                    &:hover {
+                        transform: translateY(-20px) scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $bp-medium)
+{
+    .page-quiz-home {
+        .wrapper {
+            .content {
+                margin-top: 0;
+            }
+
+            p {
+                width: 90%;
+            }
+            .quiz-link {
+                width: 90%;
+                height: auto;
+                padding: 20px;
+                border-radius: 0;
+
+                &#quiz-forest {
+                    transform: translateY(0);
+                    background-size: cover;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+
+                &#quiz-foresterie {
+                    background-size: cover;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+
+                &#quiz-ecolo {
+                    transform: translateY(0);
+                    background-size: cover;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+
+                &:before {
+                    content: none;
+                }
+
+                span {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    transform: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotating {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

@@ -1,0 +1,19 @@
+// Calculate ems from pixels
+@function em($pixels, $base: 10) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($base)) {
+    $base: $base * 1px;
+  }
+
+  @return $pixels / $base * 1em;
+}
+
+// Calculate rems from pixels
+// Usage: @include font-size(13);
+@mixin font-size($sizeValue: 16) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 10) + rem;
+}

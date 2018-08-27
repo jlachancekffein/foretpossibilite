@@ -1,0 +1,647 @@
+//
+// STYLES SHARED BETWEEN FAQ AND VOXPOP SECTIONS
+//
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.circle-button {
+    display: inline-block;
+    position: relative;
+    width:  54px;
+    height: 54px;
+    border-radius: 100%;
+    border: 1px solid white;
+    text-align: center;
+
+    background-color: rgba(0,0,0,0.42);
+
+    &:hover {
+        background-color: white;
+        transition: background-color .4s;
+    }
+
+    svg {
+        display: inline-block;
+        width: 18px;
+        height: auto;
+    }
+    &:hover svg * {
+        fill: black !important;
+    }
+}
+a:hover {
+    .circle-button {
+        background-color: white;
+        transition: background-color .4s;
+
+        svg * {
+            fill: black !important;
+        }
+    }
+}
+
+.circle-button__icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.circle-button--question {
+    svg {
+        width: 34px;
+    }
+}
+
+.circle-button--play {
+    svg {
+        width: 24px;
+        margin-left: 2px;
+    }
+}
+
+.circle-button--close {
+    svg {
+        width: 24px;
+        margin-top: 5px;
+    }
+}
+
+.circle-button--eye {
+    svg {
+        width: 33px;
+    }
+}
+
+.cta-button {
+    position: relative;
+    border: 1px solid white;
+    @include font-smoothing('antialiased');
+    @include font-size(20);
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: white;
+        color: black;
+        transition: background-color .4s;
+    }
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
+
+    a {
+        display: block;
+        padding: 5px 15px;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    // The arrow
+    &:hover svg {
+        fill: black;
+    }
+}
+
+.cta-button__icon {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    width: 40px;
+    height: 30px;
+
+    @media screen and (max-width: 519px) {
+        display: none;
+    }
+}
+
+//
+// PAGE LAYOUT
+//
+
+.wrapper {
+    // min-height: 100%;
+    // height: auto;
+
+    background-size: cover;
+
+    &:after {
+        $color_step1: rgba(0,0,0,.4);
+        $color_step2: rgba(0,0,0,.5);
+        $color_step3: rgba(0,0,0,.7);
+        $color_step4: rgba(0,0,0, 1);
+        background: linear-gradient(to bottom, $color_step1 0%, $color_step2 33%, $color_step3 66%, $color_step4 100%);
+
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+}
+
+.content {
+    @include font-size(19);
+
+    @media screen and (min-width: 1180px) {
+        margin-top: -50px;
+    }
+}
+
+//
+// PAGE TITLE
+//
+
+.page__title {
+    margin-bottom: 25px;
+}
+
+// The title text in visible on small screens only
+.page__title-text {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Plantin Std';
+    font-style: italic;
+    @include font-smoothing('antialiased');
+    @include font-size(30);
+
+    @media screen and (min-width: 520px) {
+        display: none;
+    }
+
+    span {
+        display: block;
+    }
+}
+
+// On bigger screens, we use the illustration
+.page__title-img {
+    display: block;
+    max-width: 677px;
+    height: auto;
+    margin: 0 auto;
+
+    @media screen and (max-width: 519px) {
+        display: none;
+    }
+
+    source, img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+//
+// PAGE SUBMENU
+//
+
+.page__menu {
+    @include font-smoothing('antialiased');
+    text-transform: uppercase;
+
+    ul {
+        margin: 0;
+        list-style-type: none;
+        text-align: center;
+
+        @media screen and (max-width: 767px) {
+            text-align: left;
+        }
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 12px;
+        padding: 0;
+        line-height: 1em;
+
+        * {
+            vertical-align: middle;
+        }
+
+        @media screen and (max-width: 767px) {
+            position: relative;
+            left: 5px;
+            display: block;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 359px) {
+            font-size: .9em;
+        }
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .circle-button {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .page__menu-text {
+        border-bottom: 1px solid white;
+    }
+
+    .page__menu-separator {
+        width: 2px;
+        height: .9em;
+        border: none;
+    }
+}
+
+//
+// MAIN CONTENT (CAROUSEL)
+//
+
+[data-fade-in-element] {
+    opacity: 0;
+}
+
+.page__content {
+    padding-bottom: 60px;
+
+    //// Carousel Arrows ////
+
+    .switcher {
+        position: relative;
+        margin-top:    65px;
+        margin-bottom: 45px;
+
+        @media screen and (max-width: 519px) {
+            margin-top:    35px;
+            margin-bottom: 35px;
+        }
+    }
+
+    .switcher__arrow {
+        display: block;
+        width:  45px;
+        height: 45px;
+        cursor: pointer;
+    }
+
+    .switcher__arrow--right {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    //// Carousel Slides ////
+
+    .slide {
+        position: relative;
+        width: (1136px/3);
+        padding-right: 40px;
+
+        @media screen and (max-width: 519px) {
+            padding-right: 0;
+        }
+    }
+
+    .slide--last {
+        padding-right: 0;
+    }
+
+    .slide__number {
+        padding-top: 0;
+        margin-bottom: 10px;
+        @include font-smoothing('antialiased');
+        @include font-size(26);
+    }
+
+    .slide__tool {
+        position: absolute;
+        top: 0;
+        right: 50px;
+        width: 260px;
+        height: 34px;
+        text-align: center;
+        @include font-smoothing('antialiased');
+
+        @media screen and (max-width: 519px) {
+            right: 2px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 122px;
+            height: 50%;
+            border-left: 1px solid white;
+            border-bottom: 1px solid white;
+            border-bottom-left-radius: 10px;
+
+            @media screen and (max-width: 519px) {
+                display: none;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: block;
+            width: 122px;
+            height: 50%;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            border-bottom-right-radius: 10px;
+
+            @media screen and (max-width: 519px) {
+                display: none;
+            }
+        }
+    }
+
+    .slide__tip {
+        position: absolute;
+        top: calc(100% - 5px);
+        left: 50%;
+        display: block;
+        width:  10px;
+        height: 10px;
+        border-right:  1px solid white;
+        border-bottom: 1px solid white;
+        transform: translateX(-50%) rotate(45deg);
+
+        @media screen and (max-width: 519px) {
+            display: none;
+        }
+    }
+
+    .slide__name {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0 5px;
+        padding-top: 2px;
+        border: 1px solid white;
+        border-bottom: 0;
+        border-radius: 10px;
+        white-space: nowrap;
+        font-size: .9em;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        @media screen and (max-width: 519px) {
+            top: 11px;
+            padding-top: 0;
+            border: none;
+            text-align: right;
+            font-size: .8em;
+        }
+    }
+
+    .slide__title {
+        padding: 0;
+        margin: 0;
+        padding-right: 1em;
+        margin-bottom: 10px;
+        line-height: 1.25em;
+        font-family: 'Plantin Std';
+        font-style: italic;
+        @include font-smoothing('antialiased');
+        @include font-size(28);
+
+        @media screen and (max-width: 519px) {
+            padding-right: 0;
+            @include font-size(26);
+        }
+    }
+
+    .slide__text {
+        line-height: 1.45em;
+        font-family: 'Plantin Std';
+        font-style: normal;
+        @include font-smoothing('antialiased');
+        @include font-size(16);
+
+        a {
+            display: inline;
+
+            @media screen and (max-width: 767px) {
+                display: block;
+                margin-top: 10px;
+            }
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            padding-bottom: 20px;
+        }
+    }
+
+    .slide__full {
+        display: none;
+    }
+
+    .slide--text {
+        @media screen and (min-width: 768px) {
+            padding-left: 5px;
+        }
+    }
+
+    .slide--cta {
+        .cta {
+            position: relative;
+            padding: 50px 30px 30px 30px;
+            border: 1px solid white;
+            border-bottom: 0;
+
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 30px;
+                height: 10px;
+                border-bottom: 1px solid white;
+            }
+            &::after {
+                left: auto;
+                right: 0;
+            }
+        }
+
+        .cta-button {
+            position: relative;
+            margin-top: -10px;
+            top: 30px;
+            transform: translateY(50%);
+        }
+
+        .slide__title {
+            padding: 0;
+
+            @media screen and (max-width: 767px) {
+                text-align: center;
+            }
+        }
+    }
+
+    .slide--cta-video {
+        .cta {
+            display: block;
+            padding: 15px;
+            border-bottom: 1px solid white;
+            text-decoration: none;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+        .cta__inner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            border: 1px solid white;
+            background-color: black;
+        }
+
+        .cta__image {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            border: 1px solid white;
+            background-size: cover;
+        }
+
+        .cta__overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            text-align: center;
+        }
+
+        .cta__content-text {
+            @include font-smoothing('antialiased');
+            text-transform: uppercase;
+
+            span {
+                display: inline;
+                border-bottom: 1px solid white;
+                line-height: 1em;
+            }
+        }
+
+        .circle-button--play {
+            svg {
+                margin-top: 6px;
+            }
+        }
+    }
+
+    .slick-list,
+    .slick-slide {
+        outline: none !important;
+    }
+}
+
+//
+// FAQ LIGHTBOX
+//
+
+.faq-lightbox {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    border: 20px solid white;
+
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        padding: 50px;
+        background-color: rgba(0,0,0,.8);
+        border: 1px solid white;
+
+        @media screen and (max-width: 767px) {
+            padding: 30px 30px 50px;
+        }
+    }
+
+    .cta-button {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        min-width: 270px;
+        background-color: black;
+        transform: translate(-50%, -50%);
+
+        &:hover {
+            background-color: white;
+        }
+    }
+}
+
+// Lightbox visibility
+body.faq-lightbox--is-visible {
+    header {
+        z-index: 1;
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+
+        .header {
+            z-index: 1;
+        }
+
+        .faq-lightbox {
+            // display: block;
+            border: none;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            padding: 50px 10px;
+            overflow-y: scroll;
+        }
+    }
+}
+
+.faq-lightbox__close {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 38px;
+    height: 38px;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    cursor: pointer;
+}

@@ -1,0 +1,69 @@
+.page-voxpop {
+
+    @import 'faq_shared';
+
+    .wrapper {
+        background: url('../images/faq-bg.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    //
+    // Carousel with video CTA slides
+    //
+
+    .page__content {
+        padding-bottom: 0;
+
+        // Vertically align the carousel with the one from FAQ
+        .carousel {
+            position: relative;
+            top: -30px;
+        }
+
+        .slick-track {
+            padding: 30px 0;
+        }
+
+        .slide--cta-video {
+            margin-left: 4px;
+
+            // No transition on small screens
+            @media screen and (min-width: 800px) {
+                .cta-wrap {
+                    padding: 10px;
+                    transition: all .2s;
+
+                    .cta__image {
+                        height: 280px;
+                        transition: all .2s;
+                    }
+
+                    &:hover {
+                        padding: 0;
+
+                        .cta__image {
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 359px) {
+                .cta-wrap {
+                    .cta__image {
+                        height: 250px;
+                    }
+                }
+            }
+        }
+    }
+
+    .faq-lightbox--video .container {
+        padding: 10px;
+    }
+
+    .faq-lightbox__close {
+        z-index: 10;
+    }
+
+} // .page-voxpop

@@ -1,0 +1,16 @@
+==
+use Cms\Classes\Theme;
+
+function onStart()
+{
+    $this['SVG_SPRITE'] = '';
+
+    $icons_path = Theme::getActiveTheme()->getPath() . '/assets/public/images/icons.svg';
+    if ( file_exists($icons_path) ) {
+        $this['SVG_SPRITE'] = file_get_contents($icons_path);
+    }
+}
+==
+<div style="display: none;">
+    {{ SVG_SPRITE | raw }}
+</div>

@@ -1,0 +1,11 @@
+columns:
+    name:
+        label: Quiz
+        type: text
+        sortable: true
+    result:
+        label: Résultat
+        type: text
+    score:
+        label: Score
+        type: text

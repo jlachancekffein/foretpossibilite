@@ -1,0 +1,54 @@
+1533209318a:1:{s:33:"possibilities/share-territory.htm";a:6:{s:8:"fileName";s:33:"possibilities/share-territory.htm";s:7:"content";s:2451:"[localePicker]
+forceUrl = 1
+
+==
+
+<div class="row" data-right-height>
+    <div class="grid-half" data-right-height-content>
+        <div class="wrap-pics">
+            <img data-animate="true" src="{{ 'assets/public/images/possibilities/pic-share-territory-2.png'|theme }}" alt="">
+        </div>
+    </div>
+    <div class="grid-half" data-right-height-content>
+        {% if locale == 'fr' %}
+            <h2>Un territoire partagé</h2>
+            <ul>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Dans les forêts publiques québécoises, il n’est pas rare de voir plus d’une dizaine de types d’utilisateurs interagir sur un même territoire. En effet, chasseurs, villégiateurs, randonneurs et travailleurs forestiers se côtoient quotidiennement, créant une dynamique unique au monde.</li>
+                <li data-animate="true"><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Au Québec, 90 % du territoire forestier est public. L’harmonisation des usages est donc une condition essentielle au maintien de l’ensemble des activités en forêt.</li>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg> Les forêts privées représentent 8 % du territoire et appartiennent à plus de 130 000 propriétaires – des acteurs importants dans le paysage forestier.</li>
+            </ul>
+        {% endif %}
+        {% if locale == 'en' %}
+            <h2>A shared territory</h2>
+            <ul>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>In Quebec’s public forests, it is common to see ten or more different users interacting in the same area. Hunters, tourists, hikers and forestry workers cross paths every day, creating a truly unique dynamic.</li>
+                <li data-animate="true"><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>In Quebec, 90% of the forest is publicly owned. Harmonization of use is therefore essential if activities are to be maintained in the forest.</li>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>The private forests account for 8% of Québec’s forest land. They belong to more than 130,000 owners who are important stakeholders in the forest landscape.</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>";s:5:"mtime";i:1513354190;s:6:"markup";s:2418:"<div class="row" data-right-height>
+    <div class="grid-half" data-right-height-content>
+        <div class="wrap-pics">
+            <img data-animate="true" src="{{ 'assets/public/images/possibilities/pic-share-territory-2.png'|theme }}" alt="">
+        </div>
+    </div>
+    <div class="grid-half" data-right-height-content>
+        {% if locale == 'fr' %}
+            <h2>Un territoire partagé</h2>
+            <ul>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Dans les forêts publiques québécoises, il n’est pas rare de voir plus d’une dizaine de types d’utilisateurs interagir sur un même territoire. En effet, chasseurs, villégiateurs, randonneurs et travailleurs forestiers se côtoient quotidiennement, créant une dynamique unique au monde.</li>
+                <li data-animate="true"><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Au Québec, 90 % du territoire forestier est public. L’harmonisation des usages est donc une condition essentielle au maintien de l’ensemble des activités en forêt.</li>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg> Les forêts privées représentent 8 % du territoire et appartiennent à plus de 130 000 propriétaires – des acteurs importants dans le paysage forestier.</li>
+            </ul>
+        {% endif %}
+        {% if locale == 'en' %}
+            <h2>A shared territory</h2>
+            <ul>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>In Quebec’s public forests, it is common to see ten or more different users interacting in the same area. Hunters, tourists, hikers and forestry workers cross paths every day, creating a truly unique dynamic.</li>
+                <li data-animate="true"><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>In Quebec, 90% of the forest is publicly owned. Harmonization of use is therefore essential if activities are to be maintained in the forest.</li>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>The private forests account for 8% of Québec’s forest land. They belong to more than 130,000 owners who are important stakeholders in the forest landscape.</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>";s:4:"code";N;s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"1";}}}

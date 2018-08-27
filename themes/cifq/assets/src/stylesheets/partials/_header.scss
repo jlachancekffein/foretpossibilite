@@ -1,0 +1,190 @@
+.header {
+    position: relative;
+    padding: 26px 0;
+    z-index: 3;
+}
+
+.header__logo {
+    display: block;
+    width: 166px;
+    height: 124px;
+    background: url('../images/cifq-logo.svg') no-repeat;
+    background-size: contain;
+    // @include image-2x('../images/cifq-logo-2x.png', 132px, 74px);
+    text-indent: -10000px;
+    overflow: hidden;
+}
+
+.header__wrap-links {
+    float: right;
+}
+
+.header__menu {
+    display: inline-block;
+    // float: right;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include font-size(18);
+
+    span:first-of-type {
+        display: table-cell;
+        padding-right: 23px;
+    }
+
+    div {
+        display: table-cell;
+    }
+
+    .burger-icon {
+        &.burger-icon--x {
+            span {
+                &:before {
+
+                }
+
+                &:after {
+
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .burger-icon {
+            span {
+                &:before {
+                    transform: translateY(-100%);
+                }
+
+                &:after {
+                    transform: translateY(100%);
+                }
+            }
+
+            &.burger-icon--x {
+                span {
+                    &:before {
+                        transform: translate(0, 8px) rotate(-45deg)
+                    }
+
+                    &:after {
+                        transform: translate(0, -8px) rotate(45deg)
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header__secondary-links {
+    display: inline-block;
+    padding-right: 10px;
+    a {
+        position: relative;
+        display: table;
+        @include font-size(18);
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background: $white;
+            bottom: 0;
+            transition: width 0.5s;
+        }
+
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+}
+.header__secondary-links + .header__secondary-links {
+  position: relative;
+  padding-left: 10px;
+  &:before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 15px;
+    background: $white;
+    position: absolute;
+    top: 53%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.header__social-menu {
+    position: relative;
+    display: inline-block;
+    margin-right: 80px;
+    padding-left: 10px;
+
+    &:before {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 15px;
+        background: $white;
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    a {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin: 0 3px;
+    }
+}
+
+@media screen and (max-width: $bp-large) {
+    .header__wrap-links {
+        // margin-left: -20px;
+    }
+}
+
+@media screen and (max-width: $bp-large)
+{
+    .header {
+        padding-top: 10px;
+    }
+
+    .header__logo {
+        width: 122px;
+        height: 96px;
+    }
+
+    .header__menu {
+        position: absolute;
+        right: 6%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .header__wrap-links {
+        margin-left: 0;
+    }
+
+    .header__social-menu {
+        margin-right: 0;
+
+        a {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .header__secondary-links {
+        a {
+            @include font-size(14);
+        }
+    }
+}

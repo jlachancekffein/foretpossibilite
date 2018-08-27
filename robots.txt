@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /backend/
+
+
+# Sitemaps
+Sitemap: http://www.uneforetdepossibilites.com/sitemap.xml

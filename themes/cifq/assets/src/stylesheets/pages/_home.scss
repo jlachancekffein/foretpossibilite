@@ -1,0 +1,287 @@
+.page-home {
+
+    .wrapper {
+        background: url('../images/forest.jpg') no-repeat center;
+        background-size: cover;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: .3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    }
+
+    .cifq-logo {
+        display: block;
+        width: 36%;
+        max-width: 660px;
+        margin: 0 auto;
+        transition: opacity .1s linear;
+
+        &.hidden {
+          opacity: 0;
+        }
+    }
+
+    .home__introduction {
+      width: 66%;
+      margin: 20px auto 40px;
+      text-align: center;
+
+      p {
+        margin: 0;
+        text-align: center;
+        @include font-size(22);
+        @include font-smoothing('antialiased');
+        visibility: hidden;
+      }
+
+      .btn--cta {
+        margin-top: 50px;
+        visibility: hidden;
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    .home__main-menu {
+        padding-top: 70px;
+        display: none;
+        position: fixed;
+        bottom: 1%;
+        width: 100%;
+        // visibility: hidden;
+
+        .home-cta {
+            display: block;
+            font-family: 'Plantin Std';
+            font-style: italic;
+            @include font-smoothing('antialiased');
+            @include font-size(33);
+            text-align: center;
+            text-decoration: none;
+            transition: all .2s linear;
+            visibility: hidden;
+
+            span {
+                display: inline-block;
+                position: relative;
+                margin: 0 auto;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 1px;
+                    background: $white;
+                    opacity: .9;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 14%;
+                    transform: translateX(-50%);
+                    transition: width .2s ease-out;
+                }
+            }
+
+            &:hover {
+                span {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &.visible {
+          display: block;
+        }
+
+        .footer-text {
+            @include font-size(20);
+            @include font-smoothing('antialiased');
+            text-align: center;
+            padding-top: 46px;
+        }
+    }
+
+    // .video-wrap {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     overflow: hidden;
+    //
+    //     video, div {
+    //         display: block;
+    //         opacity: 0;
+    //         position: absolute;
+    //         // background: black;
+    //         top: 50%;
+    //         left: 50%;
+    //         min-width: 100%;
+    //         min-height: 100%;
+    //         width: auto;
+    //         height: auto;
+    //         transform: translate(-50%, -50%);
+    //         z-index: 0;
+    //         transition: all .4s ease-out;
+    //
+    //         &.active {
+    //           opacity: 1;
+    //           z-index: 1;
+    //         }
+    //
+    //         &:after {
+    //             content: '';
+    //             position: absolute;
+    //             top: 0;
+    //             left: 0;
+    //             width: 100%;
+    //             height: 100%;;
+    //             background: linear-gradient(to bottom, rgba(0,0,0,0) 43%, rgba(0,0,0,0.55) 79%, rgba(0,0,0,1) 100%);
+    //             //z-index: 1;
+    //         }
+    //     }
+    // }
+
+    .video-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 0;
+            transition: all .9s ease-out;
+            overflow: hidden;
+
+            img {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                transform: translate(-50%, -50%);
+            }
+
+            &.active {
+              opacity: 1;
+              z-index: 1;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;;
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 43%, rgba(0,0,0,0.45) 79%, rgba(0,0,0,.65) 100%);
+                //z-index: 1;
+            }
+        }
+
+        video {
+            display: block;
+            opacity: 0;
+            position: absolute;
+            // background: black;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            transition: all .4s ease-out;
+
+            &.active {
+              opacity: 1;
+              z-index: 1;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;;
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 43%, rgba(0,0,0,0.55) 79%, rgba(0,0,0,1) 100%);
+                //z-index: 1;
+            }
+        }
+    }
+
+}
+
+@media (max-width: $bp-large)
+{
+    .page-home {
+
+        .home__introduction {
+            p {
+                @include font-size(20);
+            }
+        }
+
+        .home__main-menu {
+            .home-cta {
+                @include font-size(28);
+            }
+        }
+    }
+}
+
+@media (max-width: $bp-medium)
+{
+    .page-home {
+        .cifq-logo {
+            width: 70%;
+        }
+
+        .home__introduction {
+            width: 90%;
+
+            p {
+                @include font-size(16);
+            }
+        }
+
+        .home__main-menu {
+            position: relative;
+            bottom: auto;
+            padding-top: 35px;
+
+            .home-cta {
+                margin: 20px 0;
+            }
+
+            .footer-text {
+                @include font-size(16);
+            }
+        }
+    }
+}

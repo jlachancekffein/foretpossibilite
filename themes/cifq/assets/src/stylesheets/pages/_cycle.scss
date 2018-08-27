@@ -1,0 +1,324 @@
+.page-cycle {
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding: 0;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    // PAGE LAYOUT
+    //
+
+    // Fix horizontal overflow
+    .simplebar-content { overflow-x: hidden; overflow-y: auto; }
+    .wrapper { overflow-x: hidden; }
+
+    .wrapper {
+        // min-height: 100%;
+        // height: auto;
+
+        position: relative;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+
+        // Preload first slide
+        background-image: url('../images/cycle-bg-co2_hi.jpg');
+    }
+
+    .wrapper__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    // Slide backgrounds //
+
+    .wrapper__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity .8s;
+    }
+
+    .wrapper__item--is-current {
+        opacity: 1;
+        transition: opacity 1.2s;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    // PAGE TITLE
+    //
+
+    .page__title {
+        margin-bottom: 25px;
+    }
+
+    // The title text in visible on small screens only
+    .page__title-text {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-weight: 400;
+        font-family: 'Plantin Std';
+        font-style: italic;
+        @include font-smoothing('antialiased');
+        @include font-size(30);
+
+        @media screen and (min-width: 520px) {
+            display: none;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    // On bigger screens, we use the illustration
+    .page__title-img {
+        display: block;
+        max-width: 366px;
+        height: auto;
+        margin: 0 auto;
+
+        @media screen and (max-width: 519px) {
+            display: none;
+        }
+
+        source, img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    // PAGE CONTENT (CAROUSEL WITH CIRCLE IMAGES)
+    //
+
+    [data-fade-in-element] {
+        opacity: 0;
+    }
+
+    .content {
+        @include font-size(19);
+
+        @media screen and (min-width: 900px) {
+            margin-top: -70px;
+        }
+    }
+
+    .page__content {
+        padding-bottom: 40px;
+
+        @media screen and (min-width: 1500px) {
+            margin-top: 80px;
+        }
+
+        // Circles //
+
+        .circles {
+            position: relative;
+            min-height: 350px;
+            text-align: center;
+
+            @media screen and (max-width: 767px) {
+                min-height: 190px;
+            }
+        }
+
+        .circle {
+            position: relative;
+            display: inline-block;
+            opacity: 1;
+            transition: opacity .8s;
+        }
+
+        .circle--left {
+            position: absolute;
+            top: 130px;
+            left: -200px;
+            cursor: pointer;
+
+            @media screen and (max-width: 767px) {
+                top: 0;
+                left: -80px;
+            }
+        }
+
+        .circle--right {
+            position: absolute;
+            top: 50px;
+            right: -200px;
+            cursor: pointer;
+
+            @media screen and (max-width: 767px) {
+                top: 0;
+                right: -80px;
+            }
+        }
+
+        .circle--is-hidden {
+            opacity: 0;
+            transition: opacity .8s;
+            cursor: auto;
+        }
+
+        .circle__image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: auto;
+            max-width: 380px;
+            height: auto;
+            opacity: 0;
+
+            @media screen and (max-width: 767px) {
+                max-width: 200px;
+            }
+
+            &:first-child {
+                position: relative !important;
+            }
+        }
+        .circle--left,
+        .circle--right {
+            .circle__image {
+                @media screen and (max-width: 767px) {
+                    max-width: 120px;
+                    top: 24px;
+                }
+            }
+        }
+
+        .circle__image--is-visible {
+            opacity: 1;
+        }
+
+        .circle__image--is-previous {
+            opacity: 0;
+        }
+
+        .circle__image--is-current {
+            opacity: 0;
+        }
+
+        // Adjust single images
+        .circle__image--co2 {}
+        .circle__image--transformation {}
+        .circle__image--produits {}
+        .circle__image--revalorisation {}
+        .circle__image--carbone {}
+        .circles--direction-next {}
+        .circles--direction-prev {}
+        .circle__image--recolte {
+            @media screen and (min-width: 768px) {
+                left: 5px;
+            }
+        }
+
+        // Carousel //
+
+        .carousel-wrap {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-left:  150px;
+            padding-right: 150px;
+
+            @media screen and (max-width: 767px) {
+                padding-left:  0;
+                padding-right: 0;
+            }
+        }
+
+        .switcher {
+            position: absolute;
+            top: 66px;
+            left: 0;
+            width: 100%;
+
+            @media screen and (max-width: 767px) {
+                top: -55px;
+            }
+        }
+
+        .switcher__arrow {
+            display: block;
+            width:  45px;
+            height: 45px;
+            cursor: pointer;
+        }
+
+        .switcher__arrow--left {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @media screen and (max-width: 1300px) {
+                left: 30px;
+            }
+            @media screen and (max-width: 767px) {
+                left: -5px;
+            }
+        }
+
+        .switcher__arrow--right {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            @media screen and (max-width: 1300px) {
+                right: 30px;
+            }
+            @media screen and (max-width: 767px) {
+                right: -5px;
+            }
+        }
+
+        .slide__number {
+            display: inline-block;
+            margin-right: 15px;
+            line-height: 1.25em;
+            @include font-smoothing('antialiased');
+            @include font-size(26);
+        }
+
+        .slide__title {
+            display: inline;
+            line-height: 1.25em;
+            font-family: 'Plantin Std';
+            font-style: italic;
+            @include font-smoothing('antialiased');
+            @include font-size(30);
+        }
+
+        .slide__body {
+            padding-top: 15px;
+            line-height: 1.35em;
+            font-family: 'Plantin Std';
+            @include font-smoothing('antialiased');
+            @include font-size(18);
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        .slick-list,
+        .slick-slide {
+            outline: none !important;
+        }
+    }
+
+} // .page-cycle

@@ -1,0 +1,156 @@
+1535385127a:1:{s:13:"quiz-home.htm";a:11:{s:8:"fileName";s:13:"quiz-home.htm";s:7:"content";s:3693:"title = "quiz-home.title"
+url = "/conservation-des-forets-et-de-la-nature/quiz-sur-la-sylviculture"
+layout = "default"
+is_hidden = 0
+
+[localePicker]
+forceUrl = 1
+
+[viewBag]
+localeUrl[en] = "/forests-and-nature-conservation-in-quebec/silviculture-quiz"
+
+==
+use RainLab\Translate\Classes\Translator;
+
+function onStart()
+{
+    $this['pageClass'] = 'page-quiz-home';
+
+    $this->translator = Translator::instance();
+    $locale = $this->translator->getLocale();
+
+    if ($locale == "fr") {
+        $this["pageTitle"] = "Quiz sur la sylviculture";
+        $this["pageDescription"] = "Vérifiez votre niveau de connaissance de nos forêts : leurs bienfaits, leur exploitation, l'aménagement durable du territoire et les produits de la transformation des arbres.";
+        $this["pageKeywords"] = "";
+    } else if ($locale == "en") {
+        $this["pageTitle"] = "Silviculture quiz";
+        $this["pageDescription"] = "Test your knowledge about our forests : their benefits, their exploitation, the sustainable management of the territory and wood processing products.";
+        $this["pageKeywords"] = "";
+    }
+}
+==
+
+<div class="video-wrap">
+    <div id="vid-quiz-forest"><img src="{{ 'assets/public/images/quiz-foret-quebecoise-bg.jpg'|theme }}" alt=""></div>
+    <div id="vid-quiz-foresterie"><img src="{{ 'assets/public/images/quiz-foresterie-bg.jpg'|theme }}" alt=""></div>
+    <div id="vid-quiz-ecolo"><img src="{{ 'assets/public/images/quiz-bois-ecolo-bg.jpg'|theme }}" alt=""></div>
+</div>
+
+{% if locale == 'fr' %}
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="grid-full">
+                <h1 class="title">Mini Quiz</h1>
+                <p>Êtes-vous un bûcheron dans l’âme ou plutôt un forestier de salon? Testez votre niveau de connaissance de la forêt québécoise avec ces miniquiz!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid-third">
+                <a id="quiz-forest" class="quiz-link" href="{{ 'quiz'|page({ slug: 'foret-quebecoise' }) }}"><span>Connaissez-vous<br>la forêt québécoise?</span></a>
+            </div>
+            <div class="grid-third">
+                <a id="quiz-foresterie" class="quiz-link" href="{{ 'quiz'|page({ slug: 'foresterie' }) }}"><span>La foresterie : <br>Testez vos connaissances!</span></a>
+            </div>
+            <div class="grid-third">
+                <a id="quiz-ecolo" class="quiz-link" href="{{ 'quiz'|page({ slug: 'bois-ecolo' }) }}"><span>Écolo, le bois?</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% if locale == 'en' %}
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="grid-full">
+                <h1 class="title">Mini Quiz</h1>
+                <p>Are you a born lumberjack or an armchair forester? Take our mini-quiz to test your knowledge of Québec’s forests!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid-third">
+                <a id="quiz-forest" class="quiz-link" href="{{ 'quiz'|page({ slug: 'quebec-forests' }) }}"><span>How much do you know<br>about Québec’s forests?</span></a>
+            </div>
+            <div class="grid-third">
+                <a id="quiz-foresterie" class="quiz-link" href="{{ 'quiz'|page({ slug: 'forestery' }) }}"><span>Forestry : <br>Test your knowledge!</span></a>
+            </div>
+            <div class="grid-third">
+                <a id="quiz-ecolo" class="quiz-link" href="{{ 'quiz'|page({ slug: 'wood-ecological' }) }}"><span>Is wood an ecological material?</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}";s:5:"mtime";i:1533224048;s:6:"markup";s:2578:"<div class="video-wrap">
+    <div id="vid-quiz-forest"><img src="{{ 'assets/public/images/quiz-foret-quebecoise-bg.jpg'|theme }}" alt=""></div>
+    <div id="vid-quiz-foresterie"><img src="{{ 'assets/public/images/quiz-foresterie-bg.jpg'|theme }}" alt=""></div>
+    <div id="vid-quiz-ecolo"><img src="{{ 'assets/public/images/quiz-bois-ecolo-bg.jpg'|theme }}" alt=""></div>
+</div>
+
+{% if locale == 'fr' %}
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="grid-full">
+                <h1 class="title">Mini Quiz</h1>
+                <p>Êtes-vous un bûcheron dans l’âme ou plutôt un forestier de salon? Testez votre niveau de connaissance de la forêt québécoise avec ces miniquiz!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid-third">
+                <a id="quiz-forest" class="quiz-link" href="{{ 'quiz'|page({ slug: 'foret-quebecoise' }) }}"><span>Connaissez-vous<br>la forêt québécoise?</span></a>
+            </div>
+            <div class="grid-third">
+                <a id="quiz-foresterie" class="quiz-link" href="{{ 'quiz'|page({ slug: 'foresterie' }) }}"><span>La foresterie : <br>Testez vos connaissances!</span></a>
+            </div>
+            <div class="grid-third">
+                <a id="quiz-ecolo" class="quiz-link" href="{{ 'quiz'|page({ slug: 'bois-ecolo' }) }}"><span>Écolo, le bois?</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% if locale == 'en' %}
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="grid-full">
+                <h1 class="title">Mini Quiz</h1>
+                <p>Are you a born lumberjack or an armchair forester? Take our mini-quiz to test your knowledge of Québec’s forests!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid-third">
+                <a id="quiz-forest" class="quiz-link" href="{{ 'quiz'|page({ slug: 'quebec-forests' }) }}"><span>How much do you know<br>about Québec’s forests?</span></a>
+            </div>
+            <div class="grid-third">
+                <a id="quiz-foresterie" class="quiz-link" href="{{ 'quiz'|page({ slug: 'forestery' }) }}"><span>Forestry : <br>Test your knowledge!</span></a>
+            </div>
+            <div class="grid-third">
+                <a id="quiz-ecolo" class="quiz-link" href="{{ 'quiz'|page({ slug: 'wood-ecological' }) }}"><span>Is wood an ecological material?</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}";s:4:"code";s:854:"use RainLab\Translate\Classes\Translator;
+
+function onStart()
+{
+    $this['pageClass'] = 'page-quiz-home';
+
+    $this->translator = Translator::instance();
+    $locale = $this->translator->getLocale();
+
+    if ($locale == "fr") {
+        $this["pageTitle"] = "Quiz sur la sylviculture";
+        $this["pageDescription"] = "Vérifiez votre niveau de connaissance de nos forêts : leurs bienfaits, leur exploitation, l'aménagement durable du territoire et les produits de la transformation des arbres.";
+        $this["pageKeywords"] = "";
+    } else if ($locale == "en") {
+        $this["pageTitle"] = "Silviculture quiz";
+        $this["pageDescription"] = "Test your knowledge about our forests : their benefits, their exploitation, the sustainable management of the territory and wood processing products.";
+        $this["pageKeywords"] = "";
+    }
+}";s:5:"title";s:15:"quiz-home.title";s:3:"url";s:65:"/conservation-des-forets-et-de-la-nature/quiz-sur-la-sylviculture";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"1";}s:7:"viewBag";a:1:{s:9:"localeUrl";a:1:{s:2:"en";s:60:"/forests-and-nature-conservation-in-quebec/silviculture-quiz";}}}}

@@ -1,0 +1,100 @@
+<IfModule mod_rewrite.c>
+
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+	##
+	## Allow robots.txt
+	##
+	RewriteRule ^robots.txt - [L]
+	RewriteRule pchuhdgakv95zsxkiep22ve5qgxaw6.html - [L]
+
+  ##
+  ## You may need to uncomment the following line for some hosting environments,
+  ## if you have installed to a subdirectory, enter the name here also.
+  ##
+  # RewriteBase /
+
+  ##
+  ## Allow documents
+  ##
+  RewriteRule \.zip$ - [L]
+
+  ##
+  ## Black listed folders
+  ##
+  RewriteRule ^bootstrap/.* index.php [L,NC]
+  RewriteRule ^config/.* index.php [L,NC]
+  RewriteRule ^vendor/.* index.php [L,NC]
+  RewriteRule ^storage/cms/.* index.php [L,NC]
+  RewriteRule ^storage/logs/.* index.php [L,NC]
+  RewriteRule ^storage/framework/.* index.php [L,NC]
+  RewriteRule ^storage/temp/protected/.* index.php [L,NC]
+  RewriteRule ^storage/app/uploads/protected/.* index.php [L,NC]
+
+  ##
+  ## White listed folders
+  ##
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteCond %{REQUEST_FILENAME} !/.well-known/*
+  RewriteCond %{REQUEST_FILENAME} !/storage/app/uploads/.*
+  RewriteCond %{REQUEST_FILENAME} !/storage/app/media/.*
+  RewriteCond %{REQUEST_FILENAME} !/storage/temp/public/.*
+  RewriteCond %{REQUEST_FILENAME} !/themes/.*/(assets|resources)/.*
+  RewriteCond %{REQUEST_FILENAME} !/plugins/.*/(assets|resources)/.*
+  RewriteCond %{REQUEST_FILENAME} !/modules/.*/(assets|resources)/.*
+  RewriteRule !^index.php index.php [L,NC]
+
+  ##
+  ## Block all PHP files, except index
+  ##
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteCond %{REQUEST_FILENAME} \.php$
+  RewriteRule !^index.php index.php [L,NC]
+
+  ##
+  ## Standard routes
+  ##
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^ index.php [L]
+
+##
+## Redirections 301
+##
+Options +FollowSymLinks
+redirect 301 /fr/quiz/foret-quebecoise /fr/conservation-des-forets-et-de-la-nature/quiz-sur-la-sylviculture/foret-quebecoise
+redirect 301 /fr/quiz/foresterie /fr/conservation-des-forets-et-de-la-nature/quiz-sur-la-sylviculture/foresterie
+redirect 301 /fr/quiz/bois-ecolo /fr/conservation-des-forets-et-de-la-nature/quiz-sur-la-sylviculture/bois-ecolo
+redirect 301 /fr/quiz /fr/conservation-des-forets-et-de-la-nature/quiz-sur-la-sylviculture
+redirect 301 /fr/questions-environnementales-forestieres/videos /fr/faq-sur-les-forets-du-quebec/videos-sur-les-forets-du-quebec
+redirect 301 /fr/questions-environnementales-forestieres /fr/faq-sur-les-forets-du-quebec
+redirect 301 /fr/parcours-arbre /fr/les-arbres-sa-croissance-sa-recolte-sa-transformation
+redirect 301 /fr/industrie-forestiere-quebec/vie-du-bois-recycle /fr/conservation-des-forets-et-de-la-nature/developpement-durable-de-la-foret
+redirect 301 /fr/industrie-forestiere-quebec/territoire-forestier /fr/conservation-des-forets-et-de-la-nature/biodiversite-des-territoires-forestiers
+redirect 301 /fr/industrie-forestiere-quebec/responsabilites-et-certifications /fr/conservation-des-forets-et-de-la-nature/foret-certifiee-au-quebec
+redirect 301 /fr/industrie-forestiere-quebec/pratiques-forestieres /fr/conservation-des-forets-et-de-la-nature/amenagement-forestier-au-quebec
+redirect 301 /fr/industrie-forestiere-quebec/lutte-aux-changements-climatiques /fr/conservation-des-forets-et-de-la-nature/forets-anti-pollution-du-quebec
+redirect 301 /fr/industrie-forestiere-quebec/biodiversite-des-forets-naturelles /fr/conservation-des-forets-et-de-la-nature/foret-naturelle-du-quebec
+redirect 301 /fr/industrie-forestiere-quebec /fr/conservation-des-forets-et-de-la-nature
+redirect 301 /en/what-happens-to-tree /en/Trees-regeneration-harvesting-processing
+redirect 301 /en/quiz/wood-ecological /en/forests-and-nature-conservation-in-quebec/silviculture-quiz/wood-ecological
+redirect 301 /en/quiz/quebec-forests /en/forests-and-nature-conservation-in-quebec/silviculture-quiz/quebec-forests
+redirect 301 /en/quiz/forestery /en/forests-and-nature-conservation-in-quebec/silviculture-quiz/forestery
+redirect 301 /en/quiz /en/forests-and-nature-conservation-in-quebec/silviculture-quiz
+redirect 301 /en/forest-overview/the-many-lives-of-wood /en/forests-and-nature-conservation-in-quebec/sustainable-development-of-the-forest
+redirect 301 /en/forest-overview/the-fight-against-climate-change /en/forests-and-nature-conservation-in-quebec/quebec-anti-pollution-forests
+redirect 301 /en/forest-overview/the-development-of-forestry-practices /en/forests-and-nature-conservation-in-quebec/quebec-forestry-practices
+redirect 301 /en/forest-overview/responsibilities-and-certifications /en/forests-and-nature-conservation-in-quebec/quebec-certified-forest
+redirect 301 /en/forest-overview/biodiversite-des-forets-naturelles /en/forests-and-nature-conservation-in-quebec/quebec-forest-biodiversity
+redirect 301 /en/forest-overview/a-shared-territory /en/forests-and-nature-conservation-in-quebec/biodiversity-of-forest-territories
+redirect 301 /en/forest-overview /en/forests-and-nature-conservation-in-quebec
+redirect 301 /en/big-spaces-big-questions/videos /en/faq-on-quebec-forest-and-trees/quebec-forest-management-videos
+redirect 301 /en/big-spaces-big-questions /en/faq-on-quebec-forest-and-trees/quebec-forest-management-videos
+
+
+
+
+</IfModule>

@@ -1,0 +1,63 @@
+1533218784a:1:{s:34:"possibilities/responsabilities.htm";a:6:{s:8:"fileName";s:34:"possibilities/responsabilities.htm";s:7:"content";s:2363:"[localePicker]
+forceUrl = 1
+
+==
+
+<div class="row" data-right-height>
+    <div class="grid-half" data-right-height-content>
+        <div class="wrap-pics">
+            {% if locale == 'fr' %}
+                <img data-animate="true" src="{{ 'assets/public/images/possibilities/pic-responsabilities-1.png'|theme }}" alt="">
+            {% endif %}
+            {% if locale == 'en' %}
+                <img data-animate="true" src="{{ 'assets/public/images/possibilities/pic-responsabilities-1-en.png'|theme }}" alt="">
+            {% endif %}
+
+        </div>
+    </div>
+    <div class="grid-half" data-right-height-content>
+        {% if locale == 'fr' %}
+            <h2>Responsabilités et certifications</h2>
+            <ul>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Il est du devoir du Gouvernement du Québec de gérer les ressources de façon responsable, mais tous les Québécois ont un rôle à jouer en ce qui concerne le développement du territoire forestier.</li>
+                <li data-animate="true"><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Au Québec, 85 % des forêts publiques sont certifiées, ce qui représente la plus grande superficie certifiée au monde. Cette reconnaissance supplémentaire aux lois et règlements en vigueur garantit que les pratiques forestières respectent les normes établies afin d’assurer la durabilité de la forêt.</li>
+            </ul>
+        {% endif %}
+        {% if locale == 'en' %}
+            <h2>Responsibilities and certifications</h2>
+            <ul>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>It is the Quebec Government’s responsibility to manage the resources responsibly, but all Quebecers have a role to play in forest development.</li>
+                <li data-animate="true"><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Roughly 85% of Québec’s public forests are certified, and make up the largest certified area of forest in the world. This additional recognition, over and above current legislation and regulations, guarantees that forest practices comply with the standards introduced to ensure that the forest is sustainable.</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>
+";s:5:"mtime";i:1513354190;s:6:"markup";s:2329:"<div class="row" data-right-height>
+    <div class="grid-half" data-right-height-content>
+        <div class="wrap-pics">
+            {% if locale == 'fr' %}
+                <img data-animate="true" src="{{ 'assets/public/images/possibilities/pic-responsabilities-1.png'|theme }}" alt="">
+            {% endif %}
+            {% if locale == 'en' %}
+                <img data-animate="true" src="{{ 'assets/public/images/possibilities/pic-responsabilities-1-en.png'|theme }}" alt="">
+            {% endif %}
+
+        </div>
+    </div>
+    <div class="grid-half" data-right-height-content>
+        {% if locale == 'fr' %}
+            <h2>Responsabilités et certifications</h2>
+            <ul>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Il est du devoir du Gouvernement du Québec de gérer les ressources de façon responsable, mais tous les Québécois ont un rôle à jouer en ce qui concerne le développement du territoire forestier.</li>
+                <li data-animate="true"><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Au Québec, 85 % des forêts publiques sont certifiées, ce qui représente la plus grande superficie certifiée au monde. Cette reconnaissance supplémentaire aux lois et règlements en vigueur garantit que les pratiques forestières respectent les normes établies afin d’assurer la durabilité de la forêt.</li>
+            </ul>
+        {% endif %}
+        {% if locale == 'en' %}
+            <h2>Responsibilities and certifications</h2>
+            <ul>
+                <li><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>It is the Quebec Government’s responsibility to manage the resources responsibly, but all Quebecers have a role to play in forest development.</li>
+                <li data-animate="true"><svg class="check-icon" viewBox="0 0 1 1"><use xlink:href="#check" /></use></svg>Roughly 85% of Québec’s public forests are certified, and make up the largest certified area of forest in the world. This additional recognition, over and above current legislation and regulations, guarantees that forest practices comply with the standards introduced to ensure that the forest is sustainable.</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>";s:4:"code";N;s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"1";}}}

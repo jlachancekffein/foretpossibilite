@@ -1,0 +1,87 @@
+/**
+ * Media Queries Bebugger
+ */
+@media (min-width: $bp-xsmall) {
+  body {
+    &:after {
+      content: 'bp-xsmall';
+      display: inline-block;
+      background: red;
+      padding: 12px;
+      position: fixed;
+      z-index: 99999999;
+      top: 0;
+      left: 0;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: $bp-small) {
+  body {
+    &:after {
+      content: 'bp-small';
+      display: inline-block;
+      background: red;
+      padding: 12px;
+      position: fixed;
+      z-index: 99999999;
+      top: 0;
+      left: 0;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: $bp-medium) {
+  body {
+    &:after {
+      content: 'bp-medium';
+      display: inline-block;
+      background: red;
+      padding: 12px;
+      position: fixed;
+      z-index: 99999999;
+      top: 0;
+      left: 0;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: $bp-large) {
+  body {
+    &:after {
+      content: 'bp-large';
+      display: inline-block;
+      background: red;
+      padding: 12px;
+      position: fixed;
+      z-index: 99999999;
+      top: 0;
+      left: 0;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: $bp-xlarge) {
+  body {
+    &:after {
+      content: 'bp-xlarge';
+      display: inline-block;
+      background: red;
+      padding: 12px;
+      position: fixed;
+      z-index: 99999999;
+      top: 0;
+      left: 0;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,172 @@
+<?php 
+use RainLab\Translate\Classes\Translator;
+class Cms5a33f4656fee0791474276_cdfc84c508def3a7166cd4f22e2b8b6eClass extends \Cms\Classes\PageCode
+{
+public function onStart()
+{
+    $this['pageClass'] = 'page-cycle';
+    
+    $this->translator = Translator::instance();
+    $locale = $this->translator->getLocale();
+
+    if ($locale == "fr") {
+        $this["pageTitle"] = "Arbres : croissance, récolte, transformation";
+        $this["pageDescription"] = "Apprenez en plus sur le parcours des arbres de nos forêts: leur récolte, leur transformation, la séquestration du carbone et les produits en bois récupérés.";
+        $this["pageKeywords"] = "";
+    } else if ($locale == "en") {
+        $this["pageTitle"] = "Trees: regeneration, harvesting, processing";
+        $this["pageDescription"] = "Learn what happens to trees in our forests: the forest harvest, primary wood transformation, carbon sequestration and product redevelopment.";
+        $this["pageKeywords"] = "";
+    }
+
+    $this['slides'] = [
+        [
+            'number' => '01',
+            'slug' => 'co2',
+            'title' => 'Régénération et croissance',
+            'content' => '
+                <p>Grâce à la photosynthèse, les arbres absorbent le dioxyde de carbone (CO₂) de l’atmosphère. Ils emmagasinent
+                alors le carbone (C) et relâchent l’oxygène (O₂) dans l’atmosphère. Le carbone leur sert à fabriquer leur bois.
+                Les arbres absorbent le CO₂ surtout durant leur période de croissance.</p>
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-co2_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-co2.png',
+        ],
+        [
+            'number' => '02',
+            'slug' => 'recolte',
+            'title' => 'La récolte',
+            'content' => '
+                <p>Même si nos forêts semblent éternelles, chaque arbre a une durée de vie définie. Au Québec, la forêt se
+                régénère naturellement à 80 %. Les 20 % restant se régénèrent grâce au reboisement.</p>
+                <p>La récolte d’arbres ayant atteint leur pleine maturité contribue à la création de produits utiles et permet
+                de rajeunir la forêt. Bien sûr, il est primordial de prélever ces arbres respectueusement, en préservant leur milieu de vie.</p>
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-recolte_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-recolte.png',
+        ],
+        [
+            'number' => '03',
+            'slug' => 'transformation',
+            'title' => 'La transformation',
+            'content' => '
+                <p>Chaque arbre récolté a son utilité et rien n’est gaspillé. Au sciage, l’arbre est d’abord divisé en planches.
+                La sciure et la planure produites durant cette étape serviront à la fabrication de produits dérivés, comme les
+                panneaux de bois. Les copeaux serviront quant à eux à la fabrication de pâtes et de papiers. Tous les autres résidus
+                sont également valorisés, telle que l’écorce en biomasse qui sert à produire de l’énergie.</p>
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-transformation_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-transformation.png',
+        ],
+        [
+            'number' => '04',
+            'slug' => 'produits',
+            'title' => 'Les produits du bois',
+            'content' => '
+                <p>Les produits du bois sont écologiques puisqu’ils sont fabriqués à partir d’une ressource renouvelable,
+                biodégradable et recyclable.</p>
+                <p>Il existe plus de 10 000 produits et dérivés du bois. Grâce à des innovations récentes, un nombre
+                grandissant de produits seront issus de ressources renouvelables.</p>
+                <p>L’avenir est prometteur pour le secteur des bioproduits tels que les nouveaux papiers intelligents,
+                les nouvelles générations de cartons, les extractibles du bois et les produits de la chimie verte.</p>
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-produits_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-produits.png',
+        ],
+        [
+            'number' => '05',
+            'slug' => 'revalorisation',
+            'title' => 'La revalorisation des produits',
+            'content' => '
+                <p>Le bois peut connaître plus d’une vie. Les produits en bois peuvent être récupérés, réutilisés ou se voir
+                attribuer de nouveaux usages et ce, sans nécessairement avoir à être transformés à nouveau. En moyenne, 84 %
+                du bois de démolition traité par les centres de tri est recyclé. Tous les résidus de bois en fin de vie peuvent
+                servir de biocombustible pour produire de la vapeur et de l’électricité. Tous les papiers et cartons récupérés
+                peuvent être recyclés de 5 à 7 fois.</p>
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-revalorisation_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-revalorisation.png',
+        ],
+        [
+            'number' => '06',
+            'slug' => 'carbone',
+            'title' => 'La séquestration du carbone',
+            'content' => '
+                <p>À la fin de sa vie, tout arbre meurt et se décompose. Il libère alors dans l’atmosphère tout le carbone
+                emmagasiné durant sa vie. Mais il peut en être autrement. Si l’arbre mature est plutôt transformé en matériau
+                durable (maison, plancher ou ameublement), il gardera le carbone en lui encore longtemps. Voilà un gain
+                intéressant pour l’environnement, à condition aussi que d’autres arbres poussent à la place de ceux récoltés.</p>
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-carbone_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-carbone.png',
+        ],
+    ];
+
+    $this['slidesEN'] = [
+        [
+            'number' => '01',
+            'slug' => 'co2',
+            'title' => 'Regeneration and growth',
+            'content' => '
+                <p>Trees absorb carbon dioxide (CO₂) from the atmosphere through photosynthesis. They store the carbon and release the oxygen into the atmosphere, then use carbon to make wood. Trees mainly absorb CO₂ during their growth period.</p>
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-co2_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-co2.png',
+        ],
+        [
+            'number' => '02',
+            'slug' => 'harvesting',
+            'title' => 'Harvesting',
+            'content' => '
+                <p>Although the forest seems to be a permanent fixture, each individual tree has a defined lifetime. In Quebec’s forests, 80% of regeneration is natural. The remaining 20% is achieved through reforestation.</p>
+                <p>Harvesting of trees that have attained their full maturity helps to rejuvenate the forest, and the wood can be used to create useful products. Of course, it is important that the trees be removed in a respectful, environmentally responsible.</p>
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-recolte_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-recolte.png',
+        ],
+        [
+            'number' => '03',
+            'slug' => 'processing',
+            'title' => 'Processing',
+            'content' => '
+                <p>Every tree that is harvested has a use, and nothing goes to waste. At the sawmill, the tree is cut up to make planks. The sawdust and shavings produced at this stage are used to create other products, such as wood panels. The wood chips are used to produce pulp and paper. All other by-products are also developed; for example, bark is converted into biomass, which is then used to generate energy.</p>
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-transformation_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-transformation.png',
+        ],
+        [
+            'number' => '04',
+            'slug' => 'products',
+            'title' => 'Wood products',
+            'content' => '
+                <p>Wood products are ecological because they are made from a resource that is renewable, biodegradable and recyclable.</p>
+                <p>There are more than 10,000 products and by-products from wood. Thanks to recent innovations, growing numbers of products will be made from renewable resources.</p>
+                <p>The future is promising for bioproducts such as smart papers, new generations of cardboard, recoverable by-products and green chemistry products.</p>
+
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-produits_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-produits.png',
+        ],
+        [
+            'number' => '05',
+            'slug' => 'redevelopment',
+            'title' => 'Product redevelopment',
+            'content' => '
+                <p>Wood can have more than one life. Wood products can be salvaged, reused or repurposed without necessarily having to be processed again. On average, 84% of demolition wood processed at sorting centres is recycled. All end-of-life wood by-products can be used as biofuel to produce steam and electricity. All salvaged papers and cardboard can be recycled 5 to 7 times.</p>
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-revalorisation_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-revalorisation.png',
+        ],
+        [
+            'number' => '06',
+            'slug' => 'carbone',
+            'title' => 'Carbon sequestration',
+            'content' => '
+                <p>At the end of their life, trees die and decompose, releasing all their stored carbon into the atmosphere. But there are other possibilities. If a mature tree is processed into durable materials (houses, floors or furniture) instead, the carbon continues to be stored. And that is positive for the environment.</p>
+            ',
+            'background_image' => 'assets/public/images/cycle-bg-carbone_hi.jpg',
+            'circle_image' => 'assets/public/images/cycle-circle-carbone.png',
+        ],
+    ];
+}
+}

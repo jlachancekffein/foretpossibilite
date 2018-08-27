@@ -1,0 +1,10 @@
+list: $/cifq/faq/models/faqquestion/columns.yaml
+modelClass: Cifq\Faq\Models\FaqQuestion
+title: Questions (FAQ)
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

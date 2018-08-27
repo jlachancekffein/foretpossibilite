@@ -1,0 +1,326 @@
+.page-possibility {
+
+    .wrapper {
+        background: url('../images/maple-tree.jpg') no-repeat center;
+        background-size: cover;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: .5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        &.healthy-resource {
+            background: url('../images/background-healthy-resource.jpg') no-repeat center;
+            background-size: cover;
+
+            &:after {
+                opacity: .7;
+            }
+        }
+
+        &.practices-evolution {
+            background: url('../images/background-practices-evolution.jpg') no-repeat center;
+            background-size: cover;
+
+            &:after {
+                opacity: .7;
+            }
+        }
+
+        &.share-territory {
+            background: url('../images/background-share-territory.jpg') no-repeat center;
+            background-size: cover;
+
+            &:after {
+                opacity: .5;
+
+                @media screen and (max-width: 767px) {
+                    opacity: .6;
+                }
+            }
+        }
+
+        &.wood-second-life {
+            background: url('../images/background-wood-second-life.jpg') no-repeat center;
+            background-size: cover;
+
+            &:after {
+                opacity: .6;
+            }
+        }
+
+        &.responsabilities {
+            background: url('../images/background-responsabilities.jpg') no-repeat top center;
+            background-size: cover;
+
+            &:after {
+                opacity: .6;
+            }
+        }
+
+        &.climate-change {
+            background: url('../images/background-climate-change.jpg') no-repeat center;
+            background-size: cover;
+
+            &:after {
+                opacity: .6;
+            }
+        }
+    }
+
+    .title {
+        display: block;
+        width: 346px;
+        height: 49px;
+        margin: 0 auto;
+        text-indent: -10000px;
+        background: url('../images/possibilities-title.svg') no-repeat;
+        background-size: contain;
+        overflow: hidden;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            height: auto;
+            background: none;
+            text-indent: 0;
+            text-align: center;
+            font-family: 'Plantin Std';
+            font-style: italic;
+            @include font-size(34);
+            @include font-smoothing('antialiased');
+        }
+    }
+
+    .possibility__switcher {
+        @media screen and (max-width: 767px) {
+            position: relative;
+            top: -22px;
+        }
+    }
+
+    .possibility__index-nav {
+        display: inline-block;
+        position: absolute;
+        top: 150px;
+        right: 2%;
+
+        @media screen and (max-width: 767px) {
+            display: block;
+            top: 128px;
+            right: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .possibility__index-nav--item {
+            padding: 0;
+            margin: 0;
+            width: 30px;
+            text-align: center;
+            border-bottom: solid 1px $white;
+
+            @media screen and (max-width: 767px) {
+                display: inline-block;
+                width: 40px;
+                border-bottom: none;
+            }
+
+            a {
+                position: relative;
+                display: block;
+                padding: 10px 0;
+                font-family: 'Pantograph';
+                text-decoration: none;
+                @include font-size(20);
+                @include font-smoothing('antialiased');
+                transition: color .2s linear;
+
+                @media screen and (max-width: 767px) {
+                    display: inline-block;
+                    padding: 10px;
+                    @include font-size(16);
+                }
+
+                span {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &.active {
+                    color: $green-medium;
+                    cursor: default;
+
+                    &:hover {
+                        color: $green-medium;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    // display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    bottom: 0;
+                    left: 0;
+                    background: rgba(255, 255, 255, 1);
+                    opacity: 0;
+                    transition: height .2s linear;
+                    z-index: 0;
+                }
+
+                &:hover {
+                    color: $green-dark;
+
+                    &:after {
+                        height: 100%;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .possibility__icon-nav {
+        display: table;
+        width: 214px;
+        margin: 0 auto;
+
+        a {
+            display: table-cell;
+            width: 33%;
+            vertical-align: middle;
+
+            .arrow-prev-icon, .arrow-next-icon {
+                width: 60%;
+                transition: transform .2s linear;
+            }
+
+            .arrow-next-icon {
+                float: right;
+            }
+
+            &[href="#"] {
+                visibility: hidden;
+            }
+
+            &:hover {
+                .arrow-prev-icon {
+                    transform: translateX(-6px);
+                }
+
+                .arrow-next-icon {
+                    transform: translateX(6px);
+                }
+            }
+        }
+    }
+
+    .possibility__intro {
+        @include font-size(22);
+        @include font-smoothing('antialiased');
+    }
+
+    .possibility__content {
+        padding: 30px 0;
+
+        h2 {
+            font-family: 'Plantin Std';
+            font-style: italic;
+            @include font-size(38);
+            @include font-smoothing('antialiased');
+
+            @media screen and (max-width: 767px) {
+                margin-top: 20px;
+                @include font-size(26);
+            }
+        }
+
+        .wrap-pics {
+            position: relative;
+            width: 100%;
+            @include aspect-ratio(456, 456);
+
+            img {
+                display: block;
+                width: 85%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                visibility: hidden;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                position: relative;
+                display: block;
+                font-family: 'Plantin Std';
+                font-style: 'normal';
+                @include font-size(18);
+                @include font-smoothing('antialiased');
+                margin: 18px 0;
+                padding: 0 0 0 40px;
+
+                @media screen and (max-width: 767px) {
+                    padding-left: 22px;
+                }
+
+                .check-icon {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 30px;
+                    //visibility: hidden;
+
+                    @media screen and (max-width: 767px) {
+                        width: 18px;
+                    }
+                }
+
+                &[data-animate=true] {
+                    .check-icon {
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .possibility__main {
+        @media screen and (max-width: 1100px) {
+            .grid-half:nth-child(1) {
+                width: 40%;
+            }
+            .grid-half:nth-child(2) {
+                width: 60%;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .grid-half:nth-child(1) {
+                display: none;
+            }
+            .grid-half:nth-child(2) {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 28px;
+            }
+        }
+    }
+}

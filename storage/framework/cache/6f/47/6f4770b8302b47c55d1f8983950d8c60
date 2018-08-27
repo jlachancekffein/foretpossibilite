@@ -1,0 +1,2 @@
+1527821650a:1:{s:19:"faq/ajax_result.htm";a:5:{s:8:"fileName";s:19:"faq/ajax_result.htm";s:7:"content";s:19:"{{ result | raw }}
+";s:5:"mtime";i:1506453758;s:6:"markup";s:18:"{{ result | raw }}";s:4:"code";N;}}

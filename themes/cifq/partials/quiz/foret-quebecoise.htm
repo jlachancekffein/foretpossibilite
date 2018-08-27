@@ -1,0 +1,191 @@
+[localePicker]
+forceUrl = 1
+
+==
+
+{% if locale == 'fr' %}
+<div class="content">
+    <div class="content__overlay"></div>
+
+    <div id="question1" class="question">
+        <h3 class="question__title staggerAnimate">Question 01</h3>
+        <p class="question__label staggerAnimate">Quelle portion du territoire québécois est recouverte de forêt?</p>
+        <ul class="question__choices staggerAnimate">
+            <li><a href="#"><span>30 %</span></a></li>
+            <li><a href="#"><span>40 %</span></a></li>
+            <li><a href="#" data-answer><span>50 %</span></a></li>
+        </ul>
+        <div class="question__answer">
+            <p class="staggerAnimate">Près de la moitié du territoire québécois est recouvert de forêt dense qui représente 760 000 km<sup>2</sup>. Cette superficie est plus grande que le territoire de la France!</p>
+            <a class="btn next-btn staggerAnimate" href="#">
+                <span>Prochaine question</span>
+                <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+            </a>
+        </div>
+    </div>
+    <div id="question2" class="question">
+        <h3 class="question__title staggerAnimate">Question 02</h3>
+        <p class="question__label staggerAnimate">Quelle portion du territoire forestier québécois est publique?</p>
+        <ul class="question__choices staggerAnimate">
+            <li><a href="#"><span>20 %</span></a></li>
+            <li><a href="#"><span>50 %</span></a></li>
+            <li><a href="#" data-answer><span>90 %</span></a></li>
+        </ul>
+        <div class="question__answer">
+            <p class="staggerAnimate">Au Québec, 90 % du territoire forestier est public, ce qui implique que les diverses utilisations de la forêt sont harmonisées afin que tout le monde puisse en bénéficier. Ainsi, au moins une dizaine de types d’utilisateurs interagissent sur un même territoire (chasseurs, villégiateurs, randonneurs, travailleurs forestiers, etc.).</p>
+            <a class="btn next-btn staggerAnimate" href="#">
+                <span>Prochaine question</span>
+                <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+            </a>
+        </div>
+    </div>
+    <div id="question3" class="question">
+        <h3 class="question__title staggerAnimate">Question 03</h3>
+        <p class="question__label staggerAnimate">Quelle portion des forêts publiques du Québec est certifiée?</p>
+        <ul class="question__choices staggerAnimate">
+            <li><a href="#"><span>25 %</span></a></li>
+            <li><a href="#"><span>40 %</span></a></li>
+            <li><a href="#" data-answer><span>85 %</span></a></li>
+        </ul>
+        <div class="question__answer">
+            <p class="staggerAnimate">Au Québec, 85 % des forêts publiques sont certifiées, ce qui représente la plus grande superficie certifiée au monde. Cette reconnaissance supplémentaire aux lois et règlements en vigueur garantit que les pratiques forestières respectent les normes établies afin d’assurer la durabilité de la forêt.</p>
+            <a class="btn next-btn staggerAnimate" href="#">
+                <span>Prochaine question</span>
+                <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+            </a>
+        </div>
+    </div>
+    <div id="question4" class="question">
+        <h3 class="question__title staggerAnimate">Question 04</h3>
+        <p class="question__label staggerAnimate">Y a-t-il de la déforestation en forêt publique au Québec?</p>
+        <ul class="question__choices staggerAnimate">
+            <li><a href="#"><span>OUI</span></a></li>
+            <li><a href="#" data-answer><span>NON</span></a></li>
+            <li></li>
+        </ul>
+        <div class="question__answer">
+            <p class="staggerAnimate">Il n’y a pas de déforestation dans les forêts publiques au Québec. Cela va à l’encontre du régime forestier québécois, ses lois et règlements. La déforestation implique un déboisement permanent et la conversion des forêts à d’autres fins, telles que l’agriculture, l’urbanisation, etc.</p>
+            <a class="btn result-btn staggerAnimate" href="#">
+                <span>Résultat</span>
+                <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+            </a>
+        </div>
+    </div>
+
+    <img class="mini-quiz" src="{{ 'assets/public/images/mini-quiz.svg' | theme }}" alt="">
+</div>
+
+<div class="result">
+    <h1 class="title staggerAnimate"></h1>
+    <div class="result__score staggerAnimate">
+        <span>3/4</span>
+        <img class="good-img" src="{{ 'assets/public/images/quiz-result-bravo.svg' | theme }}" alt="">
+        <img class="medium-img" src="{{ 'assets/public/images/quiz-result-pas-mal.svg' | theme }}" alt="">
+        <img class="bad-img" src="{{ 'assets/public/images/quiz-result-lache-pas.svg' | theme }}" alt="">
+    </div>
+    <p class="good-text staggerAnimate">Vous êtes un bûcheron dans l’âme.<br>Allez-vous relever le défi du prochain quiz ?</p>
+    <p class="medium-text staggerAnimate">Vous êtes un forestier en devenir.<br>Tentez votre chance en répondant aux autres quiz!</p>
+    <p class="bad-text staggerAnimate">Vous êtes un forestier de salon.<br>Rassurez-vous, vous pouvez en apprendre plus sur la forêt avec nos autres quiz.</p>
+    <a class="btn next-quiz-btn staggerAnimate" href="{{ 'quiz'|page({ slug: 'foresterie' }) }}">
+        <span>Quiz suivant</span>
+        <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+    </a>
+</div>
+{% endif %}
+
+{% if locale == 'en' %}
+<div class="content">
+    <div class="content__overlay"></div>
+
+    <div id="question1" class="question">
+        <h3 class="question__title staggerAnimate">Question 01</h3>
+        <p class="question__label staggerAnimate">What percentage of Québec’s total area is covered by forest?</p>
+        <ul class="question__choices staggerAnimate">
+            <li><a href="#"><span>30 %</span></a></li>
+            <li><a href="#"><span>40 %</span></a></li>
+            <li><a href="#" data-answer><span>50 %</span></a></li>
+        </ul>
+        <div class="question__answer">
+            <p class="staggerAnimate">Nearly half of Québec’s territory – 760,000 km<sup>2</sup> – is covered by a dense forest. This area is bigger in size than the whole of France!</p>
+            <a class="btn next-btn staggerAnimate" href="#">
+                <span>Next question</span>
+                <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+            </a>
+        </div>
+    </div>
+    <div id="question2" class="question">
+        <h3 class="question__title staggerAnimate">Question 02</h3>
+        <p class="question__label staggerAnimate">What percentage of Québec’s forest is publicly owned?</p>
+        <ul class="question__choices staggerAnimate">
+            <li><a href="#"><span>20 %</span></a></li>
+            <li><a href="#"><span>50 %</span></a></li>
+            <li><a href="#" data-answer><span>90 %</span></a></li>
+        </ul>
+        <div class="question__answer">
+            <p class="staggerAnimate">In Québec, 90 % of the forest is publicly owned. As a result, the various forest uses are harmonized to ensure that everyone can benefit from it. At least ten different types of users will interact in any given area (hunters, vacationers, hikers, forestry workers, etc.).</p>
+            <a class="btn next-btn staggerAnimate" href="#">
+                <span>Next question</span>
+                <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+            </a>
+        </div>
+    </div>
+    <div id="question3" class="question">
+        <h3 class="question__title staggerAnimate">Question 03</h3>
+        <p class="question__label staggerAnimate">What percentage of Québec’s public forest is certified?</p>
+        <ul class="question__choices staggerAnimate">
+            <li><a href="#"><span>25 %</span></a></li>
+            <li><a href="#"><span>40 %</span></a></li>
+            <li><a href="#" data-answer><span>85 %</span></a></li>
+        </ul>
+        <div class="question__answer">
+            <p class="staggerAnimate">In Québec, 85 % of the public forest is certified. This is the largest area of certified forest anywhere in the world. Certification provides additional recognition, over and above current legislation and regulations, to guarantee that forestry practices comply with the established standards to ensure forest sustainability.</p>
+            <a class="btn next-btn staggerAnimate" href="#">
+                <span>Next question</span>
+                <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+            </a>
+        </div>
+    </div>
+    <div id="question4" class="question">
+        <h3 class="question__title staggerAnimate">Question 04</h3>
+        <p class="question__label staggerAnimate">Does deforestation take place in Québec’s public forests?</p>
+        <ul class="question__choices staggerAnimate">
+            <li><a href="#"><span>YES</span></a></li>
+            <li><a href="#" data-answer><span>NO</span></a></li>
+            <li></li>
+        </ul>
+        <div class="question__answer">
+            <p class="staggerAnimate">There is no deforestation in Québec’s public forests because it is contrary to Québec’s forest regime, legislation and regulations. Deforestation involves permanent removal of trees and conversion of the forest for other purposes such as farming or urban development.</p>
+            <a class="btn result-btn staggerAnimate" href="#">
+                <span>Result</span>
+                <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+            </a>
+        </div>
+    </div>
+
+    <img class="mini-quiz" src="{{ 'assets/public/images/mini-quiz.svg' | theme }}" alt="">
+</div>
+
+<div class="result">
+    <h1 class="title staggerAnimate"></h1>
+    <div class="result__score staggerAnimate">
+        <span>3/4</span>
+        <img class="good-img" src="{{ 'assets/public/images/quiz-result-bravo.svg' | theme }}" alt="">
+        <img class="medium-img" src="{{ 'assets/public/images/quiz-result-pas-mal.svg' | theme }}" alt="">
+        <img class="bad-img" src="{{ 'assets/public/images/quiz-result-lache-pas.svg' | theme }}" alt="">
+    </div>
+    <p class="good-text staggerAnimate">You’re a born lumberjack.<br>Are you up to the challenge of another quiz?</p>
+    <p class="medium-text staggerAnimate">You’re a would-be forester.<br>Try your hand at other quizzes!</p>
+    <p class="bad-text staggerAnimate">You’re an armchair forester.<br>Don’t worry, you can learn more about the forest in our other quizzes.</p>
+    <a class="btn next-quiz-btn staggerAnimate" href="{{ 'quiz'|page({ slug: 'forestery' }) }}">
+        <span>Next Quiz</span>
+        <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg>
+    </a>
+</div>
+{% endif %}
+
+<form data-request="onHandleForm" action="" method="post" class="quizform" >
+<form data-request="onHandleForm" action="" method="post">
+    <input type="hidden" name="quiz" value="foret-quebecoise">
+    <input type="hidden" name="result" value="">
+    <input type="hidden" name="score" value="">
+</form>

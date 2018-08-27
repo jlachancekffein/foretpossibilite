@@ -1,0 +1,29 @@
+1535385129a:1:{s:19:"site/svg-sprite.htm";a:6:{s:8:"fileName";s:19:"site/svg-sprite.htm";s:7:"content";s:343:"==
+use Cms\Classes\Theme;
+
+function onStart()
+{
+    $this['SVG_SPRITE'] = '';
+
+    $icons_path = Theme::getActiveTheme()->getPath() . '/assets/public/images/icons.svg';
+    if ( file_exists($icons_path) ) {
+        $this['SVG_SPRITE'] = file_get_contents($icons_path);
+    }
+}
+==
+<div style="display: none;">
+    {{ SVG_SPRITE | raw }}
+</div>
+";s:5:"mtime";i:1533224049;s:6:"markup";s:62:"<div style="display: none;">
+    {{ SVG_SPRITE | raw }}
+</div>";s:4:"code";s:273:"use Cms\Classes\Theme;
+
+function onStart()
+{
+    $this['SVG_SPRITE'] = '';
+
+    $icons_path = Theme::getActiveTheme()->getPath() . '/assets/public/images/icons.svg';
+    if ( file_exists($icons_path) ) {
+        $this['SVG_SPRITE'] = file_get_contents($icons_path);
+    }
+}";s:17:"_PARSER_ERROR_INI";s:0:"";}}

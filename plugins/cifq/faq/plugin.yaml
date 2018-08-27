@@ -1,0 +1,17 @@
+plugin:
+    name: 'cifq.faq::lang.plugin.name'
+    description: 'cifq.faq::lang.plugin.description'
+    author: cifq
+    icon: oc-icon-question
+    homepage: ''
+navigation:
+    menu-faq-questions:
+        label: 'Questions (FAQ)'
+        url: cifq/faq/questions
+        icon: icon-question-circle
+        permissions:
+            - cifq_faq_edit_questions
+permissions:
+    cifq_faq_edit_questions:
+        tab: FAQ
+        label: 'Edit Questions'

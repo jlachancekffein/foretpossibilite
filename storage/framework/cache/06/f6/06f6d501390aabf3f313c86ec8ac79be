@@ -1,0 +1,114 @@
+1535377898a:1:{s:21:"faq/question_form.htm";a:5:{s:8:"fileName";s:21:"faq/question_form.htm";s:7:"content";s:2129:"<form class="question-form"
+      data-request="onHandleForm"
+      data-request-update="'faq/ajax_result': '#question-form__result'">
+
+    <div class="question-form__title">
+        {{ 'Mieux on connait notre forêt, plus on est en mesure de l’apprécier et la protéger.'|_ }}
+    </div>
+    <div class="question-form__note">* {{ 'champs obligatoires'|_ }}</div>
+
+    <div class="question-form__row">
+        <div class="question-form__field question-form__field--left">
+            <span class="required-indicator">*</span>
+            <input name="lastname" placeholder="{{ 'NOM'|_ }}">
+        </div>
+        <div class="question-form__field question-form__field--right">
+            <span class="required-indicator">*</span>
+            <input name="firstname" placeholder="{{ 'PRÉNOM'|_ }}">
+        </div>
+    </div>
+
+    <div class="question-form__row">
+        <div class="question-form__field question-form__field--left">
+            <span class="required-indicator">*</span>
+            <input name="email" placeholder="{{ 'COURRIEL'|_ }}">
+        </div>
+        <div class="question-form__field question-form__field--right">
+            <span class="required-indicator">*</span>
+            <input name="city" placeholder="{{ 'VILLE'|_ }}">
+        </div>
+    </div>
+
+    <div class="question-form__row">
+        <div class="question-form__field question-form__field--full">
+            <span class="required-indicator">*</span>
+            <textarea name="question" placeholder="{{ 'VOTRE QUESTION'|_ }}" rows="4"></textarea>
+        </div>
+    </div>
+
+    <div class="g-recaptcha" data-sitekey="6Lczfx8UAAAAAKW9RDFAhAuA634M2rEQ7pU5Lff-"></div>
+
+    <div id="question-form__result">
+        {{ result | raw }}
+    </div>
+</form>
+
+<div class="cta-button">
+    <a href="#" data-submit-question-form>
+        {{ 'Posez votre question'|_ }}
+        <div class="cta-button__icon">
+            <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="#arrow-next" /></use></svg>
+        </div>
+    </a>
+</div>
+
+{% put scripts %}
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+{% endput %}
+";s:5:"mtime";i:1533224048;s:6:"markup";s:2128:"<form class="question-form"
+      data-request="onHandleForm"
+      data-request-update="'faq/ajax_result': '#question-form__result'">
+
+    <div class="question-form__title">
+        {{ 'Mieux on connait notre forêt, plus on est en mesure de l’apprécier et la protéger.'|_ }}
+    </div>
+    <div class="question-form__note">* {{ 'champs obligatoires'|_ }}</div>
+
+    <div class="question-form__row">
+        <div class="question-form__field question-form__field--left">
+            <span class="required-indicator">*</span>
+            <input name="lastname" placeholder="{{ 'NOM'|_ }}">
+        </div>
+        <div class="question-form__field question-form__field--right">
+            <span class="required-indicator">*</span>
+            <input name="firstname" placeholder="{{ 'PRÉNOM'|_ }}">
+        </div>
+    </div>
+
+    <div class="question-form__row">
+        <div class="question-form__field question-form__field--left">
+            <span class="required-indicator">*</span>
+            <input name="email" placeholder="{{ 'COURRIEL'|_ }}">
+        </div>
+        <div class="question-form__field question-form__field--right">
+            <span class="required-indicator">*</span>
+            <input name="city" placeholder="{{ 'VILLE'|_ }}">
+        </div>
+    </div>
+
+    <div class="question-form__row">
+        <div class="question-form__field question-form__field--full">
+            <span class="required-indicator">*</span>
+            <textarea name="question" placeholder="{{ 'VOTRE QUESTION'|_ }}" rows="4"></textarea>
+        </div>
+    </div>
+
+    <div class="g-recaptcha" data-sitekey="6Lczfx8UAAAAAKW9RDFAhAuA634M2rEQ7pU5Lff-"></div>
+
+    <div id="question-form__result">
+        {{ result | raw }}
+    </div>
+</form>
+
+<div class="cta-button">
+    <a href="#" data-submit-question-form>
+        {{ 'Posez votre question'|_ }}
+        <div class="cta-button__icon">
+            <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="#arrow-next" /></use></svg>
+        </div>
+    </a>
+</div>
+
+{% put scripts %}
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+{% endput %}";s:4:"code";N;}}

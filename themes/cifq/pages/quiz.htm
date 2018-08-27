@@ -1,0 +1,83 @@
+title = "quiz.title"
+url = "/conservation-des-forets-et-de-la-nature/quiz-sur-la-sylviculture/:slug?"
+layout = "default"
+is_hidden = 0
+
+[localePicker]
+forceUrl = 1
+
+[viewBag]
+localeUrl[en] = "/forests-and-nature-conservation-in-quebec/silviculture-quiz/:slug?"
+
+==
+use Cifq\Quiz\Models\Quiz;
+
+function onStart()
+{
+    $this['slug'] = $this->param('slug');
+
+    if($this->param('slug') == 'foret-quebecoise'){
+        $wrapclass = 'foret-quebecoise';
+    }elseif($this->param('slug') == 'foresterie'){
+        $wrapclass = 'foresterie';
+    }elseif($this->param('slug') == 'bois-ecolo'){
+        $wrapclass = 'bois-ecolo';
+    }elseif($this->param('slug') == 'quebec-forests'){
+        $wrapclass = 'foret-quebecoise';
+    }elseif($this->param('slug') == 'forestery'){
+        $wrapclass = 'foresterie';
+    }elseif($this->param('slug') == 'wood-ecological'){
+        $wrapclass = 'bois-ecolo';
+    }else{
+        return Redirect::to('quiz');
+    }
+
+    $this['pageClass'] = 'page-quiz ' . $wrapclass;
+}
+
+function onHandleForm()
+{
+    $data = [];
+    $data['quiz'] = trim( input('quiz', '') );
+    $data['result'] = trim( input('result', '') );
+    $data['score'] = trim( input('score', '') );
+
+    $result = new Quiz;
+    $result->name = $data['quiz'];
+    $result->result = $data['result'];
+    $result->score = $data['score'];
+    $result->save();
+}
+==
+<div class="steps">
+    <span class="steps__numbers">01 / 04</span>
+    <ul class="steps__dots">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+{% if slug == 'foret-quebecoise' %}
+    {% partial 'quiz/foret-quebecoise' %}
+{% elseif slug == 'quebec-forests' %}
+    {% partial 'quiz/foret-quebecoise' %}
+
+{% elseif slug == 'foresterie' %}
+    {% partial 'quiz/foresterie' %}
+{% elseif slug == 'forestery' %}
+    {% partial 'quiz/foresterie' %}
+
+{% elseif slug == 'bois-ecolo' %}
+    {% partial 'quiz/bois-ecolo' %}
+
+{% elseif slug == 'wood-ecological' %}
+    {% partial 'quiz/bois-ecolo' %}
+{% endif %}
+
+<div id="responses__copy">
+    <span class="responses__copy--true">CORRECT</span>
+    <span class="responses__copy--false">INCORRECT</span>
+</div>
+

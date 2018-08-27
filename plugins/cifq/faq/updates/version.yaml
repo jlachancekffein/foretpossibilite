@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table cifq_faq_question'
+    - builder_table_create_cifq_faq_question.php
+1.0.3:
+    - 'Updated table cifq_faq_question'
+    - builder_table_update_cifq_faq_question.php

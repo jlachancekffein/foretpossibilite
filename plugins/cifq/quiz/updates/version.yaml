@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table cifq_quiz_results'
+    - builder_table_create_cifq_quiz_results.php
+1.0.3:
+    - 'Updated table cifq_quiz_results'
+    - builder_table_update_cifq_quiz_results.php
