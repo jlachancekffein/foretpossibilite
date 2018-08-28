@@ -54,11 +54,11 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => 'localhost',
-            'port'      => 3306,
-            'database'  => 'foret',
-            'username'  => 'homestead',
-            'password'  => 'secret',
+            'host'      => env('DB_HOST', 'localhost'),
+            'port'      => env('DB_PORT', 3306),
+            'database'  => env('DB_DATABASE', 'foret'),
+            'username'  => env('DB_USERNAME', 'homestead'),
+            'password'  => env('DB_PASSWORD', 'secret'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

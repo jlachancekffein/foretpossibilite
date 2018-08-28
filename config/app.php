@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'url' => 'http://www.uneforetdepossibilites.com/',
+    'url' => env('APP_URL', 'http://www.uneforetdepossibilites.com/'),
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'key' => 'zLboBukVJWWxFCpgTaXEUX6fIiBPrdA7',
+    'key' =>  env('APP_KEY', ''),
 
     'cipher' => 'AES-256-CBC',
 
