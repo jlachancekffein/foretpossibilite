@@ -23,6 +23,8 @@ class Newsletter extends Model
     private $job;
     private $testimonials;
     private $email;
+    private $subscribed;
+
 
     protected $fillable = [
       'lastname',
@@ -31,6 +33,7 @@ class Newsletter extends Model
       'job',
       'testimonials',
       'email',
+      'subscribed',
       'photo'
     ];
 

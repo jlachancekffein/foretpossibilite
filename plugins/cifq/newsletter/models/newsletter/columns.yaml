@@ -17,3 +17,6 @@ columns:
     email:
         label: Courriel
         type: text
+    subscribed:
+        label: Souscription
+        type: switch

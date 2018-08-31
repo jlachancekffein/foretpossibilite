@@ -7,8 +7,13 @@ use Backend\Classes\Controller;
 
 class Newsletter extends Controller {
 
-    public $implement = ['Backend\Behaviors\ListController'];
+    public $implement = [
+      'Backend\Behaviors\ListController',
+      'Backend\Behaviors\ImportExportController'
+    ];
     public $listConfig = 'config_list.yaml';
+
+    public $importExportConfig = 'config_export.yaml';
 
     public function __construct()
     {
