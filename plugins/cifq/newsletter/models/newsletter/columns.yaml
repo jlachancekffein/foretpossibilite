@@ -1,6 +1,7 @@
 columns:
     photo:
         label: Photo
+        relation: photo
         type: image
     firstname:
         label: Prénom
