@@ -93,4 +93,16 @@ class Plugin extends PluginBase
             ],
         ];
     }
+
+    public function registerListColumnTypes()
+    {
+        return [
+            'image' => [$this, 'asImage']
+        ];
+    }
+
+    public function asImage($value, $column, $record)
+    {
+        return '<img style="height:50px" src="'.$record->photo->getPath().'"></img>';
+    }
 }
