@@ -1,5 +1,5 @@
 columns:
-    picture:
+    photo:
         label: Photo
         relation: photo
         type: image
