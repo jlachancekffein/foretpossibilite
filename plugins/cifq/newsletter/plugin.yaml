@@ -1,0 +1,6 @@
+plugin:
+    name: 'cifq.routes::lang.plugin.name'
+    description: 'cifq.routes::lang.plugin.description'
+    author: cifq
+    icon: oc-icon-location-arrow
+    homepage: ''

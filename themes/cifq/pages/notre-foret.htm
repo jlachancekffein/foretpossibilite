@@ -1,5 +1,5 @@
 title = "Notre forêt"
-url = "/notre-foret"
+url = "/notreforet"
 layout = "default"
 description = "Page Notre foret"
 is_hidden = 0
@@ -8,6 +8,24 @@ is_hidden = 0
     <div class="container">
         <div class="grid-full">
             <h1 class="title">{{ 'Notre Forêt'|_ }}</h1>
+        </div>
+
+        <div class="">
+
+            {{ form_open({ url: 'newsletter/submit', class: 'form-horizontal', 'files':true }) }}
+
+            {{ form_text('firstname') }}
+            {{ form_text('lastname') }}
+            {{ form_text('organisation') }}
+            {{ form_text('job') }}
+            {{ form_text('testimonials') }}
+            {{ form_text('email') }}
+
+            {{ form_file('photo') }}
+
+            {{ form_token() }}
+            {{ form_submit('click me') }}
+            {{ form_close() }}
         </div>
     </div>
 </div>
