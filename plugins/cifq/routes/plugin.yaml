@@ -8,4 +8,4 @@ navigation:
     menu-newsletter:
         label: 'Contacts'
         url: cifq/newsletter/newsletter
-        icon: icon-question-circle
+        icon:  icon-users
