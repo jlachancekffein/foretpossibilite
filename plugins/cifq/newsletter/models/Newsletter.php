@@ -30,8 +30,7 @@ class Newsletter extends Model
       'job',
       'testimonials',
       'email',
-      'subscribed',
-      'photo'
+      'subscribed'
     ];
 
     public $attachOne = [
