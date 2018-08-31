@@ -3,12 +3,9 @@
 
 use System\Models\File;
 use Model;
-use October\Rain\Database\Traits\Validation;
-
 
 class Newsletter extends Model
 {
-    use Validation;
 
     /**
      * The table associated with the model.
@@ -41,13 +38,17 @@ class Newsletter extends Model
         'photo' => 'System\Models\File'
     ];
 
-    public $rules = [
-        'lastname' => 'required',
-        'firstname' => 'required',
-        'organisation' => 'required',
-        'job' => 'required',
-        'testimonials' => 'required',
-        'email' => 'required',
-        'photo'   => 'required'
-    ];
+    // Validation rule
+    public function rules()
+    {
+      return [
+          'lastname' => 'required',
+          'firstname' => 'required',
+          'organisation' => 'required',
+          'job' => 'required',
+          'testimonials' => 'required',
+          'email' => 'required',
+          'photo'   => 'required'
+      ];
+    }
 }
