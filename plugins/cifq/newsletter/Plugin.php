@@ -103,6 +103,10 @@ class Plugin extends PluginBase
 
     public function asImage($value, $column, $record)
     {
-        return '<img style="height:50px" src="'.$record->photo->getPath().'"></img>';
+        if($record->photo){
+          return '<img style="height:50px" src="'.$record->photo->getPath().'"></img>';
+        }
+
+        return 'Aucune photo disponible';
     }
 }

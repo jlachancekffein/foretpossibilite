@@ -35,12 +35,14 @@ class NewsletterForm extends CmsController {
         return response()->json($result);
       }
 
-      // Save photo
-      $photo = new File;
-      $photo->data = Input::file('photo');
-      $photo->is_public = true;
-      $photo->save();
-      $newsletter->photo()->add($photo);
+      // Save no-required photo
+      if(Input::file('photo')) {
+        $photo = new File;
+        $photo->data = Input::file('photo');
+        $photo->is_public = true;
+        $photo->save();
+        $newsletter->photo()->add($photo);
+      }
 
       // Save model
       $newsletter->save();

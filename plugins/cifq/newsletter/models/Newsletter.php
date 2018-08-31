@@ -46,9 +46,7 @@ class Newsletter extends Model
           'firstname' => 'required',
           'organisation' => 'required',
           'job' => 'required',
-          'testimonials' => 'required',
-          'email' => 'required|email',
-          'photo'   => 'required'
+          'email' => 'required|email'
       ];
     }
 }

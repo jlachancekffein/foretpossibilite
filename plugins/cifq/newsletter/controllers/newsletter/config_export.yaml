@@ -3,5 +3,4 @@
 # ===================================
 
 export:
-    useList: orders
-    fileName: orders.csv
+    useList: true
