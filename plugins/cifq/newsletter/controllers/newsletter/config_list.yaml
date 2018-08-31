@@ -1,0 +1,11 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Contacts
+list: $/cifq/newsletter/models/newsletter/columns.yaml
+modelClass: Cifq\Newsletter\Models\Newsletter
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: Find records

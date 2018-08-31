@@ -1,0 +1,19 @@
+columns:
+    firstname:
+        label: Prénom
+        type: text
+    lastname:
+        label: Nom
+        type: text
+    organisation:
+        label: Organisation
+        type: text
+    job:
+        label: Profession
+        type: text
+    testimonials:
+        label: Temoignages
+        type: text
+    email:
+        label: Courriel
+        type: text

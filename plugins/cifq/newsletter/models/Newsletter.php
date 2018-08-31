@@ -1,9 +1,10 @@
 <?php namespace Cifq\Newsletter\Models;
 
-use Model;
 
 use System\Models\File;
+use Model;
 use October\Rain\Database\Traits\Validation;
+
 
 class Newsletter extends Model
 {
@@ -29,7 +30,8 @@ class Newsletter extends Model
       'organisation',
       'job',
       'testimonials',
-      'email'
+      'email',
+      'photo'
     ];
 
     public $attachOne = [
@@ -39,6 +41,8 @@ class Newsletter extends Model
     public $rules = [
         'lastname' => 'required',
         'firstname' => 'required',
+        'organisation' => 'required',
+        'job' => 'required',
         'testimonials' => 'required',
         'email' => 'required',
         'photo'   => 'required'

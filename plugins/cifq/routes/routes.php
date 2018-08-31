@@ -12,4 +12,4 @@ Route::get('/cycle', function () {
     return Redirect::to('/parcours-arbre');
 });
 
-Route::post('/newsletter/submit', 'Cifq\Newsletter\Controllers\NewsletterController@submit');
+Route::post('/newsletter/submit', 'Cifq\Newsletter\Controllers\NewsletterForm@submit');
