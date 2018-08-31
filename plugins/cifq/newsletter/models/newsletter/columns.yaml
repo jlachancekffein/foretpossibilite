@@ -1,4 +1,8 @@
 columns:
+    picture:
+        label: Photo
+        relation: photo
+        type: image
     firstname:
         label: Prénom
         type: text

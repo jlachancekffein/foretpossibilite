@@ -21,6 +21,7 @@ class Newsletter extends Model
     private $testimonials;
     private $email;
     private $subscribed;
+    private $photo;
 
 
     protected $fillable = [
