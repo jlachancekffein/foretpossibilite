@@ -1,0 +1,429 @@
+@font-face {
+  font-family: "Brandon";
+  src: url("/themes/cifq/assets/public/fonts/BrandonText-Medium.woff2") format("woff2"), url("/themes/cifq/assets/public/fonts/BrandonText-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Brandon";
+  src: url("/themes/cifq/assets/public/fonts/BrandonText-Bold.woff2") format("woff2"), url("/themes/cifq/assets/public/fonts/BrandonText-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Brandon";
+  src: url("/themes/cifq/assets/public/fonts/BrandonText-Black.woff2") format("woff2"), url("/themes/cifq/assets/public/fonts/BrandonText-Black.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+#page-foret {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  font-family: 'Brandon', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.25px;
+}
+
+#page-foret img {
+  max-width: 100%;
+}
+
+#page-foret .-hidden {
+  display: none;
+}
+
+#page-foret .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #000;
+}
+
+#page-foret .header {
+  height: calc(100vh - 30px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1760px) {
+  #page-foret .header {
+    background-position: 70% 50%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #page-foret .header {
+    background-position: 60% 50%;
+  }
+}
+
+#page-foret .header > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+#page-foret .header > .container .signature {
+  margin-bottom: 30px;
+}
+
+#page-foret .header .mouse-scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Plantin Std', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+#page-foret .header .mouse-scroll img {
+  width: 26px;
+  margin-bottom: 10px;
+}
+
+#page-foret .content {
+  background-color: white;
+}
+
+#page-foret .content.intro {
+  padding-top: 60px;
+  color: #6a6a6a;
+  text-align: center;
+  font-size: 18px;
+}
+
+#page-foret .content.intro h1 {
+  font-weight: 700;
+  font-size: 44px;
+}
+
+#page-foret .content.intro h2 {
+  margin-top: -50px;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  font-family: 'Plantin Std', sans-serif;
+}
+
+#page-foret .content.intro .list {
+  display: flex;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  #page-foret .content.intro .list {
+    display: block;
+  }
+}
+
+#page-foret .content.intro .list ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 600px) {
+  #page-foret .content.intro .list ul:first-child {
+    padding-right: 30px;
+  }
+  #page-foret .content.intro .list ul:last-child {
+    padding-left: 30px;
+  }
+}
+
+#page-foret .content.intro .list ul li {
+  position: relative;
+  padding-left: 24px;
+  padding-bottom: 26px;
+  line-height: 20px;
+}
+
+#page-foret .content.intro .list ul li:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: 12px;
+  height: 13px;
+  background-image: url("/themes/cifq/assets/public/images/list-checkbox.png");
+}
+
+#page-foret .content.intro .list ul li.special {
+  color: #9ae113;
+  font-size: 24px;
+  font-family: 'Plantin Std', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 32px;
+}
+
+#page-foret .content.intro .list ul li.special:before {
+  display: none;
+}
+
+#page-foret .content.intro .signature {
+  margin: 60px 0;
+}
+
+#page-foret .content.before-form {
+  padding: 70px 0 30px;
+  background-color: #9ae113;
+  text-align: center;
+  font-size: 26px;
+  line-height: 32px;
+  z-index: 9;
+}
+
+#page-foret .content.before-form .arrow-down {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: #9ae113;
+}
+
+#page-foret .content.form {
+  padding-top: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 800px) {
+  #page-foret .content.form .grid-half {
+    width: 100%;
+  }
+}
+
+#page-foret .content.form .container {
+  position: relative;
+  height: 640px;
+}
+
+#page-foret .content.form h2 {
+  margin-bottom: 80px;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+}
+
+#page-foret .content.form .form-step {
+  position: absolute;
+  transition: all 1s;
+  opacity: 0;
+  z-index: 0;
+}
+
+#page-foret .content.form .form-step[data-active="1"] {
+  opacity: 1;
+  z-index: 1;
+}
+
+#page-foret .content.form .input {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+#page-foret .content.form .input span {
+  color: white;
+  font-size: 25px;
+  position: relative;
+  top: 11px;
+  left: 10px;
+  transition: all 0.5s;
+}
+
+#page-foret .content.form .input.-error {
+  color: red;
+}
+
+#page-foret .content.form .input.-error input[type="text"], #page-foret .content.form .input.-error input[type="email"], #page-foret .content.form .input.-error textarea {
+  border-color: red;
+}
+
+#page-foret .content.form .input.-error span {
+  color: red;
+}
+
+#page-foret .content.form input[type="text"], #page-foret .content.form input[type="email"], #page-foret .content.form textarea {
+  height: 48px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 20px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+#page-foret .content.form .foret-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 376px;
+  height: 65px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: #9ae113;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#page-foret .content.form .foret-btn.btn-upload {
+  background-color: #454545;
+  transition: all 0.5s;
+}
+
+#page-foret .content.form .foret-btn.btn-upload.-error {
+  background-color: red;
+}
+
+#page-foret .content.form .copyright {
+  float: none;
+  clear: both;
+  margin: 0 auto;
+  padding-top: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  text-align: center;
+}
+
+#page-foret .content.form .copyright a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#page-foret .content .form-step[data-step="2"] {
+  padding: 30px 60px 100px;
+  background: white;
+  color: #000;
+  font-size: 18px;
+}
+
+#page-foret .content .form-step[data-step="2"] textarea {
+  height: 200px;
+  border-color: #454545;
+  color: #454545;
+}
+
+#page-foret .content .form-step[data-step="2"] textarea.-error {
+  border-color: red;
+}
+
+#page-foret .content .form-step[data-step="2"] .form-step-2-intro {
+  font-weight: 700;
+}
+
+#page-foret .content .form-step[data-step="2"] .citation {
+  font-size: 14px;
+}
+
+#page-foret .content .form-step[data-step="2"] .citation p {
+  text-align: center;
+}
+
+#page-foret .content .form-step[data-step="2"] .citation.-left {
+  padding-right: 30px;
+}
+
+#page-foret .content .form-step[data-step="2"] .citation.-right {
+  padding-left: 30px;
+}
+
+#page-foret .content .form-step[data-step="2"] .control-options {
+  margin-top: 26px;
+  font-size: 11px;
+  font-family: 'Plantin Std', sans-serif;
+  font-weight: 400;
+}
+
+#page-foret .content .form-step[data-step="2"] .control-options .control {
+  margin-bottom: 32px;
+}
+
+#page-foret .content .form-step[data-step="2"] .control-options .control:last-child {
+  margin-bottom: 0;
+}
+
+#page-foret .content .form-step[data-step="2"] .control-options .control.-error .control_indicator {
+  border-color: red;
+  transition: all 0.5s;
+}
+
+#page-foret .content .form-step[data-step="2"] .submit-confirm-btn {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#page-foret .control {
+  display: block;
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  cursor: pointer;
+}
+
+#page-foret .control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+#page-foret .control_indicator {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #000000;
+}
+
+#page-foret .control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 35;
+  pointer-events: none;
+}
+
+#page-foret .control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+#page-foret .control input:checked ~ .control_indicator:after {
+  display: block;
+}
+
+#page-foret .control-checkbox .control_indicator:after {
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid #84c425;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+#page-foret .control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+
+/*# sourceMappingURL=foret.css.map */

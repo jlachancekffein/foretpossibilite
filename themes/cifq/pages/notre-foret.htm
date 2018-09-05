@@ -4,31 +4,290 @@ layout = "default"
 description = "Page Notre foret"
 is_hidden = 0
 ==
-<div class="content">
-    <div class="container">
-        <div class="grid-full">
-            <h1 class="title">{{ 'Notre Forêt'|_ }}</h1>
+
+{% set imgPath = '/themes/cifq/assets/public/images' %}
+
+<link href="/themes/cifq/assets/compiled/foret.css" rel="stylesheet">
+
+<div id="page-foret">
+
+    <div class="header" style="background-image: url('{{ imgPath }}/foret-header.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="grid-three-fourths">
+                    <div class="signature">
+                        <img src="{{ imgPath }}/foret-signature.png" />
+                    </div>
+
+                    <div class="intro">
+                        <p>Notre forêt est en santé et plus vivante que jamais.<br />
+                        Il est temps de démontrer aux Québécois, autant des villes que des régions, que le secteur forestier participe non seulement à l’économie, mais aussi à mettre 
+                        en place des solutions d’avenir durables et profitables à tous.</p>
+
+                        <p>Le Collectif pour une forêt durable invite tous les travailleurs, partenaires et communautés aux quatres coins du Québec à signer le message « Notre forêt »
+                        afin de témoigner de ses multiples possibilités.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="">
+        <div class="mouse-scroll">
+            <div><img src="{{ imgPath }}/mouse-scroll.png" class="scroll" /></div>
+            <span>En savoir plus</span>
+        </div>
 
-            {{ form_open({ url: 'newsletter/submit', class: 'form-horizontal', 'files':true }) }}
+        
 
-            {{ form_text('firstname') }}
-            {{ form_text('lastname') }}
-            {{ form_text('organisation') }}
-            {{ form_text('job') }}
-            {{ form_text('testimonials') }}
-            {{ form_text('email') }}
+    </div>
 
-            {{ form_checkbox('subscribed') }}
+    <div class="content intro" style="background-image: url('{{ imgPath }}/foret-intro-pattern.jpg')">
+        <div class="container">
+            <div class="grid-full intro">
+                <h1 class="title">{{ 'Notre Forêt'|_ }}</h1>
+                <h2>Là où certains ne voient que des arbres, je vois plutôt une forêt de possibilités.</h2>
+                <div class="list">
+                    <ul>
+                        <li>Notre forêt n’a jamais été aussi verte et nos pratiques forestières sont parmi les meilleures au monde.</li>
+                        <li>Notre forêt est récoltée de façon responsable, en respectant les piliers du développement durable.</li>
+                        <li>Notre forêt contribue à la lutte aux changements climatiques.</li>
+                        <li>Notre forêt inspire la fierté; elle est créatrice de valeur,fait tourner l’économie de toutes les régions du Québecet nourrit des milliers de familles d’ici.</li>
+                    </ul>
+                    <ul>
+                        <li>Notre forêt, lieu d’innovation où l’évolution des procédésde récolte permet une réduction de l’empreinte environnementale.</li>
+                        <li>Notre forêt on y travaille au quotidien et tout est planifié afin d’en assurer la pérennité pour de nombreuses générations à venir. </li>
+                        <li class="special">J’invite tout le Québec à s’unir pour l’avenir de notre forêt.</li>
+                    </ul>
+                </div>
+                <div class="signature">
+                    <img src="{{ imgPath }}/foret-intro-signature.png" />
+                </div>
+            </div>
 
-
-            {{ form_file('photo') }}
-
-            {{ form_token() }}
-            {{ form_submit('click me') }}
-            {{ form_close() }}
         </div>
     </div>
+
+    <div class="content before-form">
+        <div class="container">
+            <div class="grid-full">
+                <p>Ce message sera au coeur d’une grande campagne médiatique diffusée dès le mois d’octobre et positionnera le secteur forestier comme un secteur d’avenir.</p>
+                <p>Nous avons besoin de vous pour changer les perceptions des Québécois à l’égard de la forêt. C’est ensemble que nous pouvons les convaincre qu’elle offre une forêt de possibilités.</p>
+            </div>
+        </div>
+        <div class="arrow-down"></div>
+    </div>
+
+    <div class="content form" style="background-image: url('{{ imgPath }}/foret-form-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                {{ form_open({ url: 'newsletter/submit', class: 'form-horizontal', 'files':true }) }}
+
+                    <div class="form-step" data-step="1" data-active="0">
+
+                        <h2>Signez dès maintenant !</h2>
+
+                        <div class="grid-half">
+                            <div class="input">{{ form_text('firstname', 'Prénom') }} <span class="required">*</span></div>
+                            <div class="input">{{ form_text('organisation', 'Organisation') }} <span class="required">&nbsp;</span></div>
+                            <div class="input">{{ form_email('email', 'Courriel') }} <span class="required">*</span></div>
+                        </div>
+                        <div class="grid-half">
+                            <div class="input">{{ form_text('lastname', 'Nom') }} <span class="required">*</span></div>
+                            <div class="input">{{ form_text('job', 'Profession') }} <span class="required">&nbsp;</span></div>
+                        </div>
+                        <div class="grid-full text-center">
+                            <a href="#" class="foret-btn submit-btn">
+                                <span>Notre forêt, j’y crois</span>
+                                <span><img src="{{ imgPath }}/foret-submit-btn.png" /></span>
+                            </a>
+                        </div>
+                        <div class="grid-half copyright">
+                            <em>En cliquant sur le bouton Notre forêt, j’y crois, j'accepte que le Collectif pour une forêt durable utilise mon nom et mon adresse courriel conformément à sa <br /><a href="#">Politique de confidentialité</a></em>
+                        </div>
+
+                    </div>
+
+                    <div class="form-step clearfix" data-step="2" data-active="1">
+                        
+                        <div class="grid-full text-center form-step-2-intro">
+                            <p>Nous croyons aux possibilités infinies qu’offre notre forêt et il est temps de le communiquer à tout le Québec. Partagez votre témoignage sur la forêt québécoise.</p>
+                        </div>
+
+                        <div class="grid-half citation -left">
+                            <p>«J’assure le renouvellement de la forêt québécoise au quotidien.»<em>Julien, ouvrier sylvicole, Rimouski</em></p>
+                            {{ form_textarea('testimonials') }}
+                        </div>
+
+                        <div class="grid-half citation -right">
+                            <p>«Je sélectionne les arbres prêts à être récoltés...car rien n’est laissé au hasard.»  <em>Catherine, ingénieure forestier, Asbestos</em></p>
+                            <a href="#" class="foret-btn btn-upload">
+                                <span>Téléverser votre photo</span>
+                                <span><img src="{{ imgPath }}/foret-upload-btn.png" /></span>
+                            </a>
+                            <div class="form-field-photo -hidden">
+                                {{ form_file('photo') }}
+                            </div>
+
+                            <div class="control-options">
+                                <label class="control control-checkbox">
+                                    J’affirme détenir les droits sur cette photographie et j’autorise le Collectif pour une forêt durable à la publier à des fins promotionnelles dans le cadre de la campagne «Une forêt de possibilités».
+                                    <input type="checkbox" name="upload-file-legal" />
+                                    <div class="control_indicator"></div>
+                                </label>
+                                 <label class="control control-checkbox">
+                                    Je veux rester informé (e)  et recevoir de l’information de la part du Collectif pour une forêt durable
+                                    {{ form_checkbox('subscribed') }}
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="grid-full text-center">
+                              <a href="#" class="foret-btn submit-confirm-btn">
+                                <span>Envoyer</span>
+                                <span><img src="{{ imgPath }}/foret-submit-btn.png" /></span>
+                            </a>
+                        </div>
+
+                    </div>
+                    
+                     {{ form_token() }}
+                {{ form_close() }}
+            </div>
+        </div>
+    </div>
+
+
 </div>
+
+
+<script>
+
+    (function(){
+        
+        var formContainer = document.querySelector('.content.form');
+        var uploadBtnTriggerer = formContainer.querySelector('.btn-upload');
+        var uploadInput = formContainer.querySelector('.form-field-photo input');
+        var formStep1 = formContainer.querySelector('.form-step[data-step="1"]');
+        var formStep2 = formContainer.querySelector('.form-step[data-step="2"]');
+        var submitBtnStep1 = formStep1.querySelector('.submit-btn');
+        var formStep1Inputs = formStep1.querySelectorAll('input');
+        var submitTriggerBtn = formContainer.querySelector('.submit-confirm-btn');
+        var form = formContainer.querySelector('form');
+
+        uploadBtnTriggerer.addEventListener('click', function(e){
+            e.preventDefault();
+            uploadInput.click();
+        })
+
+        submitBtnStep1.addEventListener('click', function(e){
+            e.preventDefault();
+
+            if (valideForm(1)){
+                formStep1.dataset.active = 0;
+                formStep2.dataset.active = 1;
+            }
+
+            
+        })
+
+        submitTriggerBtn.addEventListener('click', function(e){
+            e.preventDefault();
+            if (valideForm(2)){
+                form.submit();
+            }
+            
+        })
+
+        // Step 1 remove error class on input focus
+        for (i=0; i<formStep1Inputs.length; i++){
+            var elm = formStep1Inputs[i];
+            elm.addEventListener('focus', function(){
+                this.closest('.input').classList.remove('-error');
+            })
+        }
+
+        // Step 2 remove error class
+        formStep2.querySelector('textarea').addEventListener('focus', function(){
+            this.classList.remove('-error');
+        })
+        formStep2.querySelector('.btn-upload').addEventListener('click', function(){
+            this.classList.remove('-error');
+        })
+        formStep2.querySelector('[name="upload-file-legal"]').addEventListener('change', function(){
+            this.closest('.control').classList.remove('-error');
+        })
+
+      
+
+        function valideForm(step){
+
+            var isValid = true;
+
+            if (step === 1){
+                
+                var firstname = formStep1.querySelector('[name="firstname"]');
+                var lastname = formStep1.querySelector('[name="lastname"]');
+                var email = formStep1.querySelector('[name="email"]');
+
+                if (!firstname.value.trim().length){
+                    firstname.closest('.input').classList.add('-error');
+                    isValid = false;
+                }
+
+                if (!lastname.value.trim().length){
+                    lastname.closest('.input').classList.add('-error');
+                    isValid = false;
+                }
+                if (!validateEmail(email.value)){
+                    email.closest('.input').classList.add('-error');
+                    isValid = false;
+                }
+
+                
+
+            }
+
+            if (step === 2){
+                var legal = formStep2.querySelector('[name="upload-file-legal"]');
+                var photo = formStep2.querySelector('[name="photo"]');
+                var testimonials = formStep2.querySelector('[name="testimonials"]');
+                
+
+                if (!legal.checked){
+                    legal.closest('.control').classList.add('-error');
+                    isValid = false;
+                }
+
+                if (!photo.value.trim().length){
+                    formStep2.querySelector('.btn-upload').classList.add('-error');
+                    isValid = false;
+                }
+
+                if (!testimonials.value.trim().length){
+                    testimonials.classList.add('-error');
+                    isValid = false;
+                }
+
+                
+                
+            }
+
+            return isValid;
+
+        }
+
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+
+    })();
+
+        
+
+    
+
+</script>
