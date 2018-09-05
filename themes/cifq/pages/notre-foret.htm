@@ -82,18 +82,18 @@ is_hidden = 0
             <div class="row">
                 {{ form_open({ url: 'newsletter/submit', class: 'form-horizontal', 'files':true }) }}
 
-                    <div class="form-step" data-step="1" data-active="0">
+                    <div class="form-step" data-step="1" data-active="1">
 
                         <h2>Signez dès maintenant !</h2>
 
                         <div class="grid-half">
-                            <div class="input">{{ form_text('firstname', 'Prénom') }} <span class="required">*</span></div>
-                            <div class="input">{{ form_text('organisation', 'Organisation') }} <span class="required">&nbsp;</span></div>
-                            <div class="input">{{ form_email('email', 'Courriel') }} <span class="required">*</span></div>
+                            <div class="input"><input name="firstname" type="text" value="" placeholder="Prénom" tabindex="10"> <span class="required">*</span></div>
+                            <div class="input"><input name="organisation" type="text" value="" placeholder="Organisation" tabindex="30"> <span class="required">&nbsp;</span></div>
+                            <div class="input"><input name="email" type="email" value="" placeholder="Courriel" tabindex="50"> <span class="required">*</span></div>
                         </div>
                         <div class="grid-half">
-                            <div class="input">{{ form_text('lastname', 'Nom') }} <span class="required">*</span></div>
-                            <div class="input">{{ form_text('job', 'Profession') }} <span class="required">&nbsp;</span></div>
+                            <div class="input"><input name="lastname" type="text" value="" placeholder="Nom" tabindex="20"> <span class="required">*</span></div>
+                            <div class="input"><input name="job" type="text" value="" placeholder="Profession" tabindex="40"> <span class="required">&nbsp;</span></div>
                         </div>
                         <div class="grid-full text-center">
                             <a href="#" class="foret-btn submit-btn">
@@ -107,7 +107,7 @@ is_hidden = 0
 
                     </div>
 
-                    <div class="form-step clearfix" data-step="2" data-active="1">
+                    <div class="form-step clearfix" data-step="2" data-active="0">
                         
                         <div class="grid-full text-center form-step-2-intro">
                             <p>Nous croyons aux possibilités infinies qu’offre notre forêt et il est temps de le communiquer à tout le Québec. Partagez votre témoignage sur la forêt québécoise.</p>
@@ -115,7 +115,7 @@ is_hidden = 0
 
                         <div class="grid-half citation -left">
                             <p>«J’assure le renouvellement de la forêt québécoise au quotidien.»<em>Julien, ouvrier sylvicole, Rimouski</em></p>
-                            {{ form_textarea('testimonials') }}
+                            <textarea name="testimonials" cols="50" rows="10" placeholder="VOTRE TÉMOIGNAGE"></textarea>
                         </div>
 
                         <div class="grid-half citation -right">

@@ -238,6 +238,7 @@
 }
 
 #page-foret .content.form .input span {
+  width: 20px;
   color: white;
   font-size: 25px;
   position: relative;
@@ -264,20 +265,30 @@
   background-color: transparent;
   color: white;
   font-size: 20px;
-  font-style: italic;
   padding-left: 20px;
-  text-transform: uppercase;
+  font-family: 'Pantograph';
+  font-weight: 400;
   transition: all 0.5s;
+}
+
+#page-foret .content.form input[type="text"]:-ms-input-placeholder, #page-foret .content.form input[type="email"]:-ms-input-placeholder, #page-foret .content.form textarea:-ms-input-placeholder {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+#page-foret .content.form input[type="text"]::placeholder, #page-foret .content.form input[type="email"]::placeholder, #page-foret .content.form textarea::placeholder {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 #page-foret .content.form .foret-btn {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 376px;
+  width: 310px;
   height: 65px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
   background-color: #9ae113;
   font-size: 20px;
   text-transform: uppercase;
@@ -285,7 +296,10 @@
 }
 
 #page-foret .content.form .foret-btn.btn-upload {
+  width: 100%;
   background-color: #454545;
+  font-family: 'Pantograph';
+  font-weight: 400;
   transition: all 0.5s;
 }
 
@@ -301,10 +315,16 @@
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   text-align: center;
+  font-family: 'Plantin Std', sans-serif;
+  font-style: normal;
 }
 
 #page-foret .content.form .copyright a {
   color: rgba(255, 255, 255, 0.6);
+}
+
+#page-foret .content.form .copyright em {
+  font-style: normal;
 }
 
 #page-foret .content .form-step[data-step="2"] {
@@ -324,6 +344,14 @@
   border-color: red;
 }
 
+#page-foret .content .form-step[data-step="2"] textarea:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+#page-foret .content .form-step[data-step="2"] textarea::placeholder {
+  color: rgba(0, 0, 0, 0.65);
+}
+
 #page-foret .content .form-step[data-step="2"] .form-step-2-intro {
   font-weight: 700;
 }
@@ -337,11 +365,11 @@
 }
 
 #page-foret .content .form-step[data-step="2"] .citation.-left {
-  padding-right: 30px;
+  padding-right: 36px;
 }
 
 #page-foret .content .form-step[data-step="2"] .citation.-right {
-  padding-left: 30px;
+  padding-left: 36px;
 }
 
 #page-foret .content .form-step[data-step="2"] .control-options {

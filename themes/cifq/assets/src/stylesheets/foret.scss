@@ -249,6 +249,7 @@
         margin-bottom: 32px;
 
         span{
+          width: 20px;
           color: white;
           font-size: 25px;
           position: relative;
@@ -277,27 +278,34 @@
         background-color: transparent;
         color: white;
         font-size: 20px;
-        font-style: italic;
         padding-left: 20px;
-        text-transform: uppercase;
+        font-family: 'Pantograph';
+        font-weight: 400;
         transition: all 0.5s;
+        &::placeholder{
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.65);
+        }
       }
 
       .foret-btn{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 376px;
+        width: 310px;
         height: 65px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 50px;
         background-color: $c-greenfluo;
         font-size: 20px;
         text-transform: uppercase;
         text-decoration: none;
 
         &.btn-upload{
+          width: 100%;
           background-color:  $c-graydark;
+          font-family: 'Pantograph';
+          font-weight: 400;
           transition: all 0.5s;
           &.-error{
             background-color: $c-error;
@@ -314,8 +322,13 @@
         color: rgba(255,255,255, 0.6);
         font-size: 14px;
         text-align: center;
+        font-family: 'Plantin Std', sans-serif;
+        font-style: normal;
         a{
           color: rgba(255,255,255, 0.6);
+        }
+        em{
+          font-style: normal;
         }
       }
 
@@ -335,6 +348,9 @@
         &.-error{
           border-color: $c-error;
         }
+        &::placeholder{
+          color: rgba(0,0,0,0.65);
+        }
       }
 
       .form-step-2-intro{
@@ -347,10 +363,10 @@
           text-align: center;
         }
         &.-left{
-          padding-right: 30px;
+          padding-right: 36px;
         }
         &.-right{
-          padding-left: 30px;
+          padding-left: 36px;
         }
       }
 
