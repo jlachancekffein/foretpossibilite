@@ -34,10 +34,10 @@
   $c-greenfluo: #9ae113;
   $c-error: red;
 
+  $x-mobile-breakpoint: 400px;
   $mobile-breakpoint: 600px;
   $mobile-form-breakpoint: 800px;
 
-  
   
   position: absolute;
   top: 0;
@@ -82,6 +82,12 @@
       background-position: 60% 50%;
     }
 
+    @media screen and (max-width: $mobile-form-breakpoint) {
+      font-size: 12px;
+    }
+
+    
+
     > .container{
       display: flex;
       flex-direction: column;
@@ -90,6 +96,12 @@
 
       .signature{
         margin-bottom: 30px;
+      }
+
+      .intro{
+        @media screen and (max-width: $mobile-form-breakpoint) {
+          display: none;
+        }
       }
 
     }
@@ -301,6 +313,11 @@
         text-transform: uppercase;
         text-decoration: none;
 
+        @media screen and (max-width: $mobile-form-breakpoint) {
+          width: 100%;
+          height: auto;
+        }
+
         &.btn-upload{
           width: 100%;
           background-color:  $c-graydark;
@@ -341,6 +358,10 @@
       color: #000;
       font-size: 18px;
 
+      @media screen and (max-width: $mobile-form-breakpoint) {
+        padding: 30px 10px 100px;
+      }
+
       textarea{
         height: 200px;
         border-color: $c-graydark;
@@ -364,9 +385,15 @@
         }
         &.-left{
           padding-right: 36px;
+          @media screen and (max-width: $mobile-form-breakpoint) {
+            padding-right: 0;
+          }
         }
         &.-right{
           padding-left: 36px;
+          @media screen and (max-width: $mobile-form-breakpoint) {
+            padding-left: 0;
+          }
         }
       }
 
