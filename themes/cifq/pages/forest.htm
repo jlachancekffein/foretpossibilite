@@ -1,6 +1,7 @@
 title = "forest"
 url = "/nosforets"
 is_hidden = 0
+layout = "default"
 
 [viewBag]
 localeUrl[en] = "/forest"
@@ -9,8 +10,10 @@ localeUrl[en] = "/forest"
 {% set imgPath = '/themes/cifq/assets/public/images' %}
 
 <link href="/themes/cifq/assets/compiled/foret.css" rel="stylesheet">
+<div id="page-nosforets">
 
-<div id="page-foret">
+  hello world
+
 
     <div class="header" style="background-image: url('{{ imgPath }}/foret-header.jpg')">
         <div class="container">
@@ -71,90 +74,46 @@ localeUrl[en] = "/forest"
     <div class="content before-form">
         <div class="container">
             <div class="grid-full">
-                <p>Ce message sera au coeur d’une grande campagne médiatique diffusée dès le mois d’octobre et positionnera le secteur forestier comme un secteur d’avenir.</p>
-                <p>Nous avons besoin de vous pour changer les perceptions des Québécois à l’égard de la forêt. C’est ensemble que nous pouvons les convaincre qu’elle offre une forêt de possibilités.</p>
+                <p>Lorem Ipsum</p>
             </div>
         </div>
         <div class="arrow-down"></div>
     </div>
 
-    <div class="content form" style="background-image: url('{{ imgPath }}/foret-form-bg.jpg')">
+    <div class="content form" style="background-image: url('{{ imgPath }}/forest-bloc/forest.png')">
         <div class="container">
             <div class="row">
-                {{ form_open({ url: 'newsletter/submit', class: 'form-horizontal', 'files':true }) }}
 
-                    <div class="form-step" data-step="1" data-active="1">
+              <div class="grid-third">
+                  <div class="signature">
+                      <img src="{{ imgPath }}/forest-bloc/forest-card-1.png" />
+                  </div>
 
-                        <h2>Signez dès maintenant !</h2>
+                  <div class="intro">
+                      <p>50% du territoire québécois est recouvert de forêt</p>
+                  </div>
+              </div>
 
-                        <div class="grid-half">
-                            <div class="input"><input name="firstname" type="text" value="" placeholder="Prénom" tabindex="10"> <span class="required">*</span></div>
-                            <div class="input"><input name="organisation" type="text" value="" placeholder="Organisation" tabindex="30"> <span class="required">&nbsp;</span></div>
-                            <div class="input"><input name="email" type="email" value="" placeholder="Courriel" tabindex="50"> <span class="required">*</span></div>
-                        </div>
-                        <div class="grid-half">
-                            <div class="input"><input name="lastname" type="text" value="" placeholder="Nom" tabindex="20"> <span class="required">*</span></div>
-                            <div class="input"><input name="job" type="text" value="" placeholder="Profession" tabindex="40"> <span class="required">&nbsp;</span></div>
-                        </div>
-                        <div class="grid-full text-center">
-                            <a href="#" class="foret-btn submit-btn">
-                                <span>Notre forêt, j’y crois</span>
-                                <span><img src="{{ imgPath }}/foret-submit-btn.png" /></span>
-                            </a>
-                        </div>
-                        <div class="grid-half copyright">
-                            <em>En cliquant sur le bouton Notre forêt, j’y crois, j'accepte que le Collectif pour une forêt durable utilise mon nom et mon adresse courriel conformément à sa <br /><a href="#">Politique de confidentialité</a></em>
-                        </div>
+              <div class="grid-third">
+                  <div class="signature">
+                      <img src="{{ imgPath }}/forest-bloc/forest-card-2.png" />
+                  </div>
 
-                    </div>
+                  <div class="intro">
+                      <p>80% des forêts se régénèrent naturellement</p>
+                  </div>
+              </div>
 
-                    <div class="form-step clearfix" data-step="2" data-active="0">
+              <div class="grid-third">
+                  <div class="signature">
+                      <img src="{{ imgPath }}/forest-bloc/forest-card-3.png" />
+                  </div>
 
-                        <div class="grid-full text-center form-step-2-intro">
-                            <p>Nous croyons aux possibilités infinies qu’offre notre forêt et il est temps de le communiquer à tout le Québec. Partagez votre témoignage sur la forêt québécoise.</p>
-                        </div>
+                  <div class="intro">
+                      <p>Moins de 1% du territoire forestier est récolté chaque année</p>
+                  </div>
+              </div>
 
-                        <div class="grid-half citation -left">
-                            <p>«J’assure le renouvellement de la forêt québécoise au quotidien.»<em>Julien, ouvrier sylvicole, Rimouski</em></p>
-                            <textarea name="testimonials" cols="50" rows="10" placeholder="VOTRE TÉMOIGNAGE"></textarea>
-                        </div>
-
-                        <div class="grid-half citation -right">
-                            <p>«Je sélectionne les arbres prêts à être récoltés...car rien n’est laissé au hasard.»  <em>Catherine, ingénieure forestier, Asbestos</em></p>
-                            <a href="#" class="foret-btn btn-upload">
-                                <span>Téléverser votre photo</span>
-                                <span><img src="{{ imgPath }}/foret-upload-btn.png" /></span>
-                            </a>
-                            <div class="form-field-photo -hidden">
-                                {{ form_file('photo') }}
-                            </div>
-
-                            <div class="control-options">
-                                <label class="control control-checkbox">
-                                    J’affirme détenir les droits sur cette photographie et j’autorise le Collectif pour une forêt durable à la publier à des fins promotionnelles dans le cadre de la campagne «Une forêt de possibilités».
-                                    <input type="checkbox" name="upload-file-legal" />
-                                    <div class="control_indicator"></div>
-                                </label>
-                                 <label class="control control-checkbox">
-                                    Je veux rester informé (e)  et recevoir de l’information de la part du Collectif pour une forêt durable
-                                    {{ form_checkbox('subscribed') }}
-                                    <div class="control_indicator"></div>
-                                </label>
-                            </div>
-
-                        </div>
-
-                        <div class="grid-full text-center">
-                              <a href="#" class="foret-btn submit-confirm-btn">
-                                <span>Envoyer</span>
-                                <span><img src="{{ imgPath }}/foret-submit-btn.png" /></span>
-                            </a>
-                        </div>
-
-                    </div>
-
-                     {{ form_token() }}
-                {{ form_close() }}
             </div>
         </div>
     </div>

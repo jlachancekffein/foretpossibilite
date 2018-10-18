@@ -19,6 +19,478 @@
   font-weight: 700;
 }
 
+#page-nosforets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  font-family: 'Brandon', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.25px;
+}
+
+#page-nosforets img {
+  max-width: 100%;
+}
+
+#page-nosforets .-hidden {
+  display: none;
+}
+
+#page-nosforets .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #000;
+}
+
+#page-nosforets .header {
+  height: calc(100vh - 30px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1760px) {
+  #page-nosforets .header {
+    background-position: 70% 50%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #page-nosforets .header {
+    background-position: 60% 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #page-nosforets .header {
+    font-size: 12px;
+  }
+}
+
+#page-nosforets .header > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+#page-nosforets .header > .container .signature {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  #page-nosforets .header > .container .intro {
+    display: none;
+  }
+}
+
+#page-nosforets .header .mouse-scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Plantin Std', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+#page-nosforets .header .mouse-scroll img {
+  width: 26px;
+  margin-bottom: 10px;
+}
+
+#page-nosforets .content {
+  background-color: white;
+}
+
+#page-nosforets .content.intro {
+  padding-top: 60px;
+  color: #6a6a6a;
+  text-align: center;
+  font-size: 18px;
+}
+
+#page-nosforets .content.intro h1 {
+  font-weight: 700;
+  font-size: 44px;
+}
+
+#page-nosforets .content.intro h2 {
+  margin-top: -50px;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  font-family: 'Plantin Std', sans-serif;
+}
+
+#page-nosforets .content.intro .list {
+  display: flex;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  #page-nosforets .content.intro .list {
+    display: block;
+  }
+}
+
+#page-nosforets .content.intro .list ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 600px) {
+  #page-nosforets .content.intro .list ul:first-child {
+    padding-right: 30px;
+  }
+  #page-nosforets .content.intro .list ul:last-child {
+    padding-left: 30px;
+  }
+}
+
+#page-nosforets .content.intro .list ul li {
+  position: relative;
+  padding-left: 24px;
+  padding-bottom: 26px;
+  line-height: 20px;
+}
+
+#page-nosforets .content.intro .list ul li:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: 12px;
+  height: 13px;
+  background-image: url("/themes/cifq/assets/public/images/list-checkbox.png");
+}
+
+#page-nosforets .content.intro .list ul li.special {
+  color: #9ae113;
+  font-size: 24px;
+  font-family: 'Plantin Std', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 32px;
+}
+
+#page-nosforets .content.intro .list ul li.special:before {
+  display: none;
+}
+
+#page-nosforets .content.intro .signature {
+  margin: 60px 0;
+}
+
+#page-nosforets .content.before-form {
+  padding: 70px 0 30px;
+  background-color: #9ae113;
+  text-align: center;
+  font-size: 26px;
+  line-height: 32px;
+  z-index: 9;
+}
+
+#page-nosforets .content.before-form .arrow-down {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: #9ae113;
+}
+
+#page-nosforets .content.form {
+  padding-top: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 800px) {
+  #page-nosforets .content.form .grid-half {
+    width: 100%;
+  }
+}
+
+#page-nosforets .content.form .container {
+  position: relative;
+  height: 640px;
+}
+
+#page-nosforets .content.form h2 {
+  margin-bottom: 80px;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+}
+
+#page-nosforets .content.form .form-step {
+  position: absolute;
+  transition: all 1s;
+  opacity: 0;
+  z-index: 0;
+}
+
+#page-nosforets .content.form .form-step[data-active="1"] {
+  opacity: 1;
+  z-index: 1;
+}
+
+#page-nosforets .content.form .input {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+#page-nosforets .content.form .input span {
+  width: 20px;
+  color: white;
+  font-size: 25px;
+  position: relative;
+  top: 11px;
+  left: 10px;
+  transition: all 0.5s;
+}
+
+#page-nosforets .content.form .input.-error {
+  color: red;
+}
+
+#page-nosforets .content.form .input.-error input[type="text"], #page-nosforets .content.form .input.-error input[type="email"], #page-nosforets .content.form .input.-error textarea {
+  border-color: red;
+}
+
+#page-nosforets .content.form .input.-error span {
+  color: red;
+}
+
+#page-nosforets .content.form input[type="text"], #page-nosforets .content.form input[type="email"], #page-nosforets .content.form textarea {
+  height: 48px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+  font-family: 'Pantograph';
+  font-weight: 400;
+  transition: all 0.5s;
+}
+
+#page-nosforets .content.form input[type="text"]:-ms-input-placeholder, #page-nosforets .content.form input[type="email"]:-ms-input-placeholder, #page-nosforets .content.form textarea:-ms-input-placeholder {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+#page-nosforets .content.form input[type="text"]::placeholder, #page-nosforets .content.form input[type="email"]::placeholder, #page-nosforets .content.form textarea::placeholder {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+#page-nosforets .content.form .foret-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 310px;
+  height: 65px;
+  margin: 0 auto;
+  padding: 0 50px;
+  background-color: #9ae113;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  #page-nosforets .content.form .foret-btn {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#page-nosforets .content.form .foret-btn.btn-upload {
+  width: 100%;
+  background-color: #454545;
+  font-family: 'Pantograph';
+  font-weight: 400;
+  transition: all 0.5s;
+}
+
+#page-nosforets .content.form .foret-btn.btn-upload.-error {
+  background-color: red;
+}
+
+#page-nosforets .content.form .copyright {
+  float: none;
+  clear: both;
+  margin: 0 auto;
+  padding-top: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  text-align: center;
+  font-family: 'Plantin Std', sans-serif;
+  font-style: normal;
+}
+
+#page-nosforets .content.form .copyright a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#page-nosforets .content.form .copyright em {
+  font-style: normal;
+}
+
+#page-nosforets .content .form-step[data-step="2"] {
+  padding: 30px 60px 100px;
+  background: white;
+  color: #000;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 800px) {
+  #page-nosforets .content .form-step[data-step="2"] {
+    padding: 30px 10px 100px;
+  }
+}
+
+#page-nosforets .content .form-step[data-step="2"] textarea {
+  height: 200px;
+  border-color: #454545;
+  color: #454545;
+}
+
+#page-nosforets .content .form-step[data-step="2"] textarea.-error {
+  border-color: red;
+}
+
+#page-nosforets .content .form-step[data-step="2"] textarea:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+#page-nosforets .content .form-step[data-step="2"] textarea::placeholder {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+#page-nosforets .content .form-step[data-step="2"] .form-step-2-intro {
+  font-weight: 700;
+}
+
+#page-nosforets .content .form-step[data-step="2"] .citation {
+  font-size: 14px;
+}
+
+#page-nosforets .content .form-step[data-step="2"] .citation p {
+  text-align: center;
+}
+
+#page-nosforets .content .form-step[data-step="2"] .citation.-left {
+  padding-right: 36px;
+}
+
+@media screen and (max-width: 800px) {
+  #page-nosforets .content .form-step[data-step="2"] .citation.-left {
+    padding-right: 0;
+  }
+}
+
+#page-nosforets .content .form-step[data-step="2"] .citation.-right {
+  padding-left: 36px;
+}
+
+@media screen and (max-width: 800px) {
+  #page-nosforets .content .form-step[data-step="2"] .citation.-right {
+    padding-left: 0;
+  }
+}
+
+#page-nosforets .content .form-step[data-step="2"] .control-options {
+  margin-top: 26px;
+  font-size: 11px;
+  font-family: 'Plantin Std', sans-serif;
+  font-weight: 400;
+}
+
+#page-nosforets .content .form-step[data-step="2"] .control-options .control {
+  margin-bottom: 32px;
+}
+
+#page-nosforets .content .form-step[data-step="2"] .control-options .control:last-child {
+  margin-bottom: 0;
+}
+
+#page-nosforets .content .form-step[data-step="2"] .control-options .control.-error .control_indicator {
+  border-color: red;
+  transition: all 0.5s;
+}
+
+#page-nosforets .content .form-step[data-step="2"] .submit-confirm-btn {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#page-nosforets .control {
+  display: block;
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  cursor: pointer;
+}
+
+#page-nosforets .control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+#page-nosforets .control_indicator {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #000000;
+}
+
+#page-nosforets .control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 35;
+  pointer-events: none;
+}
+
+#page-nosforets .control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+#page-nosforets .control input:checked ~ .control_indicator:after {
+  display: block;
+}
+
+#page-nosforets .control-checkbox .control_indicator:after {
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid #84c425;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+#page-nosforets .control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+
 #page-foret {
   position: absolute;
   top: 0;

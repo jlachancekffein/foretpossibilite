@@ -18,10 +18,471 @@
   font-family: "Brandon";
   src: url("/themes/cifq/assets/public/fonts/BrandonText-Black.woff2") format("woff2"),
          url("/themes/cifq/assets/public/fonts/BrandonText-Black.woff") format("woff");
-  
+
   font-style: normal;
   font-weight: 700;
  }
+
+
+#page-nosforets{
+
+    $c-gray: #6a6a6a;
+    $c-graydark: #454545;
+    $c-greenfluo: #9ae113;
+    $c-error: red;
+
+    $x-mobile-breakpoint: 400px;
+    $mobile-breakpoint: 600px;
+    $mobile-form-breakpoint: 800px;
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    font-family: 'Brandon', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.25px;
+
+
+    img{
+      max-width: 100%;
+    }
+
+    .-hidden{
+      display: none;
+    }
+
+    .arrow-down{
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid #000;
+    }
+
+
+    .header{
+      height: calc(100vh - 30px);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      font-size: 20px;
+
+      @media screen and (max-width: 1760px) {
+        background-position: 70% 50%;
+      }
+
+      @media screen and (max-width: 680px) {
+        background-position: 60% 50%;
+      }
+
+      @media screen and (max-width: $mobile-form-breakpoint) {
+        font-size: 12px;
+      }
+
+
+
+      > .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        .signature{
+          margin-bottom: 30px;
+        }
+
+        .intro{
+          @media screen and (max-width: $mobile-form-breakpoint) {
+            display: none;
+          }
+        }
+
+      }
+
+      .mouse-scroll{
+        position: absolute;
+        bottom: 36px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: 'Plantin Std', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        img{
+          width: 26px;
+          margin-bottom: 10px;
+        }
+      }
+
+    }
+
+    .content{
+      background-color: white;
+
+      &.intro{
+        padding-top: 60px;
+        color: $c-gray;
+        text-align: center;
+        font-size: 18px;
+
+        h1{
+          font-weight: 700;
+          font-size: 44px;
+        }
+
+        h2{
+          margin-top: -50px;
+          font-weight: 400;
+          font-style: italic;
+          font-size: 28px;
+          font-family: 'Plantin Std', sans-serif;
+        }
+
+        .list{
+          display: flex;
+          text-align: left;
+
+          @media screen and (max-width: $mobile-breakpoint) {
+            display: block;
+          }
+
+          ul{
+            list-style: none;
+            @media screen and (min-width: $mobile-breakpoint) {
+              &:first-child{
+                padding-right: 30px;
+              }
+              &:last-child{
+                padding-left: 30px;
+              }
+            }
+
+            li{
+              position: relative;
+              padding-left: 24px;
+              padding-bottom: 26px;
+              line-height: 20px;
+              &:before{
+                content: '';
+                position: absolute;
+                top: 3px;
+                left: 0;
+                display: block;
+                width: 12px;
+                height: 13px;
+                background-image: url('/themes/cifq/assets/public/images/list-checkbox.png')
+              }
+              &.special{
+                color: $c-greenfluo;
+                font-size: 24px;
+                font-family: 'Plantin Std', sans-serif;
+                font-weight: 400;
+                font-style: italic;
+                line-height: 32px;
+                &:before{
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+        .signature{
+          margin: 60px 0;
+        }
+
+      }
+
+
+      &.before-form{
+        padding: 70px 0 30px;
+        background-color: $c-greenfluo;
+        text-align: center;
+        font-size: 26px;
+        line-height: 32px;
+        z-index: 9;
+
+        .arrow-down{
+          position: absolute;
+          bottom: -20px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-top-color: $c-greenfluo;
+        }
+
+      }
+
+      &.form{
+        padding-top: 100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: $mobile-form-breakpoint) {
+          .grid-half{
+            width: 100%;
+          }
+        }
+
+        .container{
+          position: relative;
+          height: 640px;
+        }
+
+        h2{
+          margin-bottom: 80px;
+          font-weight: 600;
+          font-size: 30px;
+          text-align: center;
+        }
+
+        .form-step{
+          position: absolute;
+          transition: all 1s;
+          opacity: 0;
+          z-index: 0;
+          &[data-active="1"]{
+            opacity: 1;
+            z-index: 1;
+          }
+        }
+
+
+        .input{
+          display: flex;
+          margin-bottom: 32px;
+
+          span{
+            width: 20px;
+            color: white;
+            font-size: 25px;
+            position: relative;
+            top: 11px;
+            left: 10px;
+            transition: all 0.5s;
+          }
+
+          &.-error{
+            color: $c-error;
+            input[type="text"], input[type="email"], textarea{
+              border-color: $c-error;
+            }
+            span{
+              color: $c-error;
+            }
+          }
+
+        }
+
+
+
+        input[type="text"], input[type="email"], textarea{
+          height: 48px;
+          border: 2px solid white;
+          background-color: transparent;
+          color: white;
+          font-size: 20px;
+          padding-left: 20px;
+          font-family: 'Pantograph';
+          font-weight: 400;
+          transition: all 0.5s;
+          &::placeholder{
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.65);
+          }
+        }
+
+        .foret-btn{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 310px;
+          height: 65px;
+          margin: 0 auto;
+          padding: 0 50px;
+          background-color: $c-greenfluo;
+          font-size: 20px;
+          text-transform: uppercase;
+          text-decoration: none;
+
+          @media screen and (max-width: $mobile-form-breakpoint) {
+            width: 100%;
+            height: auto;
+          }
+
+          &.btn-upload{
+            width: 100%;
+            background-color:  $c-graydark;
+            font-family: 'Pantograph';
+            font-weight: 400;
+            transition: all 0.5s;
+            &.-error{
+              background-color: $c-error;
+            }
+          }
+
+        }
+
+        .copyright{
+          float: none;
+          clear: both;
+          margin: 0 auto;
+          padding-top: 50px;
+          color: rgba(255,255,255, 0.6);
+          font-size: 14px;
+          text-align: center;
+          font-family: 'Plantin Std', sans-serif;
+          font-style: normal;
+          a{
+            color: rgba(255,255,255, 0.6);
+          }
+          em{
+            font-style: normal;
+          }
+        }
+
+
+      }
+
+      .form-step[data-step="2"]{
+        padding: 30px 60px 100px;
+        background: white;
+        color: #000;
+        font-size: 18px;
+
+        @media screen and (max-width: $mobile-form-breakpoint) {
+          padding: 30px 10px 100px;
+        }
+
+        textarea{
+          height: 200px;
+          border-color: $c-graydark;
+          color: $c-graydark;
+          &.-error{
+            border-color: $c-error;
+          }
+          &::placeholder{
+            color: rgba(0,0,0,0.65);
+          }
+        }
+
+        .form-step-2-intro{
+          font-weight: 700;
+        }
+
+        .citation{
+          font-size: 14px;
+          p{
+            text-align: center;
+          }
+          &.-left{
+            padding-right: 36px;
+            @media screen and (max-width: $mobile-form-breakpoint) {
+              padding-right: 0;
+            }
+          }
+          &.-right{
+            padding-left: 36px;
+            @media screen and (max-width: $mobile-form-breakpoint) {
+              padding-left: 0;
+            }
+          }
+        }
+
+        .control-options{
+          margin-top: 26px;
+          font-size: 11px;
+          font-family: 'Plantin Std', sans-serif;
+          font-weight: 400;
+
+          .control{
+            margin-bottom: 32px;
+            &:last-child{
+              margin-bottom: 0;
+            }
+            &.-error{
+              .control_indicator{
+                border-color: $c-error;
+                transition: all 0.5s;
+              }
+            }
+          }
+
+        }
+
+        .submit-confirm-btn{
+          position: absolute;
+          bottom: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+      }
+
+    }
+
+
+
+  .control {
+
+      display: block;
+      position: relative;
+      padding-left: 36px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+      cursor: pointer;
+  }
+      .control input {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+      }
+  .control_indicator {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      border: 2px solid #000000;
+  }
+
+
+
+
+  .control input:disabled ~ .control_indicator {
+      background: #e6e6e6;
+      opacity: 35;
+      pointer-events: none;
+  }
+  .control_indicator:after {
+      box-sizing: unset;
+      content: '';
+      position: absolute;
+      display: none;
+  }
+  .control input:checked ~ .control_indicator:after {
+      display: block;
+  }
+  .control-checkbox .control_indicator:after {
+      left: 5px;
+      top: 1px;
+      width: 4px;
+      height: 8px;
+      border: solid #84c425;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+  }
+  .control-checkbox input:disabled ~ .control_indicator:after {
+      border-color: #7b7b7b;
+  }
+
+
+}
 
 
 
@@ -38,7 +499,7 @@
   $mobile-breakpoint: 600px;
   $mobile-form-breakpoint: 800px;
 
-  
+
   position: absolute;
   top: 0;
   left: 0;
@@ -59,8 +520,8 @@
   }
 
   .arrow-down{
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid #000;
@@ -86,7 +547,7 @@
       font-size: 12px;
     }
 
-    
+
 
     > .container{
       display: flex;
@@ -165,7 +626,7 @@
               padding-left: 30px;
             }
           }
-         
+
           li{
             position: relative;
             padding-left: 24px;
@@ -254,7 +715,7 @@
           z-index: 1;
         }
       }
-      
+
 
       .input{
         display: flex;
@@ -282,7 +743,7 @@
 
       }
 
-      
+
 
       input[type="text"], input[type="email"], textarea{
         height: 48px;
@@ -349,7 +810,7 @@
         }
       }
 
-      
+
     }
 
     .form-step[data-step="2"]{
@@ -484,6 +945,6 @@
     border-color: #7b7b7b;
 }
 
- 
+
 
 }
