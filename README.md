@@ -3,6 +3,21 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## 0.6
+### Fixed
+- Nav menu item label
+
+
+## 0.5
+### Fixed
+- Grid max width container
+- Mini Quiz height no responsive
+
+## 0.4
+### Updated
+- Setup translations variables
+- Copydeck for french done
+
 ## 0.3
 ### Added
 - Plantin Italic font

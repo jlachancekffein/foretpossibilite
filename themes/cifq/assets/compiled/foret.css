@@ -128,6 +128,11 @@
   background-color: white;
 }
 
+#page-nosforets .content .container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 #page-nosforets .content.intro {
   padding-top: 60px;
   color: #6a6a6a;
@@ -271,6 +276,7 @@
 
 #page-nosforets .content.green-block .quiz-btn .quiz-btn-text {
   font-size: 20px;
+  font-family: Brandon;
 }
 
 #page-nosforets .content.green-block .quiz-btn a {
@@ -291,7 +297,6 @@
 
 #page-nosforets .content.form .container {
   position: relative;
-  height: 640px;
 }
 
 #page-nosforets .content.form .container .why-container {

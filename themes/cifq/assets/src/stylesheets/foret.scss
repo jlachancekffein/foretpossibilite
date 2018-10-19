@@ -141,6 +141,11 @@
     .content{
       background-color: white;
 
+      .container{
+        max-width: 1600px;
+        margin:0 auto;
+      }
+
       &.intro{
         padding-top: 60px;
         color: $c-gray;
@@ -281,6 +286,7 @@
 
           .quiz-btn-text{
             font-size: 20px;
+            font-family: Brandon;
           }
 
           a{
@@ -304,7 +310,6 @@
 
         .container{
           position: relative;
-          height: 640px;
 
           .why-container{
             padding-bottom:30px;
