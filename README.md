@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## 0.3
+### Updated
+
+- Header image
+- Center header logo
+
 
 ## 0.2
 ### Added
