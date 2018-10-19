@@ -3,13 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-## 0.6
-### Fixed
-- Nav menu item label
-
-
 ## 0.5
 ### Fixed
+- Nav menu item label
 - Grid max width container
 - Mini Quiz height no responsive
 
