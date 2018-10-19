@@ -23,6 +23,12 @@
   font-weight: 700;
  }
 
+ @font-face {
+  font-family: "Plantin";
+  src: url("/themes/cifq/assets/public/fonts/PlantinStd-Italic.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+ }
 
 #page-nosforets{
 
@@ -98,6 +104,14 @@
         }
 
         .intro{
+          width: 80%;
+          margin: auto;
+          background: rgba(0,0,0,.30);
+          padding:30px;
+          font-family: Plantin;
+        }
+
+        .intro{
           @media screen and (max-width: $mobile-form-breakpoint) {
             display: none;
           }
@@ -131,11 +145,14 @@
         padding-top: 60px;
         color: $c-gray;
         text-align: center;
-        font-size: 18px;
+        font-size: 28px;
+        font-family: Plantin;
 
         h1{
           font-weight: 700;
           font-size: 44px;
+          font-family: Brandon;
+          color:$c-green;
         }
 
         h2{
@@ -144,6 +161,10 @@
           font-style: italic;
           font-size: 28px;
           font-family: 'Plantin Std', sans-serif;
+        }
+
+        .collectif-logo{
+          padding-bottom: 50px;
         }
 
         .list{
@@ -237,12 +258,14 @@
             color:black;
             font-size: 20px;
             text-align:left;
+            font-family: Brandon;
           }
 
           p{
             color:white;
             text-align: left;
             font-size: 14px;
+            font-family: Brandon;
           }
         }
 
@@ -282,6 +305,33 @@
         .container{
           position: relative;
           height: 640px;
+
+          .why-container{
+            padding-bottom:30px;
+          }
+
+          .why{
+            font-family: Brandon;
+            font-size: 30px;
+          }
+
+          .know-that{
+            font-family: Plantin;
+            font-size: 30px;
+            float:right;
+          }
+
+          .signature{
+            text-align: center;
+          }
+
+
+          .intro{
+            font-family: Plantin;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 45px;
+          }
         }
 
         h2{
