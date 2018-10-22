@@ -346,12 +346,27 @@ body {
   padding-right: 5%;
 }
 
+@media only screen and (max-width: 1024px) {
+  #page-nosforets .content.form .container .card-container .grid-third {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
 #page-nosforets .content.form .container .card-container .grid-third .intro p {
   margin: 0;
 }
 
 #page-nosforets .content.form .container.is-why .row {
   margin: 5vw auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  #page-nosforets .content.form .container.is-why .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 #page-nosforets .content.form .container .why-container {
@@ -365,12 +380,26 @@ body {
   display: inline-block;
 }
 
+@media only screen and (max-width: 1024px) {
+  #page-nosforets .content.form .container .why-container .item {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 #page-nosforets .content.form .container .why-container .line {
   background-color: white;
   width: 50%;
   height: 2px;
   padding-top: 2;
   margin-top: 30px;
+}
+
+@media only screen and (max-width: 1024px) {
+  #page-nosforets .content.form .container .why-container .line {
+    width: 90%;
+    margin: 30px auto;
+  }
 }
 
 #page-nosforets .content.form .container .why {

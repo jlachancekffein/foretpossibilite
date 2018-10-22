@@ -373,6 +373,11 @@ body {
           .card-container .grid-third {
             padding-left: 5%;
             padding-right: 5%;
+            @media only screen and (max-width:1024px) {
+              width: 100%;
+              margin-bottom: 60px;
+            }
+
             .intro p {
               margin: 0;
             }
@@ -381,6 +386,11 @@ body {
           &.is-why {
             .row {
               margin: 5vw auto;
+              @media only screen and (max-width:1024px) {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+              }
             }
           }
 
@@ -394,6 +404,10 @@ body {
             
             .item {
               display: inline-block;
+              @media only screen and (max-width:1024px) {
+                display: block;
+                margin: 0 auto;
+              }
             }
             
             .line{
@@ -402,6 +416,10 @@ body {
               height: 2px;
               padding-top: 2;
               margin-top: 30px;
+              @media only screen and (max-width:1024px) {
+                width: 90%;
+                margin: 30px auto;
+              }
             }
           }
 
