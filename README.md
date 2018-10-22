@@ -3,7 +3,15 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## 0.5.1
+### Added
+- Missing Sliders images (Optimized)
+
 ## 0.5
+### Added
+- Swiper
+- Sliders images (Need to be optimized)
+
 ### Fixed
 - Nav menu item label
 - Grid max width container
