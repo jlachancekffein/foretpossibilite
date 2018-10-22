@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## 0.6
+### Added
+- Add missing fonts
+
 ## 0.5.1
 ### Added
 - Missing Sliders images (Optimized)
