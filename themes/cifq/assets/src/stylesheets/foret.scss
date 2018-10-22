@@ -1,3 +1,8 @@
+body {
+  // Éviter que la graisse des polices soient trop grasses.
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 @font-face {
   font-family: 'Brandon';
@@ -35,12 +40,22 @@
   font-weight:  300;
 }
 
- @font-face {
+@font-face {
+  font-family: 'BrandonGrotesqueRegularItalic';
+  src: url('/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.eot');
+  src: url('/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.eot') format('embedded-opentype'),
+        url('/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.woff2') format('woff2'),
+        url('/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.woff') format('woff'),
+        url('/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.ttf') format('truetype'),
+        url('/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.svg#BrandonGrotesqueRegularItalic') format('svg');
+}
+
+@font-face {
   font-family: "Plantin";
   src: url("/themes/cifq/assets/public/fonts/PlantinStd-Italic.woff") format("woff");
   font-style: normal;
   font-weight: 700;
- }
+}
 
 #page-nosforets{
 
@@ -67,8 +82,18 @@
 
 
     .green-block{
-      font-size: 1.5em;
-      line-height: 51px;
+      // line-height: 60px;
+      &.is-banner {
+        p {
+          // font-size: 3.4em;
+          font-size: 4.4vw;
+          line-height: 6vw;
+          font-family: 'BrandonGrotesqueRegularItalic';
+          letter-spacing: normal;
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
 
     img{
@@ -126,6 +151,7 @@
           background: rgba(0,0,0,.30);
           padding:30px;
           font-family: Plantin;
+          letter-spacing: normal;
         }
 
         .intro{
@@ -169,12 +195,19 @@
         text-align: center;
         font-size: 28px;
         font-family: Plantin;
+        letter-spacing: normal;
 
         h1{
           font-weight: 700;
-          font-size: 44px;
+          font-size: 49px;
           font-family: Brandon;
           color:$c-green;
+          line-height: 1.15;
+        }
+
+        p {
+          line-height: 1.143;
+          padding: 0 5vw;
         }
 
         h2{
@@ -246,7 +279,7 @@
 
 
       &.before-form{
-        padding: 70px 0 30px;
+        padding: 3vw 0;
         background-color: $c-green;
         text-align: center;
         font-size: 26px;
@@ -299,28 +332,31 @@
         }
 
         .quiz-btn{
-          padding-top: 17px;
-          height: 65px;
-          width: 342px;
+          display: inline-flex;
+          padding: 15px 30px 15px 70px;
           background-color: $c-graydark;
+          text-decoration: none;
 
           .quiz-btn-text{
-            font-size: 0.8em;
+            font-size: 20px;
             font-family: Brandon;
             font-style:   normal;
             font-weight:  400;
+            background: transparent;
+            padding-right: 50px;
+            letter-spacing: normal;
           }
 
-          a{
-            text-decoration: none;
+          img {
+            background: transparent;
           }
+
         }
 
       }
 
 
       &.form{
-        padding-top: 100px;
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -332,13 +368,37 @@
 
         .container{
           position: relative;
+          max-width: 1440px;
+
+          .card-container .grid-third {
+            padding-left: 5%;
+            padding-right: 5%;
+            .intro p {
+              margin: 0;
+            }
+          }
+
+          &.is-why {
+            .row {
+              margin: 5vw auto;
+            }
+          }
 
           .why-container{
-            padding-bottom:30px;
+            max-width: 95%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
 
+
+            
+            .item {
+              display: inline-block;
+            }
+            
             .line{
               background-color: white;
-              width: 30%;
+              width: 50%;
               height: 2px;
               padding-top: 2;
               margin-top: 30px;
@@ -366,6 +426,8 @@
             font-size: 30px;
             text-align: center;
             padding-top: 45px;
+            letter-spacing: normal;
+            line-height: 1.2;
           }
         }
 

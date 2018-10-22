@@ -1,3 +1,8 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @font-face {
   font-family: 'Brandon';
   src: url("/themes/cifq/assets/public/fonts/BrandonText-Black.woff");
@@ -26,6 +31,12 @@
 }
 
 @font-face {
+  font-family: 'BrandonGrotesqueRegularItalic';
+  src: url("/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.eot");
+  src: url("/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.eot") format("embedded-opentype"), url("/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.woff2") format("woff2"), url("/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.woff") format("woff"), url("/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.ttf") format("truetype"), url("/themes/cifq/assets/public/fonts/BrandonGrotesqueRegularItalic.svg#BrandonGrotesqueRegularItalic") format("svg");
+}
+
+@font-face {
   font-family: "Plantin";
   src: url("/themes/cifq/assets/public/fonts/PlantinStd-Italic.woff") format("woff");
   font-style: normal;
@@ -44,9 +55,13 @@
   letter-spacing: 1.25px;
 }
 
-#page-nosforets .green-block {
-  font-size: 1.5em;
-  line-height: 51px;
+#page-nosforets .green-block.is-banner p {
+  font-size: 4.4vw;
+  line-height: 6vw;
+  font-family: 'BrandonGrotesqueRegularItalic';
+  letter-spacing: normal;
+  margin: 0;
+  padding: 0;
 }
 
 #page-nosforets img {
@@ -109,6 +124,7 @@
   background: rgba(0, 0, 0, 0.3);
   padding: 30px;
   font-family: Plantin;
+  letter-spacing: normal;
 }
 
 @media screen and (max-width: 800px) {
@@ -150,13 +166,20 @@
   text-align: center;
   font-size: 28px;
   font-family: Plantin;
+  letter-spacing: normal;
 }
 
 #page-nosforets .content.intro h1 {
   font-weight: 700;
-  font-size: 44px;
+  font-size: 49px;
   font-family: Brandon;
   color: #84c425;
+  line-height: 1.15;
+}
+
+#page-nosforets .content.intro p {
+  line-height: 1.143;
+  padding: 0 5vw;
 }
 
 #page-nosforets .content.intro h2 {
@@ -231,7 +254,7 @@
 }
 
 #page-nosforets .content.before-form {
-  padding: 70px 0 30px;
+  padding: 3vw 0;
   background-color: #84c425;
   text-align: center;
   font-size: 26px;
@@ -282,25 +305,27 @@
 }
 
 #page-nosforets .content.green-block .quiz-btn {
-  padding-top: 17px;
-  height: 65px;
-  width: 342px;
+  display: inline-flex;
+  padding: 15px 30px 15px 70px;
   background-color: #454545;
-}
-
-#page-nosforets .content.green-block .quiz-btn .quiz-btn-text {
-  font-size: 0.8em;
-  font-family: Brandon;
-  font-style: normal;
-  font-weight: 400;
-}
-
-#page-nosforets .content.green-block .quiz-btn a {
   text-decoration: none;
 }
 
+#page-nosforets .content.green-block .quiz-btn .quiz-btn-text {
+  font-size: 20px;
+  font-family: Brandon;
+  font-style: normal;
+  font-weight: 400;
+  background: transparent;
+  padding-right: 50px;
+  letter-spacing: normal;
+}
+
+#page-nosforets .content.green-block .quiz-btn img {
+  background: transparent;
+}
+
 #page-nosforets .content.form {
-  padding-top: 100px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -313,15 +338,36 @@
 
 #page-nosforets .content.form .container {
   position: relative;
+  max-width: 1440px;
+}
+
+#page-nosforets .content.form .container .card-container .grid-third {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#page-nosforets .content.form .container .card-container .grid-third .intro p {
+  margin: 0;
+}
+
+#page-nosforets .content.form .container.is-why .row {
+  margin: 5vw auto;
 }
 
 #page-nosforets .content.form .container .why-container {
-  padding-bottom: 30px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+#page-nosforets .content.form .container .why-container .item {
+  display: inline-block;
 }
 
 #page-nosforets .content.form .container .why-container .line {
   background-color: white;
-  width: 30%;
+  width: 50%;
   height: 2px;
   padding-top: 2;
   margin-top: 30px;
@@ -347,6 +393,8 @@
   font-size: 30px;
   text-align: center;
   padding-top: 45px;
+  letter-spacing: normal;
+  line-height: 1.2;
 }
 
 #page-nosforets .content.form h2 {

@@ -222,7 +222,7 @@ function onStart()
 
     <div class="content before-form">
         <div class="container">
-            <div class="grid-full green-block">
+            <div class="grid-full green-block is-banner">
                 <p>{{ ambassador.title }}</p>
             </div>
         </div>
@@ -269,18 +269,18 @@ function onStart()
     </div>
 
     <div class="content form" style="background-image: url('{{ imgPath }}/forest-bloc/forest.png')">
-        <div class="container">
+        <div class="container is-why">
             <div class="row why-container">
-              <div class="grid-third">
+              <div class="item">
                 <span class="why">{{ facts.header.why }}</span>
               </div>
-              <div class="grid-third line">
+              <div class="item line">
               </div>
-              <div class="grid-third">
+              <div class="item">
                 <span class="know-that">{{ facts.header.know }}</span>
               </div>
             </div>
-            <div class="row">
+            <div class="row card-container">
 
               <div class="grid-third">
                   <div class="signature">
@@ -328,12 +328,12 @@ function onStart()
           </div>
 
           <div class="grid-third green-block-quiz-wrapper">
-              <div class="quiz-btn">
-                <a href="https://uneforetdepossibilites.com/fr/conservation-des-forets-et-de-la-nature/quiz-sur-la-sylviculture" target="_blank">
+              {# <div class="quiz-btn"> #}
+                <a class="quiz-btn" href="https://uneforetdepossibilites.com/fr/conservation-des-forets-et-de-la-nature/quiz-sur-la-sylviculture" target="_blank">
                   <span class="quiz-btn-text">{{ quiz.button.label }}</span>
                   <img src="{{ imgPath }}/quiz/arrow.png" alt="">
                 </a>
-              </div>
+              {# </div> #}
           </div>
         </div>
     </div>
