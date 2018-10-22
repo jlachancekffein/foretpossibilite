@@ -319,6 +319,14 @@
   padding-bottom: 30px;
 }
 
+#page-nosforets .content.form .container .why-container .line {
+  background-color: white;
+  width: 30%;
+  height: 2px;
+  padding-top: 2;
+  margin-top: 30px;
+}
+
 #page-nosforets .content.form .container .why {
   font-family: Brandon;
   font-size: 30px;
