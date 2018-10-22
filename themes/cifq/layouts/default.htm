@@ -53,10 +53,14 @@ function onStart()
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
         <link href="{{ 'assets/public/css/app.css?rev=fe4c17b7f6d9ff9b8a39'|theme }}" rel="stylesheet">
+        <link href="{{ '/node_modules/swiper/dist/css/swiper.min.css' }}" rel="stylesheet">
+
         {% styles %}
         {% if is_staging %}
             <script src="//cdn.trackduck.com/toolbar/prod/td.js" async data-trackduck-id="5911f6004551ba9e7e888acb"></script>
         {% endif %}
+
+        <script src="/node_modules/swiper/dist/js/swiper.min.js"></script>
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicons/apple-touch-icon.png'|theme }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/favicons/favicon-32x32.png'|theme }}">
@@ -87,7 +91,7 @@ function onStart()
         <!-- End Google Tag Manager (noscript) -->
         {% endif %}
 
-       
+
 
         <div class="wrapper{% if possibility is defined %}{{ ' ' ~ possibility }}{% endif %}">
             {% placeholder wrapper_before default %}{% endplaceholder %}
