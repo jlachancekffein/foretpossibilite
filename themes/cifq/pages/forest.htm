@@ -70,6 +70,63 @@ function onStart()
           ]
         ];
 
+        $this['sliders'] = [
+          'slide1' => [
+              'quote' => 'La forêt est un grand jardin qui se renouvelle sans cesse.',
+              'name' => 'Normand Simard',
+              'description' => 'Ingénieur forestier et directeur des approvisionnements',
+              'image' => '/sliders/Normand Simard_0529.jpg'
+            ],
+            'slide2' => [
+              'quote' => 'Développer le secteur forestier, c’est harmoniser les préoccupations humaines et environnementales.',
+              'name' => 'Alhassane A. Diallo',
+              'description' => 'Coordonnateur environnement et foresterie',
+              'image' => '/sliders/Alhassanea Diallo_1071.jpg'
+            ],
+            'slide3' => [
+              'quote' => 'La forêt québécoise, ce n’est pas que du bois : c’est une source de fierté.',
+              'name' => 'Yvon Soucy',
+              'description' => 'Préfet de la MRC de Kamouraska',
+              'image' => '/sliders/Yvon Soucy_0376.jpg'
+            ],
+            'slide4' => [
+              'quote' => 'La forêt a toujours fait partie de ma vie et je veux m’impliquer pour qu’elle en fasse partie encore longtemps.',
+              'name' => 'Élie Duchesne',
+              'description' => 'Étudiante en arpentage',
+              'image' => '/sliders/Elie Duchesne_GA_0981.jpg'
+            ],
+            'slide5' => [
+              'quote' => 'Je suis fière de transmettre ma passion à mes étudiants, car je leur permets de découvrir un secteur riche en défis et en opportunités.',
+              'name' => 'Vanessa Auger',
+              'description' => 'Technicienne forestière et enseignante',
+              'image' => '/sliders/Vanessa Auger _9617.jpg'
+            ],
+            'slide6' => [
+              'quote' => 'Les avancées technologiques améliorent constamment les conditions des travailleurs, qui sont au cœur des pratiques forestières.',
+              'name' => 'Pierre Godin',
+              'description' => 'Mécanicien de machines fixes',
+              'image' => '/sliders/Pierre Godin_1267.jpg'
+            ],
+            'slide7' => [
+              'quote' => 'Notre forêt, on s’en occupe, car c’est notre avenir!',
+              'name' => 'Karine Lévesque',
+              'description' => 'Opératrice à la salle de finition et responsable de l’emballage des rouleaux',
+              'image' => '/sliders/Karine Levesque_8970.jpg'
+            ],
+            'slide8' => [
+              'quote' => 'Nous avons la responsabilité de nous assurer que la pérennité des écosystèmes soit la priorité dans toutes les facettes de notre travail.',
+              'name' => 'Nadia Vaillancourt',
+              'description' => 'Biologiste, cueilleuse professionnelle et animatrice-naturaliste',
+              'image' => '/sliders/Nadia Vaillancourt_0675.jpg'
+            ],
+            'slide9' => [
+              'quote' => 'Enrichir notre territoire, c’est prendre soin de ses ressources et en respecter les différents usages.',
+              'name' => 'Jean-Maurice Matte',
+              'description' => 'Maire de Senneterre',
+              'image' => '/sliders/7696-UMQ_3984_JeanMaurice_Matte.jpg'
+            ]
+        ];
+
     } else if ($locale == "en") {
       $this['header'] = [
         'intro' => 'Plus vertes que jamais, nos forêts sont source de fierté et d’innovations.
@@ -172,6 +229,45 @@ function onStart()
         <div class="arrow-down"></div>
     </div>
 
+    <div class="Medias">
+
+    <div class="Medias__container"></div>
+  	<div class="Medias__bg"></div>
+
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+
+            {% for slider in sliders %}
+              <div class="swiper-slide">
+                <div class="Medias__swiper-slide" style="background-image: url('{{ imgPath }}/{{ slider.image}}')">
+                  <div class="Medias__swiper-slide-content">
+                    <div class="Medias__swiper-slide-content-quote"><span>"</span>{{ slider.quote }} <span>"</span></div>
+                    <div class="Medias__swiper-slide-content-name">{{ slider.name }}</div>
+                    <div class="Medias__swiper-slide-content-description">{{ slider.description }}</div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="Medias__swiper-button-prev">
+          <img src="{{ imgPath }}/arrow_left.png" alt="">
+        </div>
+        <div class="Medias__swiper-button-next">
+          <img src="{{ imgPath }}/arrow_right.png" alt="">
+        </div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
     <div class="content form" style="background-image: url('{{ imgPath }}/forest-bloc/forest.png')">
         <div class="container">
             <div class="row why-container">
@@ -244,8 +340,85 @@ function onStart()
 
 </div>
 
+<style media="screen">
+
+.Medias__swiper-container {
+  position: relative;
+}
+.Medias__swiper-slide {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 931px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.Medias__swiper-slide-content-quote {
+  color: #fff;
+  padding-left: 10%;
+  font-size: 54px;
+  padding-top: 15%;
+  font-family: Brandon Grotesque;
+}
+.Medias__swiper-slide-content-quote span {
+  color: #84c425;
+}
+.Medias__swiper-slide-content-name {
+  color: #fff;
+  padding-left: 10%;
+  font-size: 20px;
+  padding-top: 2%;
+  font-family: Brandon Grotesque;
+}
+.Medias__swiper-slide-content-description {
+  color: #fff;
+  padding-left: 10%;
+  font-size: 20px;
+  padding-top: 1%;
+  font-family: Brandon Grotesque;
+}
+.Medias__swiper-button-prev,
+.Medias__swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.Medias__swiper-button-prev.swiper-button-disabled,
+.Medias__swiper-button-next.swiper-button-disabled {
+  opacity: 0;
+  cursor: default;
+}
+.Medias__swiper-button-prev {
+  left: 20px;
+}
+.Medias__swiper-button-next {
+  right: 20px;
+}
+
+</style>
+
 
 <script>
+
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.Medias__swiper-button-next',
+        prevEl: '.Medias__swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    })
 
     (function(){
 
