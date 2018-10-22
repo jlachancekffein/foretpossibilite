@@ -1,22 +1,28 @@
 @font-face {
-  font-family: "Brandon";
-  src: url("/themes/cifq/assets/public/fonts/BrandonText-Medium.woff2") format("woff2"), url("/themes/cifq/assets/public/fonts/BrandonText-Medium.woff") format("woff");
+  font-family: 'Brandon';
+  src: url("/themes/cifq/assets/public/fonts/BrandonText-Black.woff");
+  /* IE9 Compat Modes */
+  src: url("/themes/cifq/assets/public/fonts/BrandonText-Black.eot?#iefix") format("embedded-opentype"), url("/themes/cifq/assets/public/fonts/BrandonText-Black.woff") format("woff"), url("/themes/cifq/assets/public/fonts/BrandonText-Black.woff2") format("woff2"), url("/themes/cifq/assets/public/fonts/BrandonText-Black.ttf") format("truetype");
   font-style: normal;
-  font-weight: 500;
+  font-weight: 900;
 }
 
 @font-face {
-  font-family: "Brandon";
-  src: url("/themes/cifq/assets/public/fonts/BrandonText-Bold.woff2") format("woff2"), url("/themes/cifq/assets/public/fonts/BrandonText-Bold.woff") format("woff");
+  font-family: 'Brandon';
+  src: url("/themes/cifq/assets/public/fonts/BrandonText-Bold.woff");
+  /* IE9 Compat Modes */
+  src: url("/themes/cifq/assets/public/fonts/BrandonText-Bold.eot?#iefix") format("embedded-opentype"), url("/themes/cifq/assets/public/fonts/BrandonText-Bold.woff") format("woff"), url("/themes/cifq/assets/public/fonts/BrandonText-Bold.woff2") format("woff2"), url("/themes/cifq/assets/public/fonts/BrandonText-Bold.ttf") format("truetype");
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: "Brandon";
-  src: url("/themes/cifq/assets/public/fonts/BrandonText-Black.woff2") format("woff2"), url("/themes/cifq/assets/public/fonts/BrandonText-Black.woff") format("woff");
+  font-family: 'Brandon';
+  src: url("/themes/cifq/assets/public/fonts/BrandonText-Light.woff");
+  /* IE9 Compat Modes */
+  src: url("/themes/cifq/assets/public/fonts/BrandonText-Light.eot?#iefix") format("embedded-opentype"), url("/themes/cifq/assets/public/fonts/BrandonText-Light.woff") format("woff"), url("/themes/cifq/assets/public/fonts/BrandonText-Light.woff2") format("woff2"), url("/themes/cifq/assets/public/fonts/BrandonText-Light.ttf") format("truetype");
   font-style: normal;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 @font-face {
