@@ -44,6 +44,11 @@
   letter-spacing: 1.25px;
 }
 
+#page-nosforets .green-block {
+  font-size: 1.5em;
+  line-height: 51px;
+}
+
 #page-nosforets img {
   max-width: 100%;
 }
@@ -257,16 +262,19 @@
 
 #page-nosforets .content.green-block .green-block-knowledge h1 {
   color: black;
-  font-size: 20px;
   text-align: left;
   font-family: Brandon;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1em;
 }
 
 #page-nosforets .content.green-block .green-block-knowledge p {
   color: white;
   text-align: left;
-  font-size: 14px;
   font-family: Brandon;
+  font-weight: 300;
+  font-size: 0.7em;
 }
 
 #page-nosforets .content.green-block .green-block-quiz-wrapper {
@@ -281,8 +289,10 @@
 }
 
 #page-nosforets .content.green-block .quiz-btn .quiz-btn-text {
-  font-size: 20px;
+  font-size: 0.8em;
   font-family: Brandon;
+  font-style: normal;
+  font-weight: 400;
 }
 
 #page-nosforets .content.green-block .quiz-btn a {
