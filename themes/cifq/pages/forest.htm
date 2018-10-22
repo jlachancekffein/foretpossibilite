@@ -244,7 +244,7 @@ function onStart()
               <div class="swiper-slide">
                 <div class="Medias__swiper-slide" style="background-image: url('{{ imgPath }}/{{ slider.image}}')">
                   <div class="Medias__swiper-slide-content">
-                    <div class="Medias__swiper-slide-content-quote"><span>"</span>{{ slider.quote }} <span>"</span></div>
+                    <div class="Medias__swiper-slide-content-quote"><span>«</span>{{ slider.quote }} <span>»</span></div>
                     <div class="Medias__swiper-slide-content-name">{{ slider.name }}</div>
                     <div class="Medias__swiper-slide-content-description">{{ slider.description }}</div>
                   </div>
@@ -357,10 +357,15 @@ function onStart()
   padding-left: 10%;
   font-size: 54px;
   padding-top: 15%;
-  font-family: "Brandon Black";
+  font-family: Brandon;
+  font-style: normal;
+  font-weight: 900;
 }
 .Medias__swiper-slide-content-quote span {
   color: #84c425;
+  font-family: Brandon;
+  font-style:   normal;
+  font-weight:  300;
 }
 .Medias__swiper-slide-content-name {
   color: #fff;
