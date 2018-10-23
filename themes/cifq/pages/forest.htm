@@ -69,6 +69,12 @@ function onStart()
             'label' => 'FAITES LE TEST'
           ]
         ];
+        
+        $this['video'] = [
+          'button' => [
+            'label' => 'Visionnez la vidéo'
+          ]
+        ];
 
         $this['sliders'] = [
           'slide1' => [
@@ -235,7 +241,7 @@ function onStart()
   	<div class="Medias__bg"></div>
 
     <!-- Slider main container -->
-    <div class="swiper-container">
+    <div class="Medias__swiper-container">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
@@ -243,18 +249,21 @@ function onStart()
             {% for slider in sliders %}
               <div class="swiper-slide">
                 <div class="Medias__swiper-slide" style="background-image: url('{{ imgPath }}/{{ slider.image}}')">
+                  <div class="Medias__swiper-slide-mask"></div>
                   <div class="Medias__swiper-slide-content">
-                    <div class="Medias__swiper-slide-content-quote"><span>«</span>{{ slider.quote }} <span>»</span></div>
+                    <div class="Medias__swiper-slide-content-quote"><span class="-start">«</span>{{ slider.quote }} <span class="-end">»</span></div>
                     <div class="Medias__swiper-slide-content-name">{{ slider.name }}</div>
                     <div class="Medias__swiper-slide-content-description">{{ slider.description }}</div>
+                    <a href="#" class="Medias__swiper-slide-content-play">
+                      <img src="{{ imgPath }}/play_btn.png">
+                      <p class="Header__play-btn">{{ video.button.label }}</p>
+                    </a>
                   </div>
                 </div>
               </div>
             {% endfor %}
 
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
 
         <!-- If we need navigation buttons -->
         <div class="Medias__swiper-button-prev">
@@ -263,9 +272,6 @@ function onStart()
         <div class="Medias__swiper-button-next">
           <img src="{{ imgPath }}/arrow_right.png" alt="">
         </div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
     </div>
 
     <div class="content form" style="background-image: url('{{ imgPath }}/forest-bloc/forest.png')">
@@ -340,74 +346,10 @@ function onStart()
 
 </div>
 
-<style media="screen">
-
-.Medias__swiper-container {
-  position: relative;
-}
-.Medias__swiper-slide {
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 931px;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-.Medias__swiper-slide-content-quote {
-  color: #fff;
-  padding-left: 10%;
-  font-size: 54px;
-  padding-top: 15%;
-  font-family: Brandon;
-  font-style: normal;
-  font-weight: 900;
-}
-.Medias__swiper-slide-content-quote span {
-  color: #84c425;
-  font-family: Brandon;
-  font-style:   normal;
-  font-weight:  300;
-}
-.Medias__swiper-slide-content-name {
-  color: #fff;
-  padding-left: 10%;
-  font-size: 20px;
-  padding-top: 2%;
-  font-family: Brandon Grotesque;
-}
-.Medias__swiper-slide-content-description {
-  color: #fff;
-  padding-left: 10%;
-  font-size: 20px;
-  padding-top: 1%;
-  font-family: Brandon Grotesque;
-}
-.Medias__swiper-button-prev,
-.Medias__swiper-button-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-.Medias__swiper-button-prev.swiper-button-disabled,
-.Medias__swiper-button-next.swiper-button-disabled {
-  opacity: 0;
-  cursor: default;
-}
-.Medias__swiper-button-prev {
-  left: 20px;
-}
-.Medias__swiper-button-next {
-  right: 20px;
-}
-
-</style>
-
 
 <script>
 
-    var mySwiper = new Swiper ('.swiper-container', {
+    var mySwiper = new Swiper ('.Medias__swiper-container', {
       // Optional parameters
       direction: 'horizontal',
       loop: true,
@@ -417,11 +359,6 @@ function onStart()
       navigation: {
         nextEl: '.Medias__swiper-button-next',
         prevEl: '.Medias__swiper-button-prev',
-      },
-
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
       },
     })
 
