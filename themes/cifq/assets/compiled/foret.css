@@ -56,6 +56,10 @@ body {
   letter-spacing: 1.25px;
 }
 
+#page-nosforets .nav {
+  z-index: 9;
+}
+
 #page-nosforets .green-block.is-banner p {
   font-size: 4.4vw;
   line-height: 6vw;
@@ -110,6 +114,7 @@ body {
 }
 
 #page-nosforets .header > .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,6 +163,61 @@ body {
 #page-nosforets .header .mouse-scroll img {
   width: 26px;
   margin-bottom: 10px;
+}
+
+#page-nosforets .header .video-background {
+  background: #000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+}
+
+@media screen and (max-width: 1080px) {
+  #page-nosforets .header .video-background {
+    display: none;
+  }
+}
+
+#page-nosforets .header .video-foreground,
+#page-nosforets .header .video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  #page-nosforets .header .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+  #page-nosforets .header .video-foreground {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  #page-nosforets .header .vid-info {
+    width: 50%;
+    padding: .5rem;
+  }
+  #page-nosforets .header .vid-info h1 {
+    margin-bottom: .2rem;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #page-nosforets .header .vid-info .acronym {
+    display: none;
+  }
 }
 
 #page-nosforets .content {
@@ -409,6 +469,9 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  #page-nosforets .content.form {
+    background-attachment: initial;
+  }
   #page-nosforets .content.form .grid-half {
     width: 100%;
   }
@@ -783,6 +846,12 @@ body {
   height: 931px;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+@media screen and (max-width: 800px) {
+  #page-nosforets .Medias__swiper-slide {
+    height: calc(100vh - 60px);
+  }
 }
 
 #page-nosforets .Medias__swiper-slide-mask {
