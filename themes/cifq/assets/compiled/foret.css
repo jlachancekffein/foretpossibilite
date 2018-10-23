@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(../../../../../node_modules/font-awesome/css/font-awesome.css);
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,6 +43,36 @@ body {
   src: url("/themes/cifq/assets/public/fonts/PlantinStd-Italic.woff") format("woff");
   font-style: normal;
   font-weight: 700;
+}
+
+.header__social-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__social-menu {
+    display: block;
+  }
+}
+
+.Header__navigation-social {
+  margin: 0 5px;
+}
+
+.header__secondary-links:nth-child(3) {
+  margin-right: 10px;
+}
+
+.header__secondary-links:nth-child(3)::after {
+  content: ' ';
+  display: block;
+  width: 1px;
+  height: 15px;
+  background: white;
+  position: absolute;
+  top: 53%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 #page-nosforets {

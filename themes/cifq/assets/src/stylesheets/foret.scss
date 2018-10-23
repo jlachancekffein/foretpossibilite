@@ -1,3 +1,5 @@
+@import '../../../../../node_modules/font-awesome/css/font-awesome.css';
+
 body {
   // Éviter que la graisse des polices soient trop grasses.
   -webkit-font-smoothing: antialiased;
@@ -56,6 +58,37 @@ body {
   font-style: normal;
   font-weight: 700;
 }
+
+.header__social-menu {
+  display: none;
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.Header__navigation-social {
+  margin: 0 5px;
+}
+
+.header__secondary-links {
+  &:nth-child(3) {
+    margin-right: 10px;
+    &::after {
+      content: ' ';
+      display: block;
+      width: 1px;
+      height: 15px;
+      background: white;
+      position: absolute;
+      top: 53%;
+      right: 0;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+}
+
 
 #page-nosforets{
 
