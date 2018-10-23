@@ -80,6 +80,9 @@ body {
     font-weight: 500;
     letter-spacing: 1.25px;
 
+    .nav{
+      z-index: 9;
+    }
 
     .green-block{
       &.is-banner {
@@ -412,6 +415,7 @@ body {
         height: 100%;
 
         @media screen and (max-width: $mobile-form-breakpoint) {
+          background-attachment: initial;
           .grid-half{
             width: 100%;
           }
