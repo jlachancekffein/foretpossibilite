@@ -82,10 +82,8 @@ body {
 
 
     .green-block{
-      // line-height: 60px;
       &.is-banner {
         p {
-          // font-size: 3.4em;
           font-size: 4.4vw;
           line-height: 6vw;
           font-family: 'BrandonGrotesqueRegularItalic';
@@ -143,6 +141,10 @@ body {
         .signature{
           margin-bottom: 30px;
           text-align: center;
+          @media screen and (max-width: 600px) {
+            // Le logo n'est pas centré sinon à cause du T pour aménagement dans le titre
+            margin-right: -11vw;
+          }
         }
 
         .intro{
@@ -190,12 +192,13 @@ body {
       }
 
       &.intro{
-        padding-top: 60px;
+        padding: 4vw 0;
         color: $c-gray;
         text-align: center;
         font-size: 28px;
         font-family: Plantin;
         letter-spacing: normal;
+        background-size: cover;
 
         h1{
           font-weight: 700;
@@ -203,12 +206,28 @@ body {
           font-family: Brandon;
           color:$c-green;
           line-height: 1.15;
+          padding: 0;
+          @media screen and (max-width: 600px) {
+            font-size: 30px;
+            line-height: 1.1;
+          }
         }
 
         p {
           line-height: 1.143;
           padding: 0 5vw;
+          margin: 0;
+          @media screen and (max-width: 600px) {
+            font-size: 16px;
+            padding: 0;
+          }
+          .collectif-logo {
+            @media screen and (max-width: 600px) {
+              max-width: 40%;
+            }
+          }
         }
+
 
         h2{
           margin-top: -50px;
@@ -216,10 +235,6 @@ body {
           font-style: italic;
           font-size: 28px;
           font-family: 'Plantin Std', sans-serif;
-        }
-
-        .collectif-logo{
-          padding-bottom: 50px;
         }
 
         .list{
@@ -298,16 +313,29 @@ body {
 
 
       &.green-block{
-        padding: 57px 0 77px;
+        padding: 4vw 0 4vw;
         background-color: $c-green;
         text-align: center;
         font-size: 26px;
         line-height: 32px;
         z-index: 9;
 
-        .green-block-knowledge {
+        @media screen and (max-width: 1024px) {
+          .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .grid-third {
+              width: 100%;
+            }
+          }
+        }
 
+        .green-block-knowledge {
           padding-top: 60px;
+          @media screen and (max-width: 1024px) {
+            padding-top: 0px;
+          }
 
           h1{
             color:black;
@@ -316,6 +344,9 @@ body {
             font-style: normal;
             font-weight: 300;
             font-size:1em;
+            @media screen and (max-width: 1024px) {
+              text-align: center;
+            }
           }
 
           p{
@@ -324,11 +355,19 @@ body {
             font-family: Brandon;
             font-weight: 300;
             font-size:0.7em;
+            margin: 0;
+            @media screen and (max-width: 1024px) {
+              text-align: center;
+              margin-bottom: 30px;
+            }
           }
         }
 
         .green-block-quiz-wrapper{
           padding-top: 81px;
+          @media screen and (max-width: 1024px) {
+            padding-top: 0px;
+          }
         }
 
         .quiz-btn{
@@ -347,8 +386,11 @@ body {
             letter-spacing: normal;
           }
 
-          img {
-            background: transparent;
+          .arrow-next-icon {
+            width: 42px;
+            height: 30px;
+            display: flex;
+            align-self: center;
           }
 
         }
@@ -412,7 +454,7 @@ body {
             
             .line{
               background-color: white;
-              width: 50%;
+              width: 30vw;
               height: 2px;
               padding-top: 2;
               margin-top: 30px;
@@ -436,6 +478,8 @@ body {
 
           .signature{
             text-align: center;
+       
+
           }
 
 
