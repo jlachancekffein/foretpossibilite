@@ -251,7 +251,9 @@ function onStart()
                 <div class="Medias__swiper-slide" style="background-image: url('{{ imgPath }}/{{ slider.image}}')">
                   <div class="Medias__swiper-slide-mask"></div>
                   <div class="Medias__swiper-slide-content">
-                    <div class="Medias__swiper-slide-content-quote"><span class="-start">«</span>{{ slider.quote }} <span class="-end">»</span></div>
+                    <div class="Medias__swiper-slide-content-quote">
+                      <span class="quote">{{ slider.quote }}</span>
+                    </div>
                     <div class="Medias__swiper-slide-content-name">{{ slider.name }}</div>
                     <div class="Medias__swiper-slide-content-description">{{ slider.description }}</div>
                     <a href="#" class="Medias__swiper-slide-content-play">
@@ -337,8 +339,6 @@ function onStart()
             <a class="quiz-btn" href="https://uneforetdepossibilites.com/fr/conservation-des-forets-et-de-la-nature/quiz-sur-la-sylviculture" target="_blank">
               <span class="quiz-btn-text">{{ quiz.button.label }}</span>
               <svg class="arrow-next-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.24 209.24"><path d="M279.62,209.24a7,7,0,0,1-4.95-12l85.67-85.67H7a7,7,0,0,1,0-14H360.34L274.67,12a7,7,0,0,1,9.9-9.9l97.62,97.62a7,7,0,0,1,0,9.9l-97.62,97.62A7,7,0,0,1,279.62,209.24Z" style="fill:#fff"/></svg>
-              {# <svg class="arrow-next-icon" viewBox="0 0 1 1"><use xlink:href="{{ 'assets/public/images/icons.svg#arrow-next'|theme }}" /></use></svg> #}
-              {# {{ 'assets/public/images/icons.svg#arrow-next'|theme }} #}
             </a>
           </div>
         </div>
