@@ -798,6 +798,11 @@ body {
     height: 931px;
     background-size: cover;
     background-position: 50% 50%;
+
+    @media screen and (max-width: $mobile-form-breakpoint) {
+      height: calc(100vh - 60px);
+    }
+
   }
 
   .Medias__swiper-slide-mask {
