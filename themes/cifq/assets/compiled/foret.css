@@ -895,7 +895,7 @@ body {
   font-weight: 300;
   color: #84c425;
   font-style: italic;
-  line-height: 0.4;
+  line-height: 0;
 }
 
 #page-nosforets .Medias__swiper-slide-content-quote .quote::before {
