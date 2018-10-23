@@ -116,6 +116,7 @@ body {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: 100% 50%;
+      background-attachment: fixed;
       font-size: 20px;
 
       @media screen and (max-width: 1760px) {
@@ -401,6 +402,9 @@ body {
       &.form{
         background-size: cover;
         background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+
 
         @media screen and (max-width: $mobile-form-breakpoint) {
           .grid-half{
