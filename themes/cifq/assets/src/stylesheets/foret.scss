@@ -866,14 +866,13 @@ body {
   }
 
   .Medias__swiper-slide-content {
-    max-width: 60%;
+    max-width: 54%;
     padding-left: 180px;
     z-index: 1;
     letter-spacing: 1.5px;
     @media only screen and (min-width:1024px) {
-      max-width: 70%;
-      padding: 0;
-      margin: 0 auto;
+      max-width: 54%;
+      padding-left: 180px;
       &.is-6 {
         position: absolute;
         right: 180px;
@@ -903,24 +902,39 @@ body {
 
       &::before,
       &::after {
-        font-size: 8vw;
+        font-size: 3vw;
         font-family: Brandon;
         font-weight: 300;
         color: #84c425;
         font-style: italic;
         line-height: 0;
+        @media only screen and (max-width:600px) {
+          font-size: 35px;
+        }
       } 
 
       &::before {
         content: '«';
         transform: translateX(-150%);
         position: absolute;
+        top: 15px;
+        @media only screen and (max-width:1024px) {
+          top: 8px;
+        }
+        @media only screen and (max-width:600px) {
+          top: 3px;
+        }
       }
 
       &::after {
         content: '»';
         left: 10px;
         position: relative;
+        bottom: -3px;
+        @media only screen and (max-width:600px) {
+          bottom: -1px;
+        } 
+
       }
     }
     @media only screen and (max-width:1024px) {
@@ -947,7 +961,10 @@ body {
     }
 
     @media only screen and (max-width:768px) {
-      font-size: 24px;
+      font-size: 28px;
+    }
+    @media only screen and (max-width:600px) {
+      font-size: 26px;
     }
   }
 
@@ -966,6 +983,12 @@ body {
     @media only screen and (max-width:768px) {
       font-size: 20px;
     }
+
+    @media only screen and (max-width:600px) {
+      font-size: 16px;
+      line-height: normal;
+      max-width: 100%;
+    }
   }
 
   .Medias__swiper-slide-content-play {
@@ -981,6 +1004,10 @@ body {
     font-style: italic;
     letter-spacing: 0.5px;
     color: #fff;
+    @media only screen and (max-width:600px) {
+      max-width: initial;
+      width: 100%;
+    }
     .Header__play-btn {
       margin: 0;
       margin-left: 12px;
