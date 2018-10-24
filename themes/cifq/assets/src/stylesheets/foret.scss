@@ -60,13 +60,6 @@ body {
   font-weight: 700;
 }
 
-.header__social-menu {
-  display: none;
-  @media screen and (max-width: 1024px) {
-    display: block;
-  }
-}
-
 .Header__navigation-social {
   margin: 0 5px;
 }
@@ -96,15 +89,27 @@ body {
 
 .is-desktop {
   display: block;
+  visibility: inherit;
+  opacity: 1;
+  height: initial;
   @media screen and (max-width: 1024px) {
     display: none;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
   }
 }
 
 .is-mobile {
   display: none;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
   @media screen and (max-width: 1024px) {
+    opacity: 1;
     display: block;
+    visibility: inherit;
+    height: initial;
   }
 }
 
@@ -181,7 +186,7 @@ body {
 
 
     .header{
-      height: calc(100vh - 30px);
+      height: calc(100vh - 80px);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: 100% 50%;
@@ -942,6 +947,14 @@ body {
     padding-left: 180px;
     z-index: 1;
     letter-spacing: 1.5px;
+    .Medias__swiper-slide-content-play {
+      display: none;
+    }
+    &.is-1 {
+      .Medias__swiper-slide-content-play {
+        display: flex;
+      }
+    }
     @media only screen and (min-width:1024px) {
       &.is-6 {
         position: absolute;
