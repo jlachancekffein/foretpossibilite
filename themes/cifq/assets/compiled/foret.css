@@ -73,6 +73,7 @@ body {
   display: block;
   visibility: inherit;
   opacity: 1;
+  height: initial;
 }
 
 @media screen and (max-width: 1024px) {
@@ -80,6 +81,7 @@ body {
     display: none;
     visibility: hidden;
     opacity: 0;
+    height: 0;
   }
 }
 
@@ -87,6 +89,7 @@ body {
   display: none;
   visibility: hidden;
   opacity: 0;
+  height: 0;
 }
 
 @media screen and (max-width: 1024px) {
@@ -94,6 +97,7 @@ body {
     opacity: 1;
     display: block;
     visibility: inherit;
+    height: initial;
   }
 }
 
