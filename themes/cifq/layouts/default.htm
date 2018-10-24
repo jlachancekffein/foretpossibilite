@@ -95,10 +95,23 @@ function onStart()
 
         {# <div class="wrapper{% if possibility is defined %}{{ ' ' ~ possibility }}{% endif %}"> #}
             {% placeholder wrapper_before default %}{% endplaceholder %}
+            
+
+            <div class="Lightbox" id="the-lightbox">
+                <div class="Lightbox__background"></div>
+                <div class="Lightbox__content">
+                    <div class="Lightbox__video">
+                        <iframe id="videoIframe" frameborder="0" enablejsapi="1" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="Lightbox__close">X</div>
+            </div>
 
             {% partial 'site/header' %}
             {% page %}
             {% partial 'site/nav' %}
+       
+
         {# </div> #}
 
         <!-- Scripts -->

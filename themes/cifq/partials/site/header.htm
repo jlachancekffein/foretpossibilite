@@ -1,6 +1,9 @@
 [localePicker]
 forceUrl = 0
 ==
+
+{% set imgPath = '/themes/cifq/assets/public/images' %}
+
 <div class="header">
     <div class="container">
         <div class="row">
@@ -18,4 +21,10 @@ forceUrl = 0
         </div>
     </div>
     <div class="isMobile"></div>
+
+     <a href="#" id="header-content-play" class="Medias__swiper-slide-content-play">
+        <img src="{{ imgPath }}/play_btn.png">
+        <p class="Header__play-btn">{{ video.button.label }}</p>
+    </a>
+
 </div>

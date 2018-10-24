@@ -1,4 +1,5 @@
 @import '../../../../../node_modules/font-awesome/css/font-awesome.css';
+@import 'partials/Video-cover';
 
 body {
   // Éviter que la graisse des polices soient trop grasses.
@@ -188,6 +189,10 @@ body {
       font-size: 20px;
       overflow: hidden;
       margin: 20px 20px 0;
+      overflow: hidden;
+			height: 0;
+			padding-top: 37.5%;
+
 
       @media screen and (max-width: 1760px) {
         background-position: 70% 50%;
@@ -209,6 +214,12 @@ body {
         flex-direction: column;
         justify-content: center;
         height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        max-width: inherit;
 
         .signature{
           margin-bottom: 30px;
@@ -216,6 +227,12 @@ body {
           @media screen and (max-width: 600px) {
             // Le logo n'est pas centré sinon à cause du T pour aménagement dans le titre
             margin-right: -11vw;
+          }
+          @media screen and (max-width: 1200px) {
+            img{
+              width: 300px;
+            }
+            
           }
         }
 
@@ -248,6 +265,9 @@ body {
         img{
           width: 26px;
           margin-bottom: 10px;
+        }
+        @media screen and (max-width: 1200px) {
+          display: none;
         }
       }
 
@@ -1053,32 +1073,7 @@ body {
     }
   }
 
-  .Medias__swiper-slide-content-play {
-    width: inherit;
-    max-width: inherit;
-    display: flex;
-    margin-top: 36px;
-    align-items: center;
-    text-transform: none;
-    text-decoration: none;
-    font-size: 22px;
-    font-family: Plantin;
-    font-style: italic;
-    letter-spacing: 0.5px;
-    color: #fff;
-    @media only screen and (max-width:600px) {
-      max-width: initial;
-      width: 100%;
-    }
-    .Header__play-btn {
-      margin: 0;
-      margin-left: 12px;
-      @media only screen and (max-width:1024px) {
-        font-size: 16px;
-        line-height: normal;
-      }
-    }
-  }
+  
 
   .Medias__swiper-button-prev,
   .Medias__swiper-button-next {
@@ -1105,5 +1100,116 @@ body {
     right: 20px;
   }
 
+  
 
+#videoIframe{
+  width: 100%;
+  height: 100%;
+}
+
+
+}
+
+#header-content-play.Medias__swiper-slide-content-play{
+  position: absolute;
+  top: 40px;
+  right: 144px;
+}
+
+.Medias__swiper-slide-content-play {
+  width: inherit;
+  max-width: inherit;
+  display: flex;
+  margin-top: 36px;
+  align-items: center;
+  text-transform: none;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: Plantin;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: #fff;
+  @media only screen and (max-width:600px) {
+    max-width: initial;
+    width: 100%;
+  }
+  .Header__play-btn {
+    margin: 0;
+    margin-left: 12px;
+    @media only screen and (max-width:1024px) {
+      font-size: 16px;
+      line-height: normal;
+    }
+  }
+}
+
+.Lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0;
+  transform: translateY(-100%);
+  z-index: 9999;
+}
+.Lightbox.is-active {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.Lightbox__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+}
+.Lightbox__close {
+  position: absolute;
+  color: #fff;
+  right: 15px;
+  top: 15px;
+  font-size: 30px;
+  padding: 15px;
+  cursor: pointer;
+  font-family: Pantograph;
+}
+.Lightbox__video {
+  overflow: hidden;
+  transform: scale(0.8);
+  width: 100vw;
+  height: calc(100vw * 9 / 16);
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+.Lightbox__video iframe {
+  width: 100%;
+  height: 100%;
+}
+.Lightbox__form {
+  position: absolute;
+  width: 600px;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Lightbox #video_mp4 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  }
+}
+
+.Lightbox iframe{
+  width: 100%;
+  height: 100%;
 }

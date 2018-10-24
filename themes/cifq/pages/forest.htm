@@ -81,7 +81,8 @@ function onStart()
               'quote' => 'La forêt est un grand jardin qui se renouvelle sans cesse.',
               'name' => 'Normand Simard',
               'description' => 'Ingénieur forestier et directeur des approvisionnements',
-              'image' => '/sliders/Normand Simard_0529.jpg'
+              'image' => '/sliders/Normand Simard_0529.jpg',
+              'video' => 'Mn1-cwcLBQo'
             ],
             'slide2' => [
               'quote' => 'Développer le secteur forestier, c’est harmoniser les préoccupations humaines et environnementales.',
@@ -190,19 +191,16 @@ function onStart()
 ==
 
 {% set imgPath = '/themes/cifq/assets/public/images' %}
+{% set videoPath = '/themes/cifq/assets/public/videos' %}
 
 <link href="/themes/cifq/assets/compiled/foret.css" rel="stylesheet">
 <div id="page-nosforets">
 
     <div class="header" style="background-image: url('{{ imgPath }}/new_header_home.png')">
 
-        <div class="video-background">
-            <div class="video-foreground">
-            <iframe src="https://www.youtube.com/embed/gzKxCVNmQv0?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ&mute=1" frameborder="0" allowfullscreen></iframe>
-            </div>
+        <div class="fullscreen-bg">
+            <video src="{{ videoPath }}/SECTEUR_FORESTIER_60SEC_1080p_ONLINE.mp4" autoplay="autoplay" muted="muted" loop="loop" class="fullscreen-bg__video"></video> 
         </div>
-
-
 
         <div class="container">
             <div class="row">
@@ -223,6 +221,7 @@ function onStart()
             <div><img src="{{ imgPath }}/mouse-scroll.png" class="scroll" /></div>
             <span>{{ header.more }}</span>
         </div>
+
     </div>
 
     <div class="content intro" style="background-image: url('{{ imgPath }}/foret-intro-pattern.jpg')">
@@ -256,7 +255,7 @@ function onStart()
             <!-- Slides -->
 
             {% for slider in sliders %}
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-video="{{slider.video}}">
                 <div class="Medias__swiper-slide is-{{ loop.index }}" style="background-image: url('{{ imgPath }}/{{ slider.image}}')">
                   <div class="Medias__swiper-slide-mask"></div>
                   <div class="Medias__swiper-slide-content is-{{ loop.index }}">
@@ -265,10 +264,12 @@ function onStart()
                     </div>
                     <div class="Medias__swiper-slide-content-name">{{ slider.name }}</div>
                     <div class="Medias__swiper-slide-content-description">{{ slider.description }}</div>
-                    <a href="#" class="Medias__swiper-slide-content-play">
-                      <img src="{{ imgPath }}/play_btn.png">
-                      <p class="Header__play-btn">{{ video.button.label }}</p>
-                    </a>
+                    {% if slider.video %}
+                        <a href="#" class="Medias__swiper-slide-content-play">
+                        <img src="{{ imgPath }}/play_btn.png">
+                        <p class="Header__play-btn">{{ video.button.label }}</p>
+                        </a>
+                    {% endif %}
                   </div>
                 </div>
               </div>
@@ -357,7 +358,7 @@ function onStart()
 
 
 <script>
-
+    
     var mySwiper = new Swiper ('.Medias__swiper-container', {
       // Optional parameters
       direction: 'horizontal',
@@ -369,7 +370,7 @@ function onStart()
         nextEl: '.Medias__swiper-button-next',
         prevEl: '.Medias__swiper-button-prev',
       },
-    })
+    });
 
     (function(){
 
@@ -378,54 +379,55 @@ function onStart()
         var uploadInput = formContainer.querySelector('.form-field-photo input');
         var formStep1 = formContainer.querySelector('.form-step[data-step="1"]');
         var formStep2 = formContainer.querySelector('.form-step[data-step="2"]');
-        var submitBtnStep1 = formStep1.querySelector('.submit-btn');
-        var formStep1Inputs = formStep1.querySelectorAll('input');
-        var submitTriggerBtn = formContainer.querySelector('.submit-confirm-btn');
-        var form = formContainer.querySelector('form');
+        //var submitBtnStep1 = formStep1.querySelector('.submit-btn');
+        //var formStep1Inputs = formStep1.querySelectorAll('input');
+        //var submitTriggerBtn = formContainer.querySelector('.submit-confirm-btn');
+        //var form = formContainer.querySelector('form');
+        var lightbox = document.querySelector('#the-lightbox');
+        var lightboxIframe = lightbox.querySelector('iframe');
+        var lightboxCloseBtn = lightbox.querySelector('.Lightbox__close');
+        var sliders = document.querySelectorAll('#page-nosforets .swiper-slide');
+        var headerVideoBtn = document.querySelector('#header-content-play');
 
-        uploadBtnTriggerer.addEventListener('click', function(e){
-            e.preventDefault();
-            uploadInput.click();
+
+        
+        /*
+        lightbox.classList.add('is-active');
+        var ytID = 'gokIFQbgtXU';
+        setTimeout(() => lightboxIframe.setAttribute('src', 'https://www.youtube.com/embed/'+ytID+'?controls=1&showinfo=0&rel=0&autoplay=1'), 0)
+        lightboxCloseBtn.addEventListener('click', function(){
+            lightbox.classList.remove('is-active');
+        })
+        */
+
+        lightboxCloseBtn.addEventListener('click', function(){
+            lightbox.classList.remove('is-active');
+            setTimeout(() => lightboxIframe.setAttribute('src', 'about:blank'), 150)
         })
 
-        submitBtnStep1.addEventListener('click', function(e){
+        headerVideoBtn.addEventListener('click', function(e){
             e.preventDefault();
+            lightbox.classList.add('is-active');
+            var ytID = 'gokIFQbgtXU';
+            setTimeout(() => lightboxIframe.setAttribute('src', 'https://www.youtube.com/embed/'+ytID+'?controls=1&showinfo=0&rel=0&autoplay=1'), 0)
+        })
 
-            if (valideForm(1)){
-                formStep1.dataset.active = 0;
-                formStep2.dataset.active = 1;
+        for (var i=0; i<sliders.length; i++){
+            var ytID = sliders[i].dataset.video
+            var btn = sliders[i].querySelector('.Medias__swiper-slide-content-play')
+            if (btn){
+                btn.addEventListener('click', function(e){
+                    e.preventDefault();
+                    lightbox.classList.add('is-active');
+                    setTimeout(() => lightboxIframe.setAttribute('src', 'https://www.youtube.com/embed/'+ytID+'?controls=1&showinfo=0&rel=0&autoplay=1'), 0)
+                })
             }
-
-
-        })
-
-        submitTriggerBtn.addEventListener('click', function(e){
-            e.preventDefault();
-            if (valideForm(2)){
-                form.submit();
-            }
-
-        })
-
-        // Step 1 remove error class on input focus
-        for (i=0; i<formStep1Inputs.length; i++){
-            var elm = formStep1Inputs[i];
-            elm.addEventListener('focus', function(){
-                this.closest('.input').classList.remove('-error');
-            })
         }
+        
 
-        // Step 2 remove error class
-        formStep2.querySelector('textarea').addEventListener('focus', function(){
-            this.classList.remove('-error');
-        })
-        formStep2.querySelector('.btn-upload').addEventListener('click', function(){
-            this.classList.remove('-error');
-        })
-        formStep2.querySelector('[name="upload-file-legal"]').addEventListener('change', function(){
-            this.closest('.control').classList.remove('-error');
-        })
+        
 
+       
 
 
         function valideForm(step){
