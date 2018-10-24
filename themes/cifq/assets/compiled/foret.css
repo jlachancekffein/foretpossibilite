@@ -421,6 +421,13 @@ body {
   }
 }
 
+@media screen and (max-width: 1024px) and (max-width: 600px) {
+  #page-nosforets .content.green-block .container .grid-third:first-child {
+    width: 240px;
+    margin: 0 auto;
+  }
+}
+
 #page-nosforets .content.green-block .green-block-knowledge {
   padding-top: 60px;
 }
@@ -537,6 +544,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  #page-nosforets .content.form .container .card-container .grid-third {
+    margin-bottom: 30px;
+  }
+}
+
 #page-nosforets .content.form .container .card-container .grid-third .intro p {
   margin: 0;
 }
@@ -586,9 +599,21 @@ body {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  #page-nosforets .content.form .container .why-container .line {
+    margin: 15px auto;
+  }
+}
+
 #page-nosforets .content.form .container .why {
   font-family: Brandon;
   font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  #page-nosforets .content.form .container .why {
+    font-size: 20px;
+  }
 }
 
 #page-nosforets .content.form .container .know-that {
@@ -597,8 +622,21 @@ body {
   float: right;
 }
 
+@media only screen and (max-width: 600px) {
+  #page-nosforets .content.form .container .know-that {
+    font-size: 20px;
+  }
+}
+
 #page-nosforets .content.form .container .signature {
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #page-nosforets .content.form .container .signature {
+    width: 200px;
+    margin: 0 auto;
+  }
 }
 
 #page-nosforets .content.form .container .intro {
@@ -608,6 +646,12 @@ body {
   padding-top: 45px;
   letter-spacing: normal;
   line-height: 1.2;
+}
+
+@media only screen and (max-width: 600px) {
+  #page-nosforets .content.form .container .intro {
+    font-size: 20px;
+  }
 }
 
 #page-nosforets .content.form h2 {
@@ -924,19 +968,7 @@ body {
   letter-spacing: 1.5px;
 }
 
-@media only screen and (max-width: 1024px) {
-  #page-nosforets .Medias__swiper-slide-content {
-    max-width: 70%;
-    padding: 0;
-    margin: 0 auto;
-  }
-}
-
 @media only screen and (min-width: 1024px) {
-  #page-nosforets .Medias__swiper-slide-content {
-    max-width: 54%;
-    padding-left: 180px;
-  }
   #page-nosforets .Medias__swiper-slide-content.is-6 {
     position: absolute;
     right: 180px;
@@ -950,6 +982,20 @@ body {
     position: absolute;
     right: 0;
     bottom: -70px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #page-nosforets .Medias__swiper-slide-content {
+    max-width: 88%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #page-nosforets .Medias__swiper-slide-content {
+    max-width: 70%;
+    padding: 0;
+    margin: 0 auto;
   }
 }
 
@@ -1006,6 +1052,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   #page-nosforets .Medias__swiper-slide-content-quote .quote::after {
+    left: -2px;
     bottom: -1px;
   }
 }
@@ -1021,6 +1068,12 @@ body {
   #page-nosforets .Medias__swiper-slide-content-quote {
     font-size: 28px;
     line-height: 1.1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #page-nosforets .Medias__swiper-slide-content-quote {
+    font-size: 20px;
   }
 }
 
