@@ -89,6 +89,32 @@ body {
   }
 }
 
+.header__wrap-links {
+  display: flex;
+}
+
+.is-desktop {
+  display: block;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.is-mobile {
+  display: none;
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.extra-links {
+  margin-top: 20px;
+  // visibility: hidden;
+  .header__social-menu:before {
+    display: none;
+  }
+}
+
 
 #page-nosforets{
 
@@ -134,6 +160,7 @@ body {
         }
       }
     }
+
 
     img{
       max-width: 100%;
@@ -199,7 +226,7 @@ body {
           padding:30px;
           font-family: Plantin;
           letter-spacing: normal;
-          @media screen and (max-width: 600px) {
+          @media screen and (max-width: 768px) {
             width: 100%;
             font-size: 16px;
             padding: 24px;

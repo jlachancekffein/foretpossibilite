@@ -10,6 +10,7 @@ $('.nav .nav__content--menu-main li').each(function(index, el) {
 });
 navObjects.push($('.partners-btn'));
 navObjects.push($('.nav__copy'));
+navObjects.push($('.extra-links'));
 
 $('.header__menu').on('click', function(event) {
     event.preventDefault();
@@ -27,11 +28,12 @@ $('.header__menu').on('click', function(event) {
         TweenLite.from($('.nav'), .4, { css:{autoAlpha:0}, onComplete: animateMenu });
     }else{
         $(navObjects).each(function(index, el) {
-            $(el).css('visibility', 'hidden');
+            $(el).css('visibility', 'hidden'); 
         });
     }
 });
 
 function animateMenu() {
+    console.log(navObjects)
     TweenMax.staggerFrom(navObjects, .3, { css:{autoAlpha:0, transform:"translateY(10px)"}, delay: .2 }, .2);
 }

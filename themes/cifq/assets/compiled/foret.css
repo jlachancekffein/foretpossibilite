@@ -75,6 +75,38 @@ body {
   transform: translateY(-50%);
 }
 
+.header__wrap-links {
+  display: flex;
+}
+
+.is-desktop {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  .is-desktop {
+    display: none;
+  }
+}
+
+.is-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .is-mobile {
+    display: block;
+  }
+}
+
+.extra-links {
+  margin-top: 20px;
+}
+
+.extra-links .header__social-menu:before {
+  display: none;
+}
+
 #page-nosforets {
   position: absolute;
   top: 0;
@@ -181,7 +213,7 @@ body {
   letter-spacing: normal;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   #page-nosforets .header > .container .intro {
     width: 100%;
     font-size: 16px;

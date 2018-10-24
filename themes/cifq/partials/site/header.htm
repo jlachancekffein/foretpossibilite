@@ -6,47 +6,9 @@ forceUrl = 0
         <div class="row">
             <div class="grid-three-fourths grid-flip grid-" >
                 <div class="header__wrap-links">
-                    <div class="header__secondary-links">
-                        {% if locale == 'fr' %}
-                           <a href="http://partenaires.uneforetdepossibilites.com/fr/partenaires" target="_blank">{{ 'Le collectif'|_ }}</a>
-                        {% endif %}
-                        {% if locale == 'en' %}
-                           <a href="http://partenaires.uneforetdepossibilites.com/en/partners" target="_blank">{{ 'Le collectif'|_ }}</a>
-                        {% endif %}
-                    </div>
-                    <div class="header__secondary-links">
-                        {% if locale == 'fr' %}
-                           <a target="_blank" href="http://partenaires.uneforetdepossibilites.com/fr">{{ 'Partenaires'|_ }}</a>
-                        {% endif %}
-                        {% if locale == 'en' %}
-                           <a target="_blank" href="http://partenaires.uneforetdepossibilites.com/en">{{ 'Partenaires'|_ }}</a>
-                        {% endif %}
-                    </div>
-                    <div class="header__secondary-links">
-                        <a href="https://facebook.com/uneforetdepossibilites/" target="_blank" class="Header__navigation-social">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.instagram.com/uneforetdepossibilites/" target="_blank" class="Header__navigation-social">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCF2sXehDojg9K6CSK8_VtrA" target="_blank" class="Header__navigation-social">
-                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="header__social-menu">
-                        <a href="https://www.facebook.com/uneforetdepossibilites" target="_blank">
-                            <svg class="fb-icon" viewBox="0 0 1 1"><use xlink:href="#facebook" /></use></svg>
-                        </a>
-                        <a href="https://www.instagram.com/uneforetdepossibilites" target="_blank">
-                            <svg class="insta-icon" viewBox="0 0 1 1"><use xlink:href="#instagram" /></use></svg>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCF2sXehDojg9K6CSK8_VtrA/videos" target="_blank">
-                            <svg class="youtube-icon" viewBox="0 0 1 1"><use xlink:href="#youtube" /></use></svg>
-                        </a>
-                    </div>
-                    <div class="header__secondary-links lang-switcher">
-                        {% component 'localePicker' %}
-                    </div>
+                    <span class="is-desktop">
+                        {% include "site/links.htm" %}
+                    </span>
                     <a class="header__menu" href="#"><span>Menu</span> <div class="burger-icon burger-icon--md"><span></span></div></a>
                 </div>
             </div>
