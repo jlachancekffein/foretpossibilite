@@ -95,15 +95,23 @@ body {
 
 .is-desktop {
   display: block;
+  visibility: inherit;
+  opacity: 1;
   @media screen and (max-width: 1024px) {
     display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
 .is-mobile {
   display: none;
+  visibility: hidden;
+  opacity: 0;
   @media screen and (max-width: 1024px) {
+    opacity: 1;
     display: block;
+    visibility: inherit;
   }
 }
 
