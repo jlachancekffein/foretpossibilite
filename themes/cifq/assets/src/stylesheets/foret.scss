@@ -60,28 +60,6 @@ body {
   font-weight: 700;
 }
 
-.Header__navigation-social {
-  margin: 0 5px;
-}
-
-.header__secondary-links {
-  &:nth-child(3) {
-    margin-right: 10px;
-    &::after {
-      content: ' ';
-      display: block;
-      width: 1px;
-      height: 15px;
-      background: white;
-      position: absolute;
-      top: 53%;
-      right: 0;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-    }
-  }
-}
 
 .header__wrap-links {
   display: flex;

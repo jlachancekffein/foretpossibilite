@@ -136,54 +136,118 @@ function onStart()
 
     } else if ($locale == "en") {
       $this['header'] = [
-        'intro' => 'Plus vertes que jamais, nos forêts sont source de fierté et d’innovations.
-        Elles représentent près de 50 % de notre territoire et méritent 100 % de notre appui.',
-        'more' => 'En savoir plus'
-      ];
+          'intro' => 'Plus vertes que jamais, nos forêts sont source de fierté et d’innovations.
+          Elles représentent près de 50 % de notre territoire et méritent 100 % de notre appui.',
+          'more' => 'En savoir plus'
+        ];
 
-      $this['statement'] = [
-        'title' => 'NOS FORÊTS,<br>NOTRE FORCE COLLECTIVE',
-        'description' => '
-        Nous sommes plus de 50 organisations d’horizons diversifiés, enracinées sur tout le territoire québécois.<br><br>
-        Nous sommes des témoins privilégiés de la vitalité et de la diversité des possibilités qu’offrent nos forêts.<br><br>
-        Nous reconnaissons que l’aménagement de nos forêts est ancré dans les principes du développement durable, afin d’offrir aux générations de demain les avantages environnementaux, économiques et sociaux qu’elles procurent.<br><br>
-        Nous constatons que nos forêts sont partagées respectueusement entre ses différents usagers.<br><br>
-        Nous sommes emballés par le consensus scientifique selon lequel nos forêts et les produits qu’elles nous permettent de développer sont avantageux pour améliorer le bilan carbone mondial.<br><br>
-        Nous sommes engagés pour que nos forêts jouent un rôle encore plus grand, au service de la collectivité québécoise.<br><br>
-        Nous nous unissons au bénéfice des forêts québécoises.<br><br>
-        Nos forêts, nous y croyons.<br><br>
-        Nous sommes le Collectif pour une forêt durable.<br><br>'
-      ];
+        $this['statement'] = [
+          'title' => 'NOS FORÊTS,<br>NOTRE FORCE COLLECTIVE',
+          'description' => '
+          Nous sommes plus de 50 organisations d’horizons diversifiés, enracinées sur tout le territoire québécois.<br><br>
+          Nous sommes des témoins privilégiés de la vitalité et de la diversité des possibilités qu’offrent nos forêts.<br><br>
+          Nous reconnaissons que l’aménagement de nos forêts est ancré dans les principes du développement durable, afin d’offrir aux générations de demain les avantages environnementaux, économiques et sociaux qu’il procure.<br><br>
+          Nous constatons que nos forêts sont partagées respectueusement entre ses différents usagers.<br><br>
+          Nous sommes emballés par le consensus scientifique selon lequel nos forêts, et les produits qu’elles nous permettent de développer, sont  avantageux pour améliorer le bilan carbone mondial.<br><br>
+          Nous sommes engagés pour que nos forêts jouent un rôle encore plus grand, au service de la collectivité québécoise.<br><br>
+          Nous nous unissons au bénéfice des forêts québécoises.<br><br>
+          Nos forêts, nous y croyons.<br><br>
+          Nous sommes le Collectif pour une forêt durable.<br><br>'
+        ];
 
-      $this['ambassador'] = [
-        'title' => 'Découvrez les multiples visages du Collectif pour une forêt durable'
-      ];
+        $this['ambassador'] = [
+          'title' => 'Découvrez les multiples visages du Collectif pour une forêt durable'
+        ];
 
-      $this['facts'] = [
-        'header' => [
-          'why' => 'Pourquoi y croire ?',
-          'know' => 'Saviez-vous que...'
-        ],
-        'card1' => [
-          'label' => 'Près de 50 % du territoire québécois est recouvert de forêt'
-        ],
-        'card2' => [
-          'label' => 'Moins de 1 % du territoire forestier est récolté chaque année'
-        ],
-        'card3' => [
-          'label' => '80 % des forêts se régénèrent naturellement'
-        ]
-      ];
+        $this['facts'] = [
+          'header' => [
+            'why' => 'Pourquoi y croire ?',
+            'know' => 'Saviez-vous que...'
+          ],
+          'card1' => [
+            'label' => 'Près de 50 % du territoire québécois est recouvert de forêt'
+          ],
+          'card2' => [
+            'label' => 'Moins de 1 % du territoire forestier est récolté chaque année'
+          ],
+          'card3' => [
+            'label' => '80 % des forêts se régénèrent naturellement'
+          ]
+        ];
 
-      $this['quiz'] = [
-        'knowledge' => [
-          'title' => 'Vérifiez vos connaissances!',
-          'description' => 'Êtes-vous un bûcheron dans l’âme ou plutôt un forestier de salon?  Testez votre niveau de connaissance de la forêt québécoise avec ces miniquiz!'
-        ],
-        'button' => [
-          'label' => 'FAITES LE TEST'
-        ]
-      ];
+        $this['quiz'] = [
+          'knowledge' => [
+            'title' => 'Vérifiez vos connaissances!',
+            'description' => 'Êtes-vous un bûcheron dans l’âme ou plutôt un forestier de salon?  Testez votre niveau de connaissance de la forêt québécoise avec ces miniquiz!'
+          ],
+          'button' => [
+            'label' => 'FAITES LE TEST'
+          ]
+        ];
+        
+        $this['video'] = [
+          'button' => [
+            'label' => 'Visionnez la vidéo'
+          ]
+        ];
+
+        $this['sliders'] = [
+          'slide1' => [
+              'quote' => 'La forêt est un grand jardin qui se renouvelle sans cesse.',
+              'name' => 'Normand Simard',
+              'description' => 'Ingénieur forestier et directeur des approvisionnements',
+              'image' => '/sliders/Normand Simard_0529.jpg',
+              'video' => 'Mn1-cwcLBQo'
+            ],
+            'slide2' => [
+              'quote' => 'Développer le secteur forestier, c’est harmoniser les préoccupations humaines et environnementales.',
+              'name' => 'Alhassane A. Diallo',
+              'description' => 'Coordonnateur environnement et foresterie',
+              'image' => '/sliders/Alhassanea Diallo_1071.jpg'
+            ],
+            'slide3' => [
+              'quote' => 'La forêt québécoise, ce n’est pas que du bois : c’est une source de fierté.',
+              'name' => 'Yvon Soucy',
+              'description' => 'Préfet de la MRC de Kamouraska',
+              'image' => '/sliders/Yvon Soucy_0376.jpg'
+            ],
+            'slide4' => [
+              'quote' => 'La forêt a toujours fait partie de ma vie et je veux m’impliquer pour qu’elle en fasse partie encore longtemps.',
+              'name' => 'Élie Duchesne',
+              'description' => 'Étudiante en arpentage',
+              'image' => '/sliders/Elie Duchesne_GA_0981.jpg'
+            ],
+            'slide5' => [
+              'quote' => 'Je suis fière de transmettre ma passion à mes étudiants, car je leur permets de découvrir un secteur riche en défis et en opportunités.',
+              'name' => 'Vanessa Auger',
+              'description' => 'Technicienne forestière et enseignante',
+              'image' => '/sliders/Vanessa Auger _9617.jpg'
+            ],
+            'slide6' => [
+              'quote' => 'Les avancées technologiques améliorent constamment les conditions des travailleurs, qui sont au cœur des pratiques forestières.',
+              'name' => 'Pierre Godin',
+              'description' => 'Mécanicien de machines fixes',
+              'image' => '/sliders/Pierre Godin_1267.jpg'
+            ],
+            'slide7' => [
+              'quote' => 'Notre forêt, on s’en occupe, car c’est notre avenir!',
+              'name' => 'Karine Lévesque',
+              'description' => 'Opératrice à la salle de finition et responsable de l’emballage des rouleaux',
+              'image' => '/sliders/Karine Levesque_8970.jpg'
+            ],
+            'slide8' => [
+              'quote' => 'Nous avons la responsabilité de nous assurer que la pérennité des écosystèmes soit la priorité dans toutes les facettes de notre travail.',
+              'name' => 'Nadia Vaillancourt',
+              'description' => 'Biologiste, cueilleuse professionnelle et animatrice-naturaliste',
+              'image' => '/sliders/Nadia Vaillancourt_0675.jpg'
+            ],
+            'slide9' => [
+              'quote' => 'Enrichir notre territoire, c’est prendre soin de ses ressources et en respecter les différents usages.',
+              'name' => 'Jean-Maurice Matte',
+              'description' => 'Maire de Senneterre',
+              'image' => '/sliders/7696-UMQ_3984_JeanMaurice_Matte.jpg'
+            ]
+        ];
 
     }
 }
@@ -398,7 +462,7 @@ function onStart()
       // Optional parameters
       direction: 'horizontal',
       loop: true,
-
+      threshold: 15,
 
       // Navigation arrows
       navigation: {
@@ -427,11 +491,20 @@ function onStart()
         var mobileBtn = document.querySelector('.header__menu');
         mobileBtn.addEventListener('click', function(e){
             var isNotVisible = headerVideoBtn.style.display === 'none';
+            var container = document.getElementById('page-nosforets');
+            var content_intro = container.querySelector('.content.intro')
+            var medias = container.querySelector('.Medias')
+            
+
             if (isNotVisible){
                 headerVideoBtn.style.display = 'flex';
+                content_intro.style.display = 'block';
+                medias.style.display = 'block';
             }
             else{
                 headerVideoBtn.style.display = 'none';
+                content_intro.style.display = 'none'
+                medias.style.display = 'none';
             }
         })
 
