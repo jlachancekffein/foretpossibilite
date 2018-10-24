@@ -85,6 +85,7 @@ body {
   font-family: 'Brandon', sans-serif;
   font-weight: 500;
   letter-spacing: 1.25px;
+  background: white;
 }
 
 #page-nosforets .nav {
@@ -98,6 +99,13 @@ body {
   letter-spacing: normal;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  #page-nosforets .green-block.is-banner p {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 #page-nosforets img {
@@ -124,6 +132,7 @@ body {
   background-attachment: fixed;
   font-size: 20px;
   overflow: hidden;
+  margin: 20px 20px 0;
 }
 
 @media screen and (max-width: 1760px) {
@@ -172,9 +181,11 @@ body {
   letter-spacing: normal;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   #page-nosforets .header > .container .intro {
-    display: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 24px;
   }
 }
 
@@ -379,6 +390,7 @@ body {
   font-size: 26px;
   line-height: 32px;
   z-index: 9;
+  position: relative;
 }
 
 #page-nosforets .content.before-form .arrow-down {
@@ -879,6 +891,16 @@ body {
   background-position: 50% 50%;
 }
 
+@media screen and (min-width: 1024px) {
+  #page-nosforets .Medias__swiper-slide {
+    height: 100vh;
+    background-position: 75% 50%;
+  }
+  #page-nosforets .Medias__swiper-slide.is-6 {
+    background-position: 25% 50%;
+  }
+}
+
 @media screen and (max-width: 800px) {
   #page-nosforets .Medias__swiper-slide {
     height: calc(100vh - 60px);
@@ -902,11 +924,25 @@ body {
   letter-spacing: 1.5px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   #page-nosforets .Medias__swiper-slide-content {
     max-width: 70%;
     padding: 0;
     margin: 0 auto;
+  }
+  #page-nosforets .Medias__swiper-slide-content.is-6 {
+    position: absolute;
+    right: 180px;
+    padding-left: 0;
+    text-align: right;
+  }
+  #page-nosforets .Medias__swiper-slide-content.is-6 .Medias__swiper-slide-content-description {
+    float: right;
+  }
+  #page-nosforets .Medias__swiper-slide-content.is-6 .Medias__swiper-slide-content-play {
+    position: absolute;
+    right: 0;
+    bottom: -70px;
   }
 }
 

@@ -211,9 +211,9 @@ function onStart()
                         <img src="{{ imgPath }}/forest-title.png" />
                     </div>
 
-                    <div class="intro">
-                        <p>{{ header.intro }}</p>
-                    </div>
+                    <p class="intro">
+                      {{ header.intro }}
+                    </p>
                 </div>
             </div>
 
@@ -257,9 +257,9 @@ function onStart()
 
             {% for slider in sliders %}
               <div class="swiper-slide">
-                <div class="Medias__swiper-slide" style="background-image: url('{{ imgPath }}/{{ slider.image}}')">
+                <div class="Medias__swiper-slide is-{{ loop.index }}" style="background-image: url('{{ imgPath }}/{{ slider.image}}')">
                   <div class="Medias__swiper-slide-mask"></div>
-                  <div class="Medias__swiper-slide-content">
+                  <div class="Medias__swiper-slide-content is-{{ loop.index }}">
                     <div class="Medias__swiper-slide-content-quote">
                       <span class="quote">{{ slider.quote }}</span>
                     </div>

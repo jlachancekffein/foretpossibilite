@@ -93,13 +93,13 @@ function onStart()
 
 
 
-        <div class="wrapper{% if possibility is defined %}{{ ' ' ~ possibility }}{% endif %}">
+        {# <div class="wrapper{% if possibility is defined %}{{ ' ' ~ possibility }}{% endif %}"> #}
             {% placeholder wrapper_before default %}{% endplaceholder %}
 
             {% partial 'site/header' %}
             {% page %}
             {% partial 'site/nav' %}
-        </div>
+        {# </div> #}
 
         <!-- Scripts -->
         {% if (is_staging or is_prod) %}
