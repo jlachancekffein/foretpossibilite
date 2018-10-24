@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import { TweenMax, Power2, TimelineLite } from 'gsap'
 
+
 /**
  * START - Intro animation
  */
