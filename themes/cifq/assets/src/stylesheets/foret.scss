@@ -922,6 +922,14 @@ body {
     padding-left: 180px;
     z-index: 1;
     letter-spacing: 1.5px;
+    .Medias__swiper-slide-content-play {
+      display: none;
+    }
+    &.is-1 {
+      .Medias__swiper-slide-content-play {
+        display: flex;
+      }
+    }
     @media only screen and (min-width:1024px) {
       &.is-6 {
         position: absolute;
