@@ -218,6 +218,23 @@ body {
         .signature{
           margin-bottom: 30px;
           text-align: center;
+
+          &.main-title {
+            position: relative;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            .title {
+              position: absolute;
+              transition: opacity .5s ease-out;
+              opacity: 0;
+              display: flex;
+              align-self: center;
+              &.is-show {
+                opacity: 1;
+              }
+            }
+          }
           @media screen and (max-width: 600px) {
             // Le logo n'est pas centré sinon à cause du T pour aménagement dans le titre
             margin-right: -11vw;

@@ -207,8 +207,10 @@ function onStart()
         <div class="container">
             <div class="row">
                 <div class="grid-full">
-                    <div class="signature">
-                        <img src="{{ imgPath }}/forest-title.png" />
+                    <div class="signature main-title">
+                        <img class="title is-1" src="{{ imgPath }}/forest-title.png" />
+                        <img class="title is-2" src="{{ imgPath }}/titre2.png" />
+                        <img class="title is-3" src="{{ imgPath }}/titre3.png" />
                     </div>
 
                     <p class="intro">
@@ -356,7 +358,40 @@ function onStart()
 </div>
 
 
+
 <script>
+
+    var elements = document.getElementsByClassName('title');
+      elements[2].classList.remove("is-show");
+      elements[0].classList.add("is-show");
+
+    var nbElements = 0
+    var myInterval = setInterval(function() {
+        if(nbElements >= 3) {
+          nbElements = 0
+        }else{
+          nbElements++
+        }
+
+        if (nbElements == 0) {
+          elements[2].classList.remove("is-show");
+          elements[nbElements].classList.add("is-show");
+        }
+        if (nbElements == 1) {
+          elements[0].classList.remove("is-show");
+          elements[nbElements].classList.add("is-show");
+
+        }
+        if (nbElements == 2) {
+          elements[1].classList.remove("is-show");
+          elements[nbElements].classList.add("is-show");
+        }
+
+        for (var i=0; i<elements.length; i++) {
+
+        } 
+    }, 5000);
+
 
     var mySwiper = new Swiper ('.Medias__swiper-container', {
       // Optional parameters
@@ -371,7 +406,7 @@ function onStart()
       },
     })
 
-    (function(){
+    {# (function(){
 
         var formContainer = document.querySelector('.content.form');
         var uploadBtnTriggerer = formContainer.querySelector('.btn-upload');
@@ -492,7 +527,7 @@ function onStart()
 
 
     })();
-
+ #}
 
 
 

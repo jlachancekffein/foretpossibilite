@@ -200,6 +200,25 @@ body {
   text-align: center;
 }
 
+#page-nosforets .header > .container .signature.main-title {
+  position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+#page-nosforets .header > .container .signature.main-title .title {
+  position: absolute;
+  transition: opacity .5s ease-out;
+  opacity: 0;
+  display: flex;
+  align-self: center;
+}
+
+#page-nosforets .header > .container .signature.main-title .title.is-show {
+  opacity: 1;
+}
+
 @media screen and (max-width: 600px) {
   #page-nosforets .header > .container .signature {
     margin-right: -11vw;
