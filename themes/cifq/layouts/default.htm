@@ -68,8 +68,13 @@ function onStart()
         <link rel="manifest" href="{{ 'assets/favicons/manifest.json'|theme }}">
         <link rel="mask-icon" href="{{ 'assets/favicons/safari-pinned-tab.svg'|theme }}" color="#2d5f2b">
         <link rel="shortcut icon" href="{{ 'assets/favicons/favicon.ico'|theme }}">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <meta name="msapplication-config" content="{{ 'assets/favicons/browserconfig.xml'|theme }}">
         <meta name="theme-color" content="#ffffff">
+
+
+
         <!-- Open Graph -->
         <meta property="og:image" content="{{ 'assets/public/images/og-image.jpg' | theme }}">
         <meta property="og:image:height" content="496">
@@ -82,6 +87,16 @@ function onStart()
         {% endif %}
         <meta property="og:title" content="Collectif pour une forêt durable">
         <meta property="og:url" content="{{ url('/') }}">
+
+        <style>
+            .Lightbox{
+                display: none;
+            }
+            #header-content-play{
+                display: none;
+            }
+        </style>
+
     </head>
     <body>
         {% if is_prod %}
@@ -107,9 +122,11 @@ function onStart()
                 <div class="Lightbox__close">X</div>
             </div>
 
-            {% partial 'site/header' %}
-            {% page %}
-            {% partial 'site/nav' %}
+            <div class="wrapper{% if possibility is defined %}{{ ' ' ~ possibility }}{% endif %}">
+                {% partial 'site/header' %}
+                {% page %}
+                {% partial 'site/nav' %}
+            </div>
        
 
         {# </div> #}

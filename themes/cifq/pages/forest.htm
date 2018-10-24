@@ -389,6 +389,17 @@ function onStart()
         var sliders = document.querySelectorAll('#page-nosforets .swiper-slide');
         var headerVideoBtn = document.querySelector('#header-content-play');
 
+        var mobileBtn = document.querySelector('.header__menu');
+        mobileBtn.addEventListener('click', function(e){
+            var isNotVisible = headerVideoBtn.style.display === 'none';
+            if (isNotVisible){
+                headerVideoBtn.style.display = 'flex';
+            }
+            else{
+                headerVideoBtn.style.display = 'none';
+            }
+        })
+
 
         
         /*
