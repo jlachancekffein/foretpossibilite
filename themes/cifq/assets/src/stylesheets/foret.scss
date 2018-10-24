@@ -841,7 +841,7 @@ body {
     height: 931px;
     background-size: cover;
     background-position: 50% 50%;
-    @media screen and (min-width: 1024px) {
+    @media screen and (max-width: 1024px) {
       height: 100vh;
       background-position: 75% 50%;
       &.is-6 {
@@ -870,6 +870,11 @@ body {
     padding-left: 180px;
     z-index: 1;
     letter-spacing: 1.5px;
+    @media only screen and (max-width:1024px) {
+      max-width: 70%;
+      padding: 0;
+      margin: 0 auto;
+    }
     @media only screen and (min-width:1024px) {
       max-width: 54%;
       padding-left: 180px;
