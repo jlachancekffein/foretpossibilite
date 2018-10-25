@@ -274,7 +274,7 @@ body {
   padding: 30px;
   font-family: Plantin;
   letter-spacing: normal;
-  text-align: left;
+  text-align: center;
   font-size: 18px;
   line-height: 22px;
 }
@@ -303,6 +303,10 @@ body {
 #page-nosforets .header .mouse-scroll img {
   width: 26px;
   margin-bottom: 10px;
+}
+
+#page-nosforets .header .mouse-scroll span {
+  font-size: 16px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -387,7 +391,7 @@ body {
 
 #page-nosforets .content.intro h1 {
   font-weight: 700;
-  font-size: 49px;
+  font-size: 44px;
   font-family: Brandon;
   color: #84c425;
   line-height: 1.15;
@@ -405,6 +409,7 @@ body {
   line-height: 1.1;
   padding: 0 5vw;
   margin: 0;
+  font-size: 23px;
 }
 
 @media screen and (max-width: 600px) {
