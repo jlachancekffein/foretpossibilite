@@ -1135,10 +1135,11 @@ body {
   width: 250px;
   top: -106px;
   @media only screen and (max-width:1024px) {
-    top: 370px;
+    top: 340px;
     right: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 190px;
   }
 
   @media only screen and (max-width:960px) {
@@ -1249,4 +1250,9 @@ body {
 }
 #header-content-play{
   display: flex;
+}
+
+
+html.page-nosforets .lang-switcher{
+  display: none;
 }

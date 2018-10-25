@@ -1289,10 +1289,11 @@ body {
 
 @media only screen and (max-width: 1024px) {
   #header-content-play.Medias__swiper-slide-content-play {
-    top: 370px;
+    top: 340px;
     right: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 190px;
   }
 }
 
@@ -1419,6 +1420,10 @@ body {
 
 #header-content-play {
   display: flex;
+}
+
+html.page-nosforets .lang-switcher {
+  display: none;
 }
 
 /*# sourceMappingURL=foret.css.map */
