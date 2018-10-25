@@ -273,7 +273,9 @@ body {
   padding: 30px;
   font-family: Plantin;
   letter-spacing: normal;
-  text-align: center;
+  text-align: left;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1421,6 +1423,15 @@ body {
 
 html.page-nosforets .lang-switcher {
   display: none;
+}
+
+.fullscreen-bg-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
 }
 
 /*# sourceMappingURL=foret.css.map */
