@@ -1135,11 +1135,12 @@ body {
   top: -106px;
   font-size: 24px;
   @media only screen and (max-width:1024px) {
-    top: 340px;
+    top: 360px;
     right: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 190px;
+    display: flex;
+    justify-content: center;
   }
 
   @media only screen and (max-width:960px) {
