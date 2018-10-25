@@ -1,7 +1,7 @@
 title = "forest"
 url = "/jycrois"
-layout = "default"
 is_hidden = 0
+layout = "default"
 
 [viewBag]
 localeUrl[en] = "/forest"
@@ -253,6 +253,7 @@ function onStart()
 }
 ?>
 ==
+
 {% set imgPath = '/themes/cifq/assets/public/images' %}
 {% set videoPath = '/themes/cifq/assets/public/videos' %}
 
@@ -351,7 +352,7 @@ function onStart()
         </div>
     </div>
 
-    <div class="content form" style="background-image: url('{{ imgPath }}/forest-bloc/forest.png')">
+    <div class="content form" style="background-image: url('{{ imgPath }}/forest-bloc/forest.png'); background-attachment:scroll">
         <div class="container is-why">
             <div class="row why-container">
               <div class="item">
@@ -493,17 +494,20 @@ function onStart()
             var container = document.getElementById('page-nosforets');
             var content_intro = container.querySelector('.content.intro')
             var medias = container.querySelector('.Medias')
+            var before_form = container.querySelector('.before-form')
             
 
             if (isNotVisible){
                 headerVideoBtn.style.display = 'flex';
                 content_intro.style.display = 'block';
                 medias.style.display = 'block';
+                before_form.style.display = 'block';
             }
             else{
                 headerVideoBtn.style.display = 'none';
                 content_intro.style.display = 'none'
                 medias.style.display = 'none';
+                before_form.style.display = 'none';
             }
         })
 
