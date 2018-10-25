@@ -1080,7 +1080,7 @@ body {
 @media only screen and (min-width: 1024px) {
   #page-nosforets .Medias__swiper-slide-content.is-6 {
     position: absolute;
-    right: 100px;
+    right: 150px;
     padding-left: 0;
   }
   #page-nosforets .Medias__swiper-slide-content.is-6 .Medias__swiper-slide-content-play {
@@ -1106,7 +1106,7 @@ body {
 
 #page-nosforets .Medias__swiper-slide-content-quote {
   position: relative;
-  margin-bottom: 48px;
+  margin-bottom: 30px;
   color: #fff;
   font-size: 50px;
   font-family: Brandon;
@@ -1278,10 +1278,11 @@ body {
 
 #header-content-play.Medias__swiper-slide-content-play {
   position: absolute;
-  right: -18px;
+  right: 0px;
   left: inherit;
-  width: 250px;
+  width: initial;
   top: -106px;
+  font-size: 24px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1301,14 +1302,12 @@ body {
 }
 
 .Medias__swiper-slide-content-play {
-  width: inherit;
-  max-width: inherit;
   display: flex;
-  margin-top: 36px;
+  margin-top: 20px;
   align-items: center;
   text-transform: none;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 33px;
   font-family: Plantin;
   font-style: italic;
   letter-spacing: 0.5px;
@@ -1323,8 +1322,7 @@ body {
 }
 
 .Medias__swiper-slide-content-play .Header__play-btn {
-  margin: 0;
-  margin-left: 12px;
+  margin: 0 0 0 20px;
 }
 
 @media only screen and (max-width: 1024px) {
