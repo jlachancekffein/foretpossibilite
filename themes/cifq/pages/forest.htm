@@ -331,6 +331,7 @@ function onStart()
                     <div class="Medias__swiper-slide-content-name">{{ slider.name }}</div>
                     <div class="Medias__swiper-slide-content-description">{{ slider.description }}</div>
                     {% if slider.video %}
+                        <pre>{{ slider.video }}</pre>
                         <a href="#" class="Medias__swiper-slide-content-play">
                         <img src="{{ imgPath }}/play_btn.png">
                         <p class="Header__play-btn">{{ video.button.label }}</p>
@@ -535,14 +536,14 @@ function onStart()
         })
 
         for (var i=0; i<sliders.length; i++){
-            var ytID = sliders[i].dataset.video
             var btn = sliders[i].querySelector('.Medias__swiper-slide-content-play')
             if (btn){
-                btn.addEventListener('click', function(e){
+                btn.addEventListener('click', function(slider, e){
+                    var ytID = slider.dataset.video
                     e.preventDefault();
                     lightbox.classList.add('is-active');
                     setTimeout(() => lightboxIframe.setAttribute('src', 'https://www.youtube.com/embed/'+ytID+'?controls=1&showinfo=0&rel=0&autoplay=1'), 0)
-                })
+                }.bind(this, sliders[i] ))
             }
         }
         
