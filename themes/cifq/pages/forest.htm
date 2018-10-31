@@ -87,7 +87,8 @@ function onStart()
               'quote' => 'Développer le secteur forestier, c’est harmoniser les préoccupations humaines et environnementales.',
               'name' => 'Alhassane A. Diallo',
               'description' => 'Coordonnateur environnement et foresterie',
-              'image' => '/sliders/Alhassanea Diallo_1071.jpg'
+              'image' => '/sliders/Alhassanea Diallo_1071.jpg',
+              'video' => 'Fu92NPKNjhY'
             ],
             'slide3' => [
               'quote' => 'La forêt québécoise, ce n’est pas que du bois : c’est une source de fierté.',
@@ -542,11 +543,11 @@ function onStart()
             
             if (btn){
               
-                btn.addEventListener('click', function(e){
-                    e.preventDefault();
+                btn.addEventListener('click', function(){
+                    //e.preventDefault();
                     lightbox.classList.add('is-active');
                     setTimeout(() => lightboxIframe.setAttribute('src', 'https://www.youtube.com/embed/'+ytID+'?controls=1&showinfo=0&rel=0&autoplay=1'), 0)
-                })
+                }.bind(this, sliders[i] ))
             }
         }
         
