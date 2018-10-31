@@ -93,7 +93,8 @@ function onStart()
               'quote' => 'La forêt québécoise, ce n’est pas que du bois : c’est une source de fierté.',
               'name' => 'Yvon Soucy',
               'description' => 'Préfet de la MRC de Kamouraska',
-              'image' => '/sliders/Yvon Soucy_0376.jpg'
+              'image' => '/sliders/Yvon Soucy_0376.jpg',
+              'video' => 'y4be-_gDrPU'
             ],
             'slide4' => [
               'quote' => 'La forêt a toujours fait partie de ma vie et je veux m’impliquer pour qu’elle en fasse partie encore longtemps.',
@@ -207,7 +208,8 @@ function onStart()
               'quote' => 'La forêt québécoise, ce n’est pas que du bois : c’est une source de fierté.',
               'name' => 'Yvon Soucy',
               'description' => 'Préfet de la MRC de Kamouraska',
-              'image' => '/sliders/Yvon Soucy_0376.jpg'
+              'image' => '/sliders/Yvon Soucy_0376.jpg',
+              'video' => 'y4be-_gDrPU'
             ],
             'slide4' => [
               'quote' => 'La forêt a toujours fait partie de ma vie et je veux m’impliquer pour qu’elle en fasse partie encore longtemps.',
@@ -529,14 +531,17 @@ function onStart()
         headerVideoBtn.addEventListener('click', function(e){
             e.preventDefault();
             lightbox.classList.add('is-active');
-            var ytID = 'gokIFQbgtXU';
+            var ytID = 'uoEQG5ml_zw';
             setTimeout(() => lightboxIframe.setAttribute('src', 'https://www.youtube.com/embed/'+ytID+'?controls=1&showinfo=0&rel=0&autoplay=1'), 0)
         })
 
         for (var i=0; i<sliders.length; i++){
-            var ytID = sliders[i].dataset.video
+
+            const ytID = sliders[i].dataset.video
             var btn = sliders[i].querySelector('.Medias__swiper-slide-content-play')
+            
             if (btn){
+              
                 btn.addEventListener('click', function(e){
                     e.preventDefault();
                     lightbox.classList.add('is-active');

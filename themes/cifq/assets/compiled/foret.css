@@ -1076,14 +1076,6 @@ body {
   letter-spacing: 1.5px;
 }
 
-#page-nosforets .Medias__swiper-slide-content .Medias__swiper-slide-content-play {
-  display: none;
-}
-
-#page-nosforets .Medias__swiper-slide-content.is-1 .Medias__swiper-slide-content-play {
-  display: flex;
-}
-
 @media only screen and (min-width: 1024px) {
   #page-nosforets .Medias__swiper-slide-content.is-6 {
     position: absolute;
