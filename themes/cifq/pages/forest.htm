@@ -22,9 +22,9 @@ function onStart()
     if ($locale == "fr") {
 
         $this['signature'] = [
-          'title1' => '{{ imgPath }}/forest-title.png',
-          'title2' => '{{ imgPath }}/titre2.png',
-          'title3' => '{{ imgPath }}/titre3.png'
+          'title1' => '/forest-title.png',
+          'title2' => '/titre2.png',
+          'title3' => '/titre3.png'
         ];
 
         $this['header'] = [
@@ -145,9 +145,9 @@ function onStart()
       } else if ($locale == "en") {
 
         $this['signature'] = [
-          'title1' => '{{ imgPath }}/forest-title.png',
-          'title2' => '{{ imgPath }}/titre2.png',
-          'title3' => '{{ imgPath }}/titre3.png'
+          'title1' => '/forest-title.png',
+          'title2' => '/titre2.png',
+          'title3' => '/titre3.png'
         ];
 
         $this['header'] = [
@@ -289,9 +289,9 @@ function onStart()
             <div class="row">
                 <div class="grid-full">
                     <div class="signature main-title">
-                        <img class="title is-1" src="{{ signature.title1 }}" />
-                        <img class="title is-2" src="{{ signature.title2 }}" />
-                        <img class="title is-3" src="{{ signature.title3 }}" />
+                        <img class="title is-1" src="{{ imgPath }}{{ signature.title1 }}" />
+                        <img class="title is-2" src="{{ imgPath }}{{ signature.title2 }}" />
+                        <img class="title is-3" src="{{ imgPath }}{{ signature.title3 }}" />
                     </div>
 
                     <p class="intro">
