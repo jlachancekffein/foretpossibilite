@@ -52,10 +52,10 @@ function onStart()
             'label' => 'Près de 50 % du territoire québécois est recouvert de forêt'
           ],
           'card2' => [
-            'label' => 'Moins de 1 % du territoire forestier est récolté chaque année'
+            'label' => '80 % des forêts se régénèrent naturellement'
           ],
           'card3' => [
-            'label' => '80 % des forêts se régénèrent naturellement'
+            'label' => 'Moins de 1 % du territoire forestier est récolté chaque année'
           ]
         ];
 
@@ -68,7 +68,7 @@ function onStart()
             'label' => 'FAITES LE TEST'
           ]
         ];
-        
+
         $this['video'] = [
           'button' => [
             'label' => 'Visionnez la vidéo'
@@ -184,7 +184,7 @@ function onStart()
             'label' => 'FAITES LE TEST'
           ]
         ];
-        
+
         $this['video'] = [
           'button' => [
             'label' => 'Visionnez la vidéo'
@@ -456,7 +456,7 @@ function onStart()
 
         for (var i=0; i<elements.length; i++) {
 
-        } 
+        }
     }, 5000);
 
 
@@ -497,7 +497,7 @@ function onStart()
             var content_intro = container.querySelector('.content.intro')
             var medias = container.querySelector('.Medias')
             var before_form = container.querySelector('.before-form')
-            
+
 
             if (isNotVisible){
                 headerVideoBtn.style.display = 'flex';
@@ -514,7 +514,7 @@ function onStart()
         })
 
 
-        
+
         /*
         lightbox.classList.add('is-active');
         var ytID = 'gokIFQbgtXU';
@@ -540,9 +540,9 @@ function onStart()
 
             const ytID = sliders[i].dataset.video
             var btn = sliders[i].querySelector('.Medias__swiper-slide-content-play')
-            
+
             if (btn){
-              
+
                 btn.addEventListener('click', function(){
                     //e.preventDefault();
                     lightbox.classList.add('is-active');
@@ -550,11 +550,11 @@ function onStart()
                 }.bind(this, sliders[i] ))
             }
         }
-        
 
-        
 
-       
+
+
+
 
 
         function valideForm(step){
