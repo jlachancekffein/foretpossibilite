@@ -76,16 +76,16 @@ function onStart()
 
 
         <!-- Open Graph -->
-        <meta property="og:image" content="{{ 'assets/public/images/og-image.jpg' | theme }}">
+        <meta property="og:image" content="{{ 'assets/public/images/facebook_share.jpg' | theme }}">
         <meta property="og:image:height" content="496">
         <meta property="og:image:width" content="947">
         {% if locale == 'fr' %}
-          <meta property="og:description" content="Le Collectif pour une forêt durable regroupe des ambassadeurs enracinés dans leur milieu. Ils ont à coeur le développement durable des forêts québécoises. Ensemble, ils témoignent de l'importance, de ce matériau vert et renouvelable. Faire partie du Collectif pour une forêt durable, c'est donner vie à une forêt de possibilités.">
+          <meta property="og:description" content="Pour y croire, il faut d’abord la connaitre.">
         {% endif %}
         {% if locale == 'en' %}
            <meta property="og:description" content="The Collectif pour une forêt durable is a group of ambassadors with strong ties to their communities – people for whom the sustainable development of Quebec’s forests is a core concern. Together, they work to make sure the importance of this renewable green material is recognized. By joining the Collectif pour une forêt durable, you will help give life to a forest of possibilities.">
         {% endif %}
-        <meta property="og:title" content="Collectif pour une forêt durable">
+        <meta property="og:title" content="Notre forêt, j’y crois">
         <meta property="og:url" content="{{ url('/') }}">
 
         <style>
@@ -110,7 +110,7 @@ function onStart()
 
         {# <div class="wrapper{% if possibility is defined %}{{ ' ' ~ possibility }}{% endif %}"> #}
             {% placeholder wrapper_before default %}{% endplaceholder %}
-            
+
 
             <div class="Lightbox" id="the-lightbox">
                 <div class="Lightbox__background"></div>
@@ -127,7 +127,7 @@ function onStart()
                 {% page %}
                 {% partial 'site/nav' %}
             </div>
-       
+
 
         {# </div> #}
 
