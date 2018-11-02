@@ -56,6 +56,7 @@ function onStart()
             'know' => 'Saviez-vous que...'
           ],
           'card1' => [
+            'image' => '/forest-bloc/forest-card-1.png',
             'label' => 'Près de 50 % du territoire québécois est recouvert de forêt'
           ],
           'card2' => [
@@ -180,6 +181,7 @@ function onStart()
             'know' => 'Did you know that ...'
           ],
           'card1' => [
+            'image' => '/forest-bloc/en/forest-card-1.png',
             'label' => 'The forest covers nearly 50% of Québec’s territory.'
           ],
           'card2' => [
@@ -387,7 +389,7 @@ function onStart()
 
               <div class="grid-third">
                   <div class="signature">
-                      <img src="{{ imgPath }}/forest-bloc/forest-card-1.png" />
+                      <img src="{{ imgPath }}{{facts.card1.image}}" />
                   </div>
 
                   <div class="intro ">
