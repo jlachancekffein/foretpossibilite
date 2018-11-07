@@ -1288,6 +1288,8 @@ body {
   width: initial;
   top: -106px;
   font-size: 24px;
+  line-height: 27px;
+  margin-top: 36px;
 }
 
 @media only screen and (max-width: 1024px) {
