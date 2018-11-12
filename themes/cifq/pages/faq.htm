@@ -16,7 +16,7 @@ use RainLab\Translate\Classes\Translator;
 function onStart()
 {
     $this['pageClass'] = 'page-faq';
-    
+
     $this->translator = Translator::instance();
     $locale = $this->translator->getLocale();
 
@@ -380,9 +380,6 @@ function onStart()
             'name' => 'Thierry, Saint-Donat',
             'title' => 'I would like to work in the forest in Quebec. Where should I go for information?',
             'excerpt' => '
-                Plusieurs entreprises exécutent des travaux en forêt. Chacune est responsable de l’embauche de son personnel.
-                Pour vous aider dans vos recherches, voici quelques suggestions de sites d’employeurs potentiels...
-
                 There are many companies that work in the forest, and they are all responsible for hiring their own personnel. Here are some websites that may help you in your search...
             ',
             'more' => true,
@@ -428,7 +425,7 @@ function onStart()
                 The Sustainable Forest Development Act, which came into force on April 1 2013, introduced a number of important changes. For example:
                 <ul>
                     <li>
-                        The Department is now responsible for 
+                        The Department is now responsible for
                         <a target="_blank" href="https://www.mffp.gouv.qc.ca/forets/amenagement/amenagement-planification.jsp"> planning forest management</a>
                         in Quebec’s public forests.
                     </li>
